@@ -28,6 +28,7 @@
 <meta property="og:description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Diesel-Chen">
+<meta property="article:tag" content="go学习分享、Java学习分享、个人博客、博客搭建、服务端开发、后端日常开发记录">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/">
@@ -97,6 +98,7 @@
       <h1 class="site-title">DieselChen</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">个人博客,记录一下学习的点滴～</p>
   </div>
 
   <div class="site-nav-right">
@@ -182,6 +184,26 @@
     <div class="collection-year">
       <span class="collection-header">2021</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-02-26T16:53:27+08:00"
+              content="2021-02-26">
+          02-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/archives/4f6256ee.html" itemprop="url">
+            <span itemprop="name">使用hexo搭建博客的自定义设置</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -276,20 +298,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -313,6 +335,14 @@
       </div>
       <ul class="links-of-blogroll-list">
         
+        
+          <li>
+            <a href="/archives/4f6256ee.html" title="使用hexo搭建博客的自定义设置" target="_blank">使用hexo搭建博客的自定义设置</a>
+          </li>
+        
+          <li>
+            <a href="/archives/bc2aa60e.html" title="hexo搭建评论系统Valine" target="_blank">hexo搭建评论系统Valine</a>
+          </li>
         
           <li>
             <a href="/archives/ba1f9be9.html" title="使用Snippets加速修改markdown的颜色背景色" target="_blank">使用Snippets加速修改markdown的颜色背景色</a>
@@ -357,12 +387,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">12 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -457,7 +487,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       avatar     : 'mm',
       meta       : guest,
       pageSize   : '10' || 10,
-      visitor    : true,
+      visitor    : false,
       lang       : 'zh-cn' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
