@@ -20,18 +20,21 @@
     var CONFIG = {"hostname":"dieselchen.work","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DieselChen">
-<meta property="og:url" content="https://dieselchen.work/archives/2021/03/index.html">
+  <meta name="description" content="go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="go源码分析-sync.Pool">
+<meta property="og:url" content="https://dieselchen.work/archives/e7b919d2.html">
 <meta property="og:site_name" content="DieselChen">
-<meta property="og:description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
+<meta property="og:description" content="go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-30T09:51:22.000Z">
+<meta property="article:modified_time" content="2021-03-30T10:30:14.141Z">
 <meta property="article:author" content="Diesel-Chen">
-<meta property="article:tag" content="go学习分享、Java学习分享、个人博客、博客搭建、服务端开发、后端日常开发记录">
+<meta property="article:tag" content="Golang">
+<meta property="article:tag" content="源码分析">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://dieselchen.work/archives/2021/03/">
+<link rel="canonical" href="https://dieselchen.work/archives/e7b919d2.html">
 
 
 <script id="page-configurations">
@@ -39,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | DieselChen</title>
+  <title>go源码分析-sync.Pool | DieselChen</title>
   
 
 
@@ -175,236 +178,174 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dieselchen.work/archives/e7b919d2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Diesel-Chen">
+      <meta itemprop="description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DieselChen">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          go源码分析-sync.Pool
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-30 17:51:22 / 修改时间：18:30:14" itemprop="dateCreated datePublished" datetime="2021-03-30T17:51:22+08:00">2021-03-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">语言</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E8%A8%80/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 14 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/e7b919d2.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/e7b919d2.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>92</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
+        <blockquote>
+<p>go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。</p>
+</blockquote>
+<span id="more"></span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-30T17:51:22+08:00"
-              content="2021-03-30">
-          03-30
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/e7b919d2.html" itemprop="url">
-            <span itemprop="name">go源码分析-sync.Pool</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-17T15:43:57+08:00"
-              content="2021-03-17">
-          03-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/25ce9345.html" itemprop="url">
-            <span itemprop="name">记录一下第一次离职</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-17T12:25:17+08:00"
-              content="2021-03-17">
-          03-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/f20814c0.html" itemprop="url">
-            <span itemprop="name">golang学习笔记</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-17T11:24:37+08:00"
-              content="2021-03-17">
-          03-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/7474afea.html" itemprop="url">
-            <span itemprop="name">牛牛App登陆过程</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-17T11:08:47+08:00"
-              content="2021-03-17">
-          03-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/d3f55236.html" itemprop="url">
-            <span itemprop="name">集成钉钉扫码登陆</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-09T11:05:30+08:00"
-              content="2021-03-09">
-          03-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/c5d273ba.html" itemprop="url">
-            <span itemprop="name">go语言的并发模型GPM</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-07T18:19:20+08:00"
-              content="2021-03-07">
-          03-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/60f3c3ab.html" itemprop="url">
-            <span itemprop="name">hexo 部署到服务器上</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-05T08:24:04+08:00"
-              content="2021-03-05">
-          03-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/add768a0.html" itemprop="url">
-            <span itemprop="name">网络方面的面试题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-05T08:03:27+08:00"
-              content="2021-03-05">
-          03-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/607df68b.html" itemprop="url">
-            <span itemprop="name">MySQL相关的面试题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-04T14:33:43+08:00"
-              content="2021-03-04">
-          03-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/fd8c1fb6.html" itemprop="url">
-            <span itemprop="name">Redis相关的面试题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<h2 id="大佬博文"><a href="#大佬博文" class="headerlink" title="大佬博文"></a>大佬博文</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://changkun.us/archives/2018/09/256/">欧神 源码分析</a></li>
+<li><a target="_blank" rel="noopener" href="https://reading.hidevops.io/reading/20180817/2018-08-17-sync-pool-reading.pdf">Go 夜读</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903903046320136">源码分析，伪共享</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/99710992">golang的对象池sync.pool源码解读</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2e08332481c5">sync.Pool 的实现与演进</a></li>
+</ul>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Diesel-Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://dieselchen.work/archives/e7b919d2.html" title="go源码分析-sync.Pool">https://dieselchen.work/archives/e7b919d2.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:15px;margin-top:30px;">-----------本文结束<i class="fa fa-heart"></i>感谢您的阅读-----------</div>
+    
+</div>
+  
+      </div>
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Golang/" rel="tag"><i class="fa fa-tag"></i> Golang</a>
+              <a href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 源码分析</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archives/25ce9345.html" rel="prev" title="记录一下第一次离职">
+      <i class="fa fa-chevron-left"></i> 记录一下第一次离职
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -451,6 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BD%AC%E5%8D%9A%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">大佬博文</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
