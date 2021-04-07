@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DieselChen</title>
+  
+  <subtitle>个人博客,记录一下学习的点滴～</subtitle>
+  <link href="https://dieselchen.work/atom.xml" rel="self"/>
+  
+  <link href="https://dieselchen.work/"/>
+  <updated>2021-04-07T09:30:33.421Z</updated>
+  <id>https://dieselchen.work/</id>
+  
+  <author>
+    <name>Diesel-Chen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>golang原生实现爬虫架构</title>
+    <link href="https://dieselchen.work/archives/f05bbbc9.html"/>
+    <id>https://dieselchen.work/archives/f05bbbc9.html</id>
+    <published>2021-04-07T08:50:07.000Z</published>
+    <updated>2021-04-07T09:30:33.421Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>学习了慕课网 golang爬虫。爬取珍爱网，从单机版–&gt;并发版–&gt;分布式版</p><p>本文对此过程做个总结</p></blockquote><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;学习了慕课网 golang爬虫。爬取珍爱网，从单机版–&amp;gt;并发版–&amp;gt;分布式版&lt;/p&gt;
+&lt;p&gt;本文对此过程做个总结&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="语言" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Golang" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    
+    
+    <category term="Golang" scheme="https://dieselchen.work/tags/Golang/"/>
+    
+    <category term="爬虫" scheme="https://dieselchen.work/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go源码分析-sync.Pool</title>
+    <link href="https://dieselchen.work/archives/e7b919d2.html"/>
+    <id>https://dieselchen.work/archives/e7b919d2.html</id>
+    <published>2021-03-30T09:51:22.000Z</published>
+    <updated>2021-03-30T10:30:45.543Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。</p></blockquote><span id="more"></span><h2 id="大佬博文"><a href="#大佬博文" class="headerlink" title="大佬博文"></a>大佬博文</h2><ul><li><a href="https://changkun.us/archives/2018/09/256/">欧神 源码分析</a></li><li><a href="https://reading.hidevops.io/reading/20180817/2018-08-17-sync-pool-reading.pdf">Go 夜读</a></li><li><a href="https://juejin.cn/post/6844903903046320136">源码分析，伪共享</a></li><li><a href="https://zhuanlan.zhihu.com/p/99710992">golang的对象池sync.pool源码解读</a></li><li><a href="https://www.jianshu.com/p/2e08332481c5">sync.Pool 的实现与演进</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="语言" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Golang" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    
+    
+    <category term="Golang" scheme="https://dieselchen.work/tags/Golang/"/>
+    
+    <category term="源码分析" scheme="https://dieselchen.work/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录一下第一次离职</title>
+    <link href="https://dieselchen.work/archives/25ce9345.html"/>
+    <id>https://dieselchen.work/archives/25ce9345.html</id>
+    <published>2021-03-17T07:43:57.000Z</published>
+    <updated>2021-03-17T15:03:50.671Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>20年6月毕业，7月底在上海找到一份工作。总结一下在牛牛成长的收获。在职时间2020-7-31 ～2021-3-17</p></blockquote><span id="more"></span><h3 id="找到第一份工作的激动"><a href="#找到第一份工作的激动" class="headerlink" title="找到第一份工作的激动"></a>找到第一份工作的激动</h3><p>​        毕业了找工作很难，现阶段程序员初级岗很饱和，想找到一份不错的工作还是有难度的。记得当时牛牛成长一面是视频面：文林哥给我面的，说真的当时面的很不好，我简历上写的很夸张，导致很多问题问深了就不会了。当时我记得文林问了一句，你觉得你的优势在哪？我抓住了这个机会说我学习能力很强，我也很想转go开发。可能是因为我当时真的很想进这家公司，在hr问我期望薪资的时候，我压到了6k左右。在二面之前已经拿到一个外包的offer。当时也是很激动，但还好没有去外包。外包是程序员的一生黑，能不去外包尽量不去外包。二面是和磊哥聊的，当时聊的还挺不错的，就斗胆要了7k，谁知当场就拿到了offer。</p><h3 id="第一个月的压力之大"><a href="#第一个月的压力之大" class="headerlink" title="第一个月的压力之大"></a>第一个月的压力之大</h3><p>​        从java转go对我来说挑战挺大的，因为我java学的也不咋样，所以每天回到家里还是会继续熟悉项目、熟悉数据库表的设计、熟悉各种框架。这一个月体重飙升，因为朝10晚7，再加会班，到家基本上10-11点了。再猛吃一顿，对于我这种易胖体质来说简直是灾难。可能是因为压力有点大导致自己的精神面貌可能不是很好，解决一些问题给人的感觉很困难。其实我分析过为啥文林、磊哥对我的评价 那么低，我一直抱着一种被低估的心态参与工作 ，虽说自我感觉是能够在规定时间完成任务，但可能言语之间就暴露了自己的问题。导致我心态发生变化是我打听到两个前端应届生都比我高2k，但实力感觉和我差不多。</p><h3 id="艰难的涨薪"><a href="#艰难的涨薪" class="headerlink" title="艰难的涨薪"></a>艰难的涨薪</h3><p>​        我好像在第三个月就开始提涨薪了，因为自我感觉良好，我做的东西还是很多的。但直接被否定了，可能对我的打击挺大的，不管怎么样我应该在平时的工作中都受到了影响。在任务驱动的环境下，我还是按部就班的完成leader布置的任务。可能问林看到我完成度还不错，跟我说让我转node，给app后端写服务就给我涨薪到 10k，但是当场就被磊哥拦下了，当时诗文已经走了，磊哥想带着我用go去写一些东西，而且想把我们现有的服务用CI、CD的方式部署。说当我完成了就给我涨薪。没过多久文林就走了，从那时候感觉app团队做的东西肯定要凉，磊哥还是继续带领我们做事情。我花了一周的时间完成了CI、CD，紧接着参与了app后端数据提供、用户中心搭建。我在年前看完成度不错又再一次和磊哥提了涨薪，磊哥给予我的是肯定，但也说了我现在还需要继续学，给我推荐了一本书《clean code》、让我 多看看源码。也说了差不多2个月就会给我涨薪。还提醒了我，我们现在的最重要的任务就是完成App的开发。转眼间就快到除夕了。在过年之前我还是把sms短信登陆做完了，可能是照着node写的，当时磊哥直接在群里@我说做的不行，我也进行了反驳，我之前一直找他说怎么设计sms表，一直没给回复，说先把oauth2完成。我也是先给个demo，在群里激辩起来。可能是我做的不对吧，自己才疏学浅，没有达到磊哥的要求。我是真的没想到磊哥年终奖居然给我了不到300。这一下子给我打醒了，这段时间的工作毫无意义，自己的绩效是最差的，我做的所有东西都是无用功 ，没有给公司带来任务的利益。之后……之后磊哥就带领着核心成员投奔了文林，其实这波操作我是真的没想到的。</p><h3 id="学习成长过程"><a href="#学习成长过程" class="headerlink" title="学习成长过程"></a>学习成长过程</h3><p>​        其实我在牛牛成长的这半年内，自己学到的东西还是很多的。比如 linux命令的熟练掌握 、git流程的掌握 、前后端连调、从产品、开发、测试、验收的整体流程等等。具体到项目就是我做了wbs后端leads线索公海、leads状态流转、找教练功能。cms改了很多很多bug，越来越熟悉cms系统，熟悉各种表结构。小程序也做了体能测试等。自己写了很多sql 完成bi报表。也进行了sql优化。explain分析sql。知道了docker、dockerfile、docker-compose、k8s。在磊哥的带领下用 go-zero从0-1起了个新的项目。集成了钉钉的扫码登录 ，自己基于oauth2的标准协议提供了授权接口。总的来说学到了很多、在 大牛们的带领下，我算是入了后端的门了 。</p><h3 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h3><p>​        今天办理了离职、明天就要奔赴新的公司、认识新的同事、在新的环境里工作。我希望自己可以在新的工作环境中提高自己的工作效率，和同事们处好关系，保持一个积极向上的乐观心态。一步一个脚印，加油！</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;20年6月毕业，7月底在上海找到一份工作。总结一下在牛牛成长的收获。在职时间2020-7-31 ～2021-3-17&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="成长与收获" scheme="https://dieselchen.work/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
+    
+    <category term="离职" scheme="https://dieselchen.work/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/%E7%A6%BB%E8%81%8C/"/>
+    
+    
+    <category term="牛牛成长" scheme="https://dieselchen.work/tags/%E7%89%9B%E7%89%9B%E6%88%90%E9%95%BF/"/>
+    
+    <category term="离职" scheme="https://dieselchen.work/tags/%E7%A6%BB%E8%81%8C/"/>
+    
+    <category term="跳槽" scheme="https://dieselchen.work/tags/%E8%B7%B3%E6%A7%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>golang学习笔记</title>
+    <link href="https://dieselchen.work/archives/f20814c0.html"/>
+    <id>https://dieselchen.work/archives/f20814c0.html</id>
+    <published>2021-03-17T04:25:17.000Z</published>
+    <updated>2021-03-17T15:17:29.521Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>golang一些用法记录一下（持续更新）</p></blockquote><span id="more"></span><h2 id="golang中截取字符串"><a href="#golang中截取字符串" class="headerlink" title="golang中截取字符串"></a>golang中截取字符串</h2><h3 id="截取普通英文字符串"><a href="#截取普通英文字符串" class="headerlink" title="截取普通英文字符串"></a>截取普通英文字符串</h3><p>当你需要截取字符串中的一部分时，可以使用像截取数组某部分那样来操作</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s := <span class="string">&quot;GoXHelloWorldX&quot;</span></span><br><span class="line">content:=s[<span class="number">3</span>:<span class="built_in">len</span>(s)<span class="number">-1</span>]</span><br><span class="line">fmt.Println(content)</span><br></pre></td></tr></table></figure><p>运行结果为： HelloWorld</p><h3 id="截取带中文字符串"><a href="#截取带中文字符串" class="headerlink" title="截取带中文字符串"></a>截取带中文字符串</h3><p>一个中文字符肯定不止一个字节，难道我还得遍历每个字节，判断编码，那也太麻烦了吧。我们不需要考虑那么多，除了byte还有另外一个类型rune，使用它完全不用考虑unicode字节问题，一个中文就只占一个数组下标</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s:=<span class="string">&quot;我He你好吗？&quot;</span></span><br><span class="line">content:=[]<span class="keyword">rune</span>(s)[<span class="number">3</span>:]</span><br><span class="line">fmt.Println(content)</span><br></pre></td></tr></table></figure><p>运行结果：你好吗？</p><h2 id="golang-string-和int-转换"><a href="#golang-string-和int-转换" class="headerlink" title="golang string 和int 转换"></a>golang string 和int 转换</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//string转成int：</span></span><br><span class="line"><span class="keyword">int</span>, err := strconv.Atoi(<span class="keyword">string</span>)</span><br><span class="line"><span class="comment">//string转成int64：</span></span><br><span class="line"><span class="keyword">int64</span>, err := strconv.ParseInt(<span class="keyword">string</span>, <span class="number">10</span>, <span class="number">64</span>)</span><br><span class="line"><span class="comment">//int转成string：</span></span><br><span class="line"><span class="keyword">string</span> := strconv.Itoa(<span class="keyword">int</span>)</span><br><span class="line"><span class="comment">//int64转成string：</span></span><br><span class="line"><span class="keyword">string</span> := strconv.FormatInt(<span class="keyword">int64</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;golang一些用法记录一下（持续更新）&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="语言" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Golang" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    
+    
+    <category term="Golang" scheme="https://dieselchen.work/tags/Golang/"/>
+    
+    <category term="学习笔记" scheme="https://dieselchen.work/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>牛牛App登陆过程</title>
+    <link href="https://dieselchen.work/archives/7474afea.html"/>
+    <id>https://dieselchen.work/archives/7474afea.html</id>
+    <published>2021-03-17T03:24:37.000Z</published>
+    <updated>2021-03-17T03:44:21.149Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>牛牛成长直播app搭建用户中心</p></blockquote><span id="more"></span><p>牛牛APP登录全流程</p><p>当前流程如下</p><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317113919021.png" alt="image-20210317113919021"></p><h1 id="验证码登录过程描述"><a href="#验证码登录过程描述" class="headerlink" title="验证码登录过程描述"></a>验证码登录过程描述</h1><h2 id="请求发送验证码"><a href="#请求发送验证码" class="headerlink" title="请求发送验证码"></a>请求发送验证码</h2><ol><li>查找 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#ngf20O">sms_codes</a> 记录，是否存在手机号相同且未过期的验证码。如不存在，新建记录；如存在，更新验证码的过期时间。</li><li>追加相关的设备信息。</li><li>检查 <strong>手机号</strong> 与 <strong>国家区号</strong> 发送次数是否被限制，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">403</a></li><li>检查腾讯云短信服务是否发送成功，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">503</a></li><li>发送成功</li></ol><h2 id="验证发送的验证码"><a href="#验证发送的验证码" class="headerlink" title="验证发送的验证码"></a>验证发送的验证码</h2><ol><li>正则匹配 code 是否通过，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">403</a></li><li>查找 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#ngf20O">sms_codes</a> 存在未验证的短信验证码，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">404</a></li><li>通过 <strong>手机号</strong> 与 <strong>国家区号</strong> 查找用户，如果查找不到完成自动注册</li><li>生成 tshn 的 access_token</li><li>验证成功</li></ol><h1 id="OAuth-登录鉴权过程"><a href="#OAuth-登录鉴权过程" class="headerlink" title="OAuth 登录鉴权过程"></a>OAuth 登录鉴权过程</h1><h2 id="请求OAuth2授权码"><a href="#请求OAuth2授权码" class="headerlink" title="请求OAuth2授权码"></a>请求OAuth2授权码</h2><table><thead><tr><th>接口地址</th><th>GET /oauth/authorize</th><th></th></tr></thead><tbody><tr><td>请求参数</td><td>client_id</td><td>客户端标识，如 “nnapp-student”</td></tr><tr><td></td><td>response_type</td><td>这里按照规范约定值为 “code”</td></tr><tr><td></td><td>redirect_uri</td><td>请求成功后的回调地址，例如 <a href="https://example.com/oauth/callback">https://example.com/oauth/callback</a></td></tr><tr><td></td><td>state</td><td>规范中约定的防止 CSRF 的值，通常为随机字符串</td></tr><tr><td>请求头</td><td>Authorization</td><td>tshn 专用的 access token</td></tr><tr><td></td><td>x-user-id</td><td>用户在 tshn 中 userid</td></tr><tr><td>返回结果</td><td>重定向到 redirect_uri 参数指定的地址</td><td>在本例中，会返回重定向请求到 <a href="https://example.com/oauth/callback?code=xxxx&amp;state=xx">https://example.com/oauth/callback?code=xxxx&amp;state=xx</a> 其中 code 为后续换取 access token 所用的临时验证码</td></tr></tbody></table><h2 id="换取Access-Token"><a href="#换取Access-Token" class="headerlink" title="换取Access Token"></a>换取Access Token</h2><table><thead><tr><th>接口地址</th><th>POST /oauth/token</th><th></th></tr></thead><tbody><tr><td>请求参数</td><td>code</td><td>用于换取 access code 的验证码，由上一个接口返回，例如 “xxxx”</td></tr><tr><td></td><td>grant_type</td><td>按照规范约定，此处为 “authorization_code”</td></tr><tr><td></td><td>client_id</td><td>用于表明客户端身份的标识，如 “nncz-student”</td></tr><tr><td></td><td>client_secret</td><td>客户端 client_id 对应的密钥</td></tr><tr><td>请求头</td><td>Authorization</td><td>tshn 专用的 access token</td></tr><tr><td></td><td>x-user-id</td><td>用户在 tshn 中 userid</td></tr><tr><td>返回结果</td><td>一个 JSON object</td><td>{  “access_token”: “”,  “token_type: “Bearer”,  “expires_at”: “unix timestamp”,  “role”: “coach”, //  “scope”: …,  “refresh_token”: … }</td></tr></tbody></table><h2 id="刷新Access-Token"><a href="#刷新Access-Token" class="headerlink" title="刷新Access Token"></a>刷新Access Token</h2><table><thead><tr><th>接口地址</th><th>POST /oauth/token</th><th></th></tr></thead><tbody><tr><td>请求参数</td><td>refresh_token</td><td>refresh_token</td></tr><tr><td></td><td>grant_type</td><td>按照规范约定，此处为 “refresh_token”</td></tr><tr><td></td><td>client_id</td><td>用于表明客户端身份的标识，如 “nncz-student”</td></tr><tr><td></td><td>client_secret</td><td>客户端 client_id 对应的密钥</td></tr><tr><td>请求头</td><td>Authorization</td><td>tshn 专用的 access token</td></tr><tr><td></td><td>x-user-id</td><td>用户在 tshn 中 userid</td></tr><tr><td>返回结果</td><td>一个 JSON object</td><td>{  “access_token”: “”,  “token_type: “Bearer”,  “expires_at”: “unix timestamp”,  “role”: “coach”, //  “scope”: …,  “refresh_token”: … }</td></tr></tbody></table><h1 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h1><h2 id="SMS-接口"><a href="#SMS-接口" class="headerlink" title="SMS 接口"></a>SMS 接口</h2><h3 id="发送验证码"><a href="#发送验证码" class="headerlink" title="发送验证码"></a>发送验证码</h3><table><thead><tr><th>请求路径</th><th>/sms/send</th></tr></thead><tbody><tr><td>请求方法</td><td>POST</td></tr><tr><td>请求头</td><td>content-type: application/x-www-form-urlencoded</td></tr><tr><td>请求参数</td><td>phone=17671773306&amp;country_code=86&amp;unique_id=xxx&amp;device_id=iPhone13%2C4&amp;mac_address=xxx&amp;ip_address=127.0.0.1</td></tr><tr><td>返回</td><td>Status=200 {“message”: “发送成功”}</td></tr><tr><td>错误码error</td><td><a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">牛牛APP登录全流程</a></td></tr></tbody></table><h3 id="检查验证码"><a href="#检查验证码" class="headerlink" title="检查验证码"></a>检查验证码</h3><table><thead><tr><th>请求路径</th><th>/sms/verify</th></tr></thead><tbody><tr><td>请求方法</td><td>POST</td></tr><tr><td>请求头</td><td>content-type: application/x-www-form-urlencoded</td></tr><tr><td>请求参数</td><td>phone=17671773306&amp;country_code=86&amp;code=9999</td></tr><tr><td>返回</td><td>Status=200 {“tshn_access_token”:token,”user_id”:1000000} tshn 用 token（通过 jwt 方式加密），token 的内容包含 {  userId: … // 学生 id 从 100 0000 开始  role: … // 可能值为 coach, student  exp: … // timestamp   iat: ..//timestamp } Status!=200  {    “error”: “invalid-code-error”,    “error_description”: “验证码没有通过正则匹配” }</td></tr><tr><td>错误码error</td><td><a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">牛牛APP登录全流程</a></td></tr></tbody></table><h3 id="错误码"><a href="#错误码" class="headerlink" title="错误码"></a>错误码</h3><table><thead><tr><th><strong>error</strong></th><th><strong>message</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>100</td><td>action_not_found</td><td>操作的方法不存在</td></tr><tr><td>403</td><td>send-restricted</td><td>该手机号发送次数受到限制</td></tr><tr><td>403</td><td>invalid-code-error</td><td>验证码没有通过正则匹配  regex: <strong>/^\d{4}$/</strong></td></tr><tr><td>404</td><td>code-not-found</td><td>没有查询到匹配的验证码</td></tr><tr><td>500</td><td>find-user-error</td><td>没有查询到该手机号绑定的用户（自动注册功能完成后该错误失效）</td></tr><tr><td>503</td><td>send-fail-error</td><td>短信发送失败了（腾讯云短信服务）</td></tr><tr><td>999</td><td>incomplete_device_info</td><td>没有设备信息</td></tr></tbody></table><h2 id="OAuth-接口"><a href="#OAuth-接口" class="headerlink" title="OAuth 接口"></a>OAuth 接口</h2><h3 id="获取授权"><a href="#获取授权" class="headerlink" title="获取授权"></a>获取授权</h3><h3 id="获取-AccessToken"><a href="#获取-AccessToken" class="headerlink" title="获取 AccessToken"></a>获取 AccessToken</h3><h3 id="请求业务接口"><a href="#请求业务接口" class="headerlink" title="请求业务接口"></a>请求业务接口</h3><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="SMS-相关表结构"><a href="#SMS-相关表结构" class="headerlink" title="SMS 相关表结构"></a>SMS 相关表结构</h2><h3 id="sms-code-包含gorm-Model"><a href="#sms-code-包含gorm-Model" class="headerlink" title="sms_code(包含gorm.Model)"></a>sms_code(包含gorm.Model)</h3><table><thead><tr><th>属性</th><th>类型</th><th>备注</th></tr></thead><tbody><tr><td>phone</td><td>varchar(30)</td><td>手机号，如：131012345678</td></tr><tr><td>country_code</td><td>varchar(10)</td><td>地区号，如 86，与手机号一同构成唯一标识</td></tr><tr><td>expire_at</td><td>timestamp</td><td>“2020-01-01 13:05:39”，表示这个 code 的过期时间</td></tr><tr><td>code</td><td>String</td><td>四位数字，例如 9527</td></tr><tr><td>verified</td><td>tinyint</td><td>默认为 0，当通过 /verify API 验证过以后会设置为 1</td></tr></tbody></table><h3 id="sms-client-包含gorm-Model"><a href="#sms-client-包含gorm-Model" class="headerlink" title="sms_client(包含gorm.Model)"></a>sms_client(包含gorm.Model)</h3><table><thead><tr><th>属性</th><th>类型</th><th>备注</th></tr></thead><tbody><tr><td>sms_code_id</td><td>int</td><td>sms_code_id    sms_code的主键</td></tr><tr><td>device_id</td><td>varchar(100)</td><td>设备ID</td></tr><tr><td>mac_address</td><td>varchar(100)</td><td>设备网卡的mac地址(ios7之后无法检索出)</td></tr><tr><td>unique_id</td><td>varchar(255)</td><td>设备唯一标识</td></tr><tr><td>ip_address</td><td>varchar(50)</td><td>设备网卡分配的ip地址</td></tr></tbody></table><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317114229778.png" alt="image-20210317114229778"></p><h2 id="OAuth-相关表结构-（tshn-的数据库中）"><a href="#OAuth-相关表结构-（tshn-的数据库中）" class="headerlink" title="OAuth 相关表结构 （tshn 的数据库中）"></a>OAuth 相关表结构 （tshn 的数据库中）</h2><h3 id="oauth-client-包含gorm-Model"><a href="#oauth-client-包含gorm-Model" class="headerlink" title="oauth_client(包含gorm.Model)"></a>oauth_client(包含gorm.Model)</h3><table><thead><tr><th>client_id</th><th>varchar(255)</th><th>发起对资源请求的客户端标识符，对应 /oauth/authorize 请求中的 client_id。客户端是指 手机端 app，或者小程序，等。</th></tr></thead><tbody><tr><td>client_secret</td><td>varchar(255)</td><td>对应请求中的参数 client_secret</td></tr><tr><td>redirect_uri</td><td>varchar(255)</td><td>重定向地址    “<a href="https://chat3.nncz.cn/oauth/callback&quot;">https://chat3.nncz.cn/oauth/callback&quot;</a></td></tr><tr><td>data</td><td>json</td><td>clientInfo Json存储信息</td></tr></tbody></table><h3 id="oauth-token-包含gorm-Model"><a href="#oauth-token-包含gorm-Model" class="headerlink" title="oauth_token(包含gorm.Model)"></a>oauth_token(包含gorm.Model)</h3><table><thead><tr><th>code</th><th>varchar(255)</th><th>授权码 authorization_code</th></tr></thead><tbody><tr><td>access</td><td>varchar(255)</td><td>access_token</td></tr><tr><td>refresh</td><td>varchar(255)</td><td>refresh_token</td></tr><tr><td>expire_at</td><td>timestamp</td><td>refresh过期时间</td></tr><tr><td>data</td><td>json</td><td>tokenInfo Json存储信息</td></tr></tbody></table><h2 id="短信配置"><a href="#短信配置" class="headerlink" title="短信配置"></a>短信配置</h2><table><thead><tr><th>常量名称</th><th>描述</th></tr></thead><tbody><tr><td>secretId</td><td>腾讯云Apikey的id</td></tr><tr><td>secretKey</td><td>腾讯云Apikey的key</td></tr><tr><td>smsAppId</td><td>短信服务的项目appId</td></tr><tr><td>smsSign</td><td>短信签名</td></tr><tr><td>smsTemplateID</td><td>短信模版id</td></tr></tbody></table><h2 id="登录配置"><a href="#登录配置" class="headerlink" title="登录配置"></a>登录配置</h2><table><thead><tr><th>code</th><th>有效期时长，默认 5分钟</th></tr></thead><tbody><tr><td>access_token</td><td>有效期，默认 6 小时</td></tr><tr><td>refresh_token</td><td>刷新token，默认 30 天</td></tr></tbody></table><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol><li><a href="https://zhuanlan.zhihu.com/p/89020647">OAuth 2.0 详解</a></li><li><a href="http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html">OAuth 2.0 的四种方式</a>（阮一峰的博客）</li><li>oauth2-server 的<a href="https://oauth2-server.readthedocs.io/">开发文档</a></li><li><a href="https://tools.ietf.org/html/rfc6749.html">RFC 6749</a></li><li><a href="https://www.oauth.com/playground/">OAuth Playground</a></li><li><a href="https://console.cloud.tencent.com/api/explorer?Product=sms">QCloud API Explorer(短信)</a></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;牛牛成长直播app搭建用户中心&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="架构设计" scheme="https://dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="技术文档" scheme="https://dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="登陆" scheme="https://dieselchen.work/tags/%E7%99%BB%E9%99%86/"/>
+    
+    <category term="用户中心" scheme="https://dieselchen.work/tags/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集成钉钉扫码登陆</title>
+    <link href="https://dieselchen.work/archives/d3f55236.html"/>
+    <id>https://dieselchen.work/archives/d3f55236.html</id>
+    <published>2021-03-17T03:08:47.000Z</published>
+    <updated>2021-03-17T03:44:21.150Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>集成钉钉扫码登录的时序图</p></blockquote><span id="more"></span><p>已在钉钉创建登录应用 (<a href="https://open-dev.dingtalk.com/">https://open-dev.dingtalk.com</a>)</p><table><thead><tr><th>名称</th><th>OAuth 系统集成</th></tr></thead><tbody><tr><td>描述</td><td>用于企业内部系统的登录</td></tr><tr><td>LOGO 地址</td><td><a href="https://nnemp-product-1254101407.cos.ap-shanghai.myqcloud.com/logo/logo1.png">https://nnemp-product-1254101407.cos.ap-shanghai.myqcloud.com/logo/logo1.png</a></td></tr><tr><td>回调地址</td><td><a href="https://oauth.nncz.cn/dingtalk/callback">https://oauth.nncz.cn/dingtalk/callback</a></td></tr><tr><td>appId</td><td>*<strong>**</strong></td></tr><tr><td>appSecret</td><td>*<strong>**</strong></td></tr></tbody></table><ol><li>扫码成功以后返回 loginTmpCode</li><li>浏览器发送请求到 goto 参数指定的地址</li><li>通过这个地址生成 jwt token 并返回给浏览器</li></ol><h2 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h2><p><img src="https://image.dieselchen.work/uPic/2021%2003%2017%20image-20210317110406824%20.png" alt="image-20210317110406824"></p><h2 id="staff表结构"><a href="#staff表结构" class="headerlink" title="staff表结构"></a>staff表结构</h2><table><thead><tr><th>属性</th><th>类型</th><th align="center">备注</th></tr></thead><tbody><tr><td>id</td><td>Uint</td><td align="center">主键自增</td></tr><tr><td>unionid</td><td>String</td><td align="center">用户在当前开放应用所属企业的唯一标识</td></tr><tr><td>openid</td><td>String</td><td align="center">用户在当前开放应用内的唯一标识</td></tr><tr><td>dingid</td><td>String</td><td align="center">钉钉id</td></tr><tr><td>nickname</td><td>String</td><td align="center">用户在钉钉上面的昵称</td></tr><tr><td>created_at</td><td>Date</td><td align="center">记录创建时间</td></tr><tr><td>updated_at</td><td>Date</td><td align="center">记录更新时间</td></tr><tr><td>deleted_at</td><td>Date</td><td align="center">记录删除时间</td></tr></tbody></table><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul><li><a href="https://developers.dingtalk.com/document/app">钉钉开发者文档</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;集成钉钉扫码登录的时序图&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="架构设计" scheme="https://dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="技术文档" scheme="https://dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="钉钉" scheme="https://dieselchen.work/tags/%E9%92%89%E9%92%89/"/>
+    
+    <category term="扫码登录" scheme="https://dieselchen.work/tags/%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/"/>
+    
+    <category term="技术文档" scheme="https://dieselchen.work/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go语言的并发模型GPM</title>
+    <link href="https://dieselchen.work/archives/c5d273ba.html"/>
+    <id>https://dieselchen.work/archives/c5d273ba.html</id>
+    <published>2021-03-09T03:05:30.000Z</published>
+    <updated>2021-03-17T03:44:21.146Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>go语言并发模型 GPM的解释</p></blockquote><span id="more"></span><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://learnku.com/articles/41728">Golang 调度器 GMP 原理与调度全分析</a></li><li><a href="https://www.golangroadmap.com/class/goadvanced/3-4.html#_2-3-runqueue%E6%89%A7%E8%A1%8C%E5%AE%8C%E6%88%90">go语言并发模型</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;go语言并发模型 GPM的解释&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="语言" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Golang" scheme="https://dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    
+    
+    <category term="Golang" scheme="https://dieselchen.work/tags/Golang/"/>
+    
+    <category term="并发模型" scheme="https://dieselchen.work/tags/%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="Goroutine" scheme="https://dieselchen.work/tags/Goroutine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 部署到服务器上</title>
+    <link href="https://dieselchen.work/archives/60f3c3ab.html"/>
+    <id>https://dieselchen.work/archives/60f3c3ab.html</id>
+    <published>2021-03-07T10:19:20.000Z</published>
+    <updated>2021-03-07T10:40:17.546Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本站之前的博客是部署在github pages 上的，考虑到国内用户并不是都可以科学上网，并且我在20年双11买的阿里云轻量型ecs 一直闲置，今天捣鼓一下，把hexo 部署到阿里云上</p></blockquote><span id="more"></span><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://zhuanlan.zhihu.com/p/82437065">带你跳过各种坑，一次性把 Hexo 博客部署到自己的服务器</a></li><li><a href="https://www.jianshu.com/p/70bf58c48010">HEXO 部署到云服务器详细指南</a></li></ul><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>你得拥有一台云服务器，阿里云，腾讯云都可以，我们通过ssh连接到 服务器，下载git、nginx，具体的下载步骤就不说了，网上都有。</p><h2 id="创建git私有库"><a href="#创建git私有库" class="headerlink" title="创建git私有库"></a>创建git私有库</h2><h3 id="在云服务器上创建一个-GIT-用户，用来运行-GIT-服务"><a href="#在云服务器上创建一个-GIT-用户，用来运行-GIT-服务" class="headerlink" title="在云服务器上创建一个 GIT 用户，用来运行 GIT 服务"></a>在云服务器上创建一个 GIT 用户，用来运行 GIT 服务</h3><ul><li>创建用户：<code>adduser git</code></li><li>设置密码：<code>passwd git</code></li></ul><h3 id="创建证书"><a href="#创建证书" class="headerlink" title="创建证书"></a>创建证书</h3><ul><li>切换到git用户：<code>su git</code></li><li>创建.ssh目录：<code>mkdir .ssh &amp;&amp; chmod 700 .ssh</code></li><li>然后在云服务创建<code>authorized_keys</code>公钥保存文件：<code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code></li></ul><h3 id="创建git仓库目录"><a href="#创建git仓库目录" class="headerlink" title="创建git仓库目录"></a>创建git仓库目录</h3><p>创建一个名为blog的git仓库</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/git/repos</span><br><span class="line">cd /home/git/repos</span><br><span class="line">git <span class="keyword">init</span> --bare blog.git</span><br></pre></td></tr></table></figure><h3 id="配置GitHOOKS"><a href="#配置GitHOOKS" class="headerlink" title="配置GitHOOKS"></a>配置GitHOOKS</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /<span class="keyword">var</span>/repo/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure><p>添加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">git --work-tree=/home/git/project/blog --git-dir=/home/git/repos/blog.git checkout -f</span><br></pre></td></tr></table></figure><p>然后保存退出，并设置权限</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /<span class="keyword">var</span>/repo/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure><h3 id="改变-BLOG-GIT-目录的拥有者为-GIT-用户"><a href="#改变-BLOG-GIT-目录的拥有者为-GIT-用户" class="headerlink" title="改变 BLOG.GIT 目录的拥有者为 GIT 用户"></a>改变 BLOG.GIT 目录的拥有者为 GIT 用户</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R git:git blog.git</span><br></pre></td></tr></table></figure><h3 id="创建静态文件目录"><a href="#创建静态文件目录" class="headerlink" title="创建静态文件目录"></a>创建静态文件目录</h3><ul><li>创建静态文件目录（文章网页）：<code>mkdir /home/git/project/blog</code></li><li>链接git仓库：<code>chown -R git:git /home/git/project/blog</code></li><li>配置权限：<code>chmod -R 755 /home/git/project/blog</code><br> 这样git仓库更新便会自动同步到hexo目录下</li></ul><h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">    - git@github.com:Diesel-Chen&#x2F;diesel-chen.github.io.git</span><br><span class="line">    - git@47.116.78.14:&#x2F;home&#x2F;git&#x2F;repos&#x2F;blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本站之前的博客是部署在github pages 上的，考虑到国内用户并不是都可以科学上网，并且我在20年双11买的阿里云轻量型ecs 一直闲置，今天捣鼓一下，把hexo 部署到阿里云上&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="hexo" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://dieselchen.work/tags/hexo/"/>
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络方面的面试题</title>
+    <link href="https://dieselchen.work/archives/add768a0.html"/>
+    <id>https://dieselchen.work/archives/add768a0.html</id>
+    <published>2021-03-05T00:24:04.000Z</published>
+    <updated>2021-03-07T08:45:05.697Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>网络方面的面试题(持续更新……)</p></blockquote><span id="more"></span><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h4 id="谈谈你对TCP-IP四层模型的理解？OSI七层模型呢？"><a href="#谈谈你对TCP-IP四层模型的理解？OSI七层模型呢？" class="headerlink" title="谈谈你对TCP/IP四层模型的理解？OSI七层模型呢？"></a>谈谈你对TCP/IP四层模型的理解？OSI七层模型呢？</h4><h4 id="说说HTTP协议的工作原理，还有HTTP1-0、1-1以及2-0的区别是什么？"><a href="#说说HTTP协议的工作原理，还有HTTP1-0、1-1以及2-0的区别是什么？" class="headerlink" title="说说HTTP协议的工作原理，还有HTTP1.0、1.1以及2.0的区别是什么？"></a>说说HTTP协议的工作原理，还有HTTP1.0、1.1以及2.0的区别是什么？</h4><h4 id="你现场画一下HTTPS协议的原理，如何使用HTTPS协议？"><a href="#你现场画一下HTTPS协议的原理，如何使用HTTPS协议？" class="headerlink" title="你现场画一下HTTPS协议的原理，如何使用HTTPS协议？"></a>你现场画一下HTTPS协议的原理，如何使用HTTPS协议？</h4><h4 id="你知道什么是网络抓包的问题吗？能说说怎么解决这个问题吗？"><a href="#你知道什么是网络抓包的问题吗？能说说怎么解决这个问题吗？" class="headerlink" title="你知道什么是网络抓包的问题吗？能说说怎么解决这个问题吗？"></a>你知道什么是网络抓包的问题吗？能说说怎么解决这个问题吗？</h4><h4 id="谈谈你对TCP三次握手和四次挥手的理解，以及为什么要这么做？"><a href="#谈谈你对TCP三次握手和四次挥手的理解，以及为什么要这么做？" class="headerlink" title="谈谈你对TCP三次握手和四次挥手的理解，以及为什么要这么做？"></a>谈谈你对TCP三次握手和四次挥手的理解，以及为什么要这么做？</h4><h4 id="当你用浏览器打开一个链接的时候，计算机做了哪些工作步骤。"><a href="#当你用浏览器打开一个链接的时候，计算机做了哪些工作步骤。" class="headerlink" title="当你用浏览器打开一个链接的时候，计算机做了哪些工作步骤。"></a>当你用浏览器打开一个链接的时候，计算机做了哪些工作步骤。</h4>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;网络方面的面试题(持续更新……)&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="面试" scheme="https://dieselchen.work/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="网络" scheme="https://dieselchen.work/categories/%E9%9D%A2%E8%AF%95/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="面试" scheme="https://dieselchen.work/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="网络" scheme="https://dieselchen.work/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL相关的面试题</title>
+    <link href="https://dieselchen.work/archives/607df68b.html"/>
+    <id>https://dieselchen.work/archives/607df68b.html</id>
+    <published>2021-03-05T00:03:27.000Z</published>
+    <updated>2021-03-07T08:45:05.705Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>mysql相关的面试题(持续更新……)</p></blockquote><span id="more"></span><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h4 id="MySQL的存储引擎有哪些？区别是什么？底层文件结构是什么？"><a href="#MySQL的存储引擎有哪些？区别是什么？底层文件结构是什么？" class="headerlink" title="MySQL的存储引擎有哪些？区别是什么？底层文件结构是什么？"></a>MySQL的存储引擎有哪些？区别是什么？底层文件结构是什么？</h4><h4 id="对MySQL的索引原理了解吗？索引的数据结构是什么？B-树和B树有什么区别？"><a href="#对MySQL的索引原理了解吗？索引的数据结构是什么？B-树和B树有什么区别？" class="headerlink" title="对MySQL的索引原理了解吗？索引的数据结构是什么？B+树和B树有什么区别？"></a>对MySQL的索引原理了解吗？索引的数据结构是什么？B+树和B树有什么区别？</h4><h4 id="你知道MySQL中支持哪几种锁吗？说说你对MySQL行锁实现原理的理解？"><a href="#你知道MySQL中支持哪几种锁吗？说说你对MySQL行锁实现原理的理解？" class="headerlink" title="你知道MySQL中支持哪几种锁吗？说说你对MySQL行锁实现原理的理解？"></a>你知道MySQL中支持哪几种锁吗？说说你对MySQL行锁实现原理的理解？</h4><h4 id="谈谈你对MySQL中的事务原理的理解？有哪几种事务隔离级别？"><a href="#谈谈你对MySQL中的事务原理的理解？有哪几种事务隔离级别？" class="headerlink" title="谈谈你对MySQL中的事务原理的理解？有哪几种事务隔离级别？"></a>谈谈你对MySQL中的事务原理的理解？有哪几种事务隔离级别？</h4><h4 id="谈谈MySQL常见的性能优化方法，以及SQL调优的方法？"><a href="#谈谈MySQL常见的性能优化方法，以及SQL调优的方法？" class="headerlink" title="谈谈MySQL常见的性能优化方法，以及SQL调优的方法？"></a>谈谈MySQL常见的性能优化方法，以及SQL调优的方法？</h4>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;mysql相关的面试题(持续更新……)&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="面试" scheme="https://dieselchen.work/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="MySQL" scheme="https://dieselchen.work/categories/%E9%9D%A2%E8%AF%95/MySQL/"/>
+    
+    
+    <category term="面试" scheme="https://dieselchen.work/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="MySQL" scheme="https://dieselchen.work/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis相关的面试题</title>
+    <link href="https://dieselchen.work/archives/fd8c1fb6.html"/>
+    <id>https://dieselchen.work/archives/fd8c1fb6.html</id>
+    <published>2021-03-04T06:33:43.000Z</published>
+    <updated>2021-03-07T10:07:14.280Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>redis面试常问汇总 （持续更新……）</p></blockquote><span id="more"></span><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h4 id="Redis缓存的作用？"><a href="#Redis缓存的作用？" class="headerlink" title="Redis缓存的作用？"></a>Redis缓存的作用？</h4><h4 id="Redis线程模型？为什么Redis单线程还能支持高并发？"><a href="#Redis线程模型？为什么Redis单线程还能支持高并发？" class="headerlink" title="Redis线程模型？为什么Redis单线程还能支持高并发？"></a>Redis线程模型？为什么Redis单线程还能支持高并发？</h4><h4 id="Redis有哪些数据类型？在哪些场景下使用比较合适呢？"><a href="#Redis有哪些数据类型？在哪些场景下使用比较合适呢？" class="headerlink" title="Redis有哪些数据类型？在哪些场景下使用比较合适呢？"></a>Redis有哪些数据类型？在哪些场景下使用比较合适呢？</h4><h4 id="Redis的过期策略和内存淘汰机制是什么？能否手写一个LRU？"><a href="#Redis的过期策略和内存淘汰机制是什么？能否手写一个LRU？" class="headerlink" title="Redis的过期策略和内存淘汰机制是什么？能否手写一个LRU？"></a>Redis的过期策略和内存淘汰机制是什么？能否手写一个LRU？</h4><h4 id="怎么保证Redis是高并发以及高可用的？"><a href="#怎么保证Redis是高并发以及高可用的？" class="headerlink" title="怎么保证Redis是高并发以及高可用的？"></a>怎么保证Redis是高并发以及高可用的？</h4><h4 id="怎么保证Redis挂掉之后再重启数据可以进行修复？"><a href="#怎么保证Redis挂掉之后再重启数据可以进行修复？" class="headerlink" title="怎么保证Redis挂掉之后再重启数据可以进行修复？"></a>怎么保证Redis挂掉之后再重启数据可以进行修复？</h4><h4 id="能聊一聊Redis-cluster集群模式的原理吗？"><a href="#能聊一聊Redis-cluster集群模式的原理吗？" class="headerlink" title="能聊一聊Redis cluster集群模式的原理吗？"></a>能聊一聊Redis cluster集群模式的原理吗？</h4><h4 id="遇到缓存穿透、缓存击穿、缓存雪崩怎么处理？"><a href="#遇到缓存穿透、缓存击穿、缓存雪崩怎么处理？" class="headerlink" title="遇到缓存穿透、缓存击穿、缓存雪崩怎么处理？"></a>遇到缓存穿透、缓存击穿、缓存雪崩怎么处理？</h4><h4 id="如何保证缓存与数据库双写时的数据一致性？"><a href="#如何保证缓存与数据库双写时的数据一致性？" class="headerlink" title="如何保证缓存与数据库双写时的数据一致性？"></a>如何保证缓存与数据库双写时的数据一致性？</h4><h4 id="你们公司生产环境的Redis集群怎么搭建的？"><a href="#你们公司生产环境的Redis集群怎么搭建的？" class="headerlink" title="你们公司生产环境的Redis集群怎么搭建的？"></a>你们公司生产环境的Redis集群怎么搭建的？</h4><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://juejin.cn/post/6844903953092575246">Redis的过期策略及内存淘汰机制</a></li><li>java面试突击第一季(有需要三季视频资料的评论区找我)</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;redis面试常问汇总 （持续更新……）&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="面试" scheme="https://dieselchen.work/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="Redis" scheme="https://dieselchen.work/categories/%E9%9D%A2%E8%AF%95/Redis/"/>
+    
+    
+    <category term="面试" scheme="https://dieselchen.work/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="Redis" scheme="https://dieselchen.work/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用hexo搭建博客的自定义设置</title>
+    <link href="https://dieselchen.work/archives/4f6256ee.html"/>
+    <id>https://dieselchen.work/archives/4f6256ee.html</id>
+    <published>2021-02-26T08:53:27.000Z</published>
+    <updated>2021-02-26T08:57:09.804Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>个人博客搭建一些自定义设置，基于hexo + next +github pages</p></blockquote><span id="more"></span><h2 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h2><p>自从 NexT-7.3.0 开始，官方推荐采用数据文件将配置与主题分离，这样我们可以在不修改主题源码的同时完成选项配置、自定义布局、自定义样式，便于后续 NexT 版本更新。</p><h4 id="next-yml"><a href="#next-yml" class="headerlink" title="next.yml"></a><span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>next.yml</span></h4><p>我们可以将所有主题配置放在一个位置（<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>hexo/source/_data/next.yml</span>）</p><p>具体步骤：</p><ol><li>在 <code>hexo/source/_data</code> 目录中创建 <code>next.yml</code>（如果<code>_data</code> 不存在，则创建目录）。</li><li>在 <code>next.yml</code> 设置 <code>override</code> 选项为 true。</li><li>将<strong>所有 NexT 主题选项</strong>从主题配置文件复制到 <code>hexo/source/_data/next.yml</code> 中。</li></ol><h4 id="styles-styl"><a href="#styles-styl" class="headerlink" title="styles.styl"></a><span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>styles.styl</span></h4><p>我们只需要把原来的 <code>hexo/next/source/css/_custom/_custom.styl</code> 中的全部自定义样式放到 <code>hexo/source/_data/styles.styl</code> 即可。</p><p>然后在 NexT 的配置文件 <code>next.yml</code> 中取消 <code>styles.styl</code> 的注释：</p><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line"></span><br><span class="line"><span class="deletion">-  #style: source/_data/styles.styl</span></span><br><span class="line"><span class="addition">+  style: source/_data/styles.styl</span></span><br></pre></td></tr></table></figure><h4 id="variables-styl"><a href="#variables-styl" class="headerlink" title="variables.styl"></a><span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>variables.styl</span></h4><p>在自定义样式文件 <code>variables.styl</code> 中添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 圆角设置</span><br><span class="line">$border-radius-inner     &#x3D; 20px 20px 20px 20px;</span><br><span class="line">$border-radius           &#x3D; 20px;</span><br></pre></td></tr></table></figure><p>然后在 NexT 的配置文件 <code>next.yml</code> 中取消 <code>variables.styl</code> 的注释：</p><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line"></span><br><span class="line"><span class="deletion">-  #variables: source/_data/variables.styl</span></span><br><span class="line"><span class="addition">+  variables: source/_data/variables.styl</span></span><br></pre></td></tr></table></figure><h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><p>编辑 主题配置文件，修改如下配置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">copycreative_commons:</span></span><br><span class="line">  <span class="attr">license:</span> <span class="string">by-nc-sa</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span> <span class="comment"># 不在侧边栏显示版权信息</span></span><br><span class="line">  <span class="attr">post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure><h2 id="删除侧边栏目录下划线"><a href="#删除侧边栏目录下划线" class="headerlink" title="删除侧边栏目录下划线"></a>删除侧边栏目录下划线</h2><p>找到对应的a标签</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 修改链接样式</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0593d3</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#ff106c</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span>, <span class="selector-tag">span</span><span class="selector-class">.exturl</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#ff106c</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="顶部阅读进度条"><a href="#顶部阅读进度条" class="headerlink" title="顶部阅读进度条"></a>顶部阅读进度条</h3><p>主题配置文件 <code>next.yml</code> 中修改 <code>reading_progress</code> 选项。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 显示在顶部</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">top</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">&quot;#06d633&quot;</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">3px</span></span><br></pre></td></tr></table></figure><h3 id="在每篇文章末尾统一添加“本文结束”标记"><a href="#在每篇文章末尾统一添加“本文结束”标记" class="headerlink" title=". 在每篇文章末尾统一添加“本文结束”标记"></a>. 在每篇文章末尾统一添加“本文结束”标记</h3><p><strong>实现效果图</strong></p><p><a href="http://upload-images.jianshu.io/upload_images/5308475-90be73acbc5f8a7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><img src="http://upload-images.jianshu.io/upload_images/5308475-90be73acbc5f8a7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a></p><p><strong>具体实现方法</strong></p><p>在路径 <code>\themes\next\layout\_macro</code> 中新建 <code>passage-end-tag.swig</code> 文件,并添加以下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class&#x3D;&quot;fa fa-paw&quot;&gt;&lt;&#x2F;i&gt;感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><p>接着打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code> 之后， <code>post-footer</code> 之前添加如下画红色部分代码（post-footer之前两个DIV）：</p><p>代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &#39;passage-end-tag.swig&#39; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><p>然后打开主题配置文件（<code>_config.yml</code>),在末尾添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure><h3 id="标签页面样式"><a href="#标签页面样式" class="headerlink" title="标签页面样式"></a>标签页面样式</h3><p>在 hexo/source/_data/styles.styl 文件加入下面样式。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.tag-cloud a &#123;</span><br><span class="line">    box-shadow: 0 1px 3px #6f42c1, 0 1px 2px #d9534f;</span><br><span class="line">    padding: 2px 10px;</span><br><span class="line">    margin: 8px;</span><br><span class="line">    background: rgba(193,66,92,0);</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-radius: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="页面阅读统计"><a href="#页面阅读统计" class="headerlink" title="页面阅读统计"></a>页面阅读统计</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: false              # 设true 开启</span><br><span class="line">  total_visitors: true       # 总阅读人数（uv数）</span><br><span class="line">  total_visitors_icon: user  # 阅读总人数的图标</span><br><span class="line">  total_views: true          # 总阅读次数（pv数）</span><br><span class="line">  total_views_icon: eye      # 阅读总次数的图标</span><br><span class="line">  post_views: true           # 开启内容阅读次数</span><br><span class="line">  post_views_icon: eye       # 内容页阅读数的图标</span><br></pre></td></tr></table></figure><h3 id="首页文章不展示全文显示摘要"><a href="#首页文章不展示全文显示摘要" class="headerlink" title="首页文章不展示全文显示摘要"></a>首页文章不展示全文显示摘要</h3><p>我们可以在主题配置文件中设置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">scroll_to_more: true      # 点击阅读全文后是否跳到&lt;!--more--&gt;标记处,设为false时点击阅读全文可以从头阅读</span><br><span class="line"></span><br><span class="line">save_scroll: false        # 自动保存每篇文章或页面上一次滚动的地方</span><br><span class="line"></span><br><span class="line">excerpt_description: true # 自动在首页对文章进行摘要描述作为前言文本</span><br><span class="line"></span><br><span class="line">auto_excerpt:   # 是否自动截取摘要</span><br><span class="line">  enable: false # 设置为true则自动截取150字当做首页摘要</span><br><span class="line">  length: 150   # 自动截取的字数</span><br></pre></td></tr></table></figure><blockquote><p>官方公告：<code>auto_excerpt</code> 可以自动截断文章内容作为摘要。此功能不是一个 Hexo 主题应当负责的，这为主题的维护者带来了太大压力。自 7.6.0 版本开始，此功能被移除，请自行安装第三方插件，或阅读 Hexo 有关文档。当然，我们仍然建议通过 <code>&lt;!-- more --&gt;</code> 来精确控制 Read More 的位置。</p></blockquote><h3 id="hexo-new-post-打开markdown-编辑器"><a href="#hexo-new-post-打开markdown-编辑器" class="headerlink" title="hexo new post 打开markdown 编辑器"></a>hexo new post 打开markdown 编辑器</h3><p>方法<br>在博客根目录里新建一个scripts 的 folder。</p><p>在这个 scripts 的 folder 里新建一个js文件，內容如下 (Typora 是我用的编辑器，把路径和软件修改成你想要的）：</p><p>For Window:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var spawn &#x3D; require(&#39;child_process&#39;).exec;</span><br><span class="line"></span><br><span class="line">hexo.on(&#39;new&#39;, function(data)&#123;</span><br><span class="line">  spawn(&#39;start  &quot;C:\Program Files (x86)\Brackets\Brackets.exe&quot; &#39; + data.path);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>For Mac:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var exec &#x3D; require(&#39;child_process&#39;).exec;</span><br><span class="line"></span><br><span class="line">hexo.on(&#39;new&#39;, function(data)&#123;</span><br><span class="line">    exec(&#39;open -a &quot;..\Brackets\Brackets.app&quot; &#39; + data.path);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;个人博客搭建一些自定义设置，基于hexo + next +github pages&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="hexo" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://dieselchen.work/tags/hexo/"/>
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo搭建评论系统Valine</title>
+    <link href="https://dieselchen.work/archives/bc2aa60e.html"/>
+    <id>https://dieselchen.work/archives/bc2aa60e.html</id>
+    <published>2021-02-26T03:52:06.000Z</published>
+    <updated>2021-04-07T09:04:07.759Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>hexo 搭建评论系统 valine，记录一下相关配置</p></blockquote><span id="more"></span><h3 id="参考各位大佬的链接"><a href="#参考各位大佬的链接" class="headerlink" title="参考各位大佬的链接"></a>参考各位大佬的链接</h3><ul><li><a href="https://deserts.io/valine-admin-document/">Deserts</a>的文章<ul><li><a href="https://deserts.io/valine-admin-document/">《Valine Admin 配置手册》</a></li></ul></li><li><a href="https://postgres.fun/20190107095300.html">Francs’s blog</a>的文章<ul><li><a href="https://postgres.fun/20190107095300.html">《Hexo: 添加Valine评论(邮件通知、评论列表头像)》</a></li></ul></li><li><a href="https://tding.top/archives/ed8b904f.html">小丁的个人博客</a>的文章<ul><li><a href="https://tding.top/archives/ed8b904f.html">《Hexo-NexT 配置 Valine》</a></li></ul></li></ul><h3 id="LeanCloud注册"><a href="#LeanCloud注册" class="headerlink" title="LeanCloud注册"></a>LeanCloud注册</h3><p>Valine 用 LeanCloud 作为数据库，所以我们需要注册一个 <a href="https://leancloud.cn/">LeanCloud 账号</a>。</p><ol><li>注册完以后需要创建一个应用，然后 <strong>进入应用 -&gt; 设置 -&gt; 应用 key</strong>，得到 appid、appkey。</li><li>我们需要在 <strong>Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名</strong>把你的域名加进去</li></ol><p><span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>注意点：</span> 注册的时候一定要选择国际版，如果你选择的是<code>华北</code>或者<code>华东</code>的话，Valine 后台评论管理是需要备案才能绑定的</p><h3 id="NexT-配置"><a href="#NexT-配置" class="headerlink" title="NexT 配置"></a>NexT 配置</h3><p>由于 NexT 7.1.2 已经内置了 Valine，所以我们只需要进行简单的配置即可。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="comment"># You can get your appid and appkey from https://leancloud.cn</span></span><br><span class="line"><span class="comment"># More info available at https://valine.js.org</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.</span></span><br><span class="line">  <span class="attr">appid:</span>  <span class="comment"># your leancloud application appid</span></span><br><span class="line">  <span class="attr">appkey:</span>  <span class="comment"># your leancloud application appkey</span></span><br><span class="line">  <span class="attr">notify:</span> <span class="literal">false</span> <span class="comment"># mail notifier, See: https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  <span class="attr">verify:</span> <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">&#x27;ヾﾉ≧∀≦)o来啊，快活啊!&#x27;</span> <span class="comment"># comment box placeholder</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">mm</span> <span class="comment"># gravatar style</span></span><br><span class="line">  <span class="attr">guest_info:</span> <span class="string">nick,mail,link</span> <span class="comment"># custom comment header</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">10</span> <span class="comment"># pagination size</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-cn</span> <span class="comment"># language, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors&#x27; for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># if false, comment count will only be displayed in post page, not in home page</span></span><br></pre></td></tr></table></figure><p>主要就是填入前一步得到的 appid、appkey。然后由于我后面要用<strong>更完善的第三方邮件提醒 Valine-Admin</strong>，所以这里我关闭了自带的邮件提醒 <code>notify</code>。</p><p>由于自带的 CDN 加载很慢，所以这里我们在 NexT 配置文件<code>_config.yml</code> 中改成第三方 CDN：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="comment"># valine</span></span><br><span class="line">  <span class="comment"># See: https://github.com/xCss/Valine</span></span><br><span class="line">  <span class="comment"># Example:</span></span><br><span class="line">  <span class="comment"># valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js</span></span><br><span class="line">  <span class="comment"># valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.4/Valine.min.js</span></span><br><span class="line">  <span class="attr">valine:</span> <span class="string">//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js</span></span><br></pre></td></tr></table></figure><p>到目前为止，我们就可以正常使用 Valine 了。</p><p>下面是一些可选的高级配置，比如我想要评论后得到邮件通知、垃圾邮件过滤，那就需要配置 Valine Admin。</p><h3 id="Valine-Admin相关配置"><a href="#Valine-Admin相关配置" class="headerlink" title="Valine Admin相关配置"></a>Valine Admin相关配置</h3><p>选择<code>云引擎</code>–&gt;<code>设置</code>–&gt;<code>云引擎域名</code>(<code>强调这个就是LeancLoud的后台地址</code>输入自己喜欢的一个的前缀)<br>后台地址后面加上<code>/sign-up</code>就可以注册<br>例如：<a href="https://letetest.avosapps.us/sign-up">https://letetest.avosapps.us/sign-up</a></p><p><img src="https://image.dieselchen.work/uPic/2021/04/07/07.png" alt="07"><br>当然如果你有自己的域名也可以选择绑定自己的域名，选择<code>设置</code>–&gt;<code>域名绑定</code>–&gt;<code>云引擎域名</code><br><img src="https://image.dieselchen.work/uPic/2021%2003%2017%20image-20210317111459392%20.png" alt="image-20210317111459392"></p><p><span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>注意</span> 如果想要绑定自己网站的二级域名有两种方式：</p><ol><li>注册国际版本，这样域名不备案就行</li><li>注册国内版本，域名需要备案。</li></ol><p>环境变量：</p><table><thead><tr><th align="left">变量</th><th align="left">示例</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left">SITE_NAME</td><td align="left">DieselChen</td><td align="left"><code>[必填]</code> 博客名称</td></tr><tr><td align="left">SITE_URL</td><td align="left"><code>https://dieselchen.work/</code></td><td align="left"><code>[必填]</code> 首页地址</td></tr><tr><td align="left">SMTP_SERVICE</td><td align="left">QQ</td><td align="left"><code>[新版支持]</code> 邮件服务提供商，支持 QQ、163、126、Gmail 以及 更多</td></tr><tr><td align="left">SMTP_USER</td><td align="left"><a href="mailto:xxxxxx@qq.com">xxxxxx@qq.com</a></td><td align="left"><code>[必填]</code>SMTP 登录用户</td></tr><tr><td align="left">SMTP_PASS</td><td align="left">ccxxxxxxxxch</td><td align="left"><code>[必填]</code>SMTP 登录密码（QQ 邮箱需要获取独立密码）</td></tr><tr><td align="left">SENDER_NAME</td><td align="left">DieselChen</td><td align="left"><code>[必填]</code> 发件人</td></tr><tr><td align="left">SENDER_EMAIL</td><td align="left"><a href="mailto:xxxxxx@qq.com">xxxxxx@qq.com</a></td><td align="left"><code>[必填]</code> 发件邮箱</td></tr><tr><td align="left">ADMIN_URL</td><td align="left"><code>https://valine.dieselchen.work/</code></td><td align="left"><code>[建议]</code>Web 主机二级域名，用于自动唤醒</td></tr><tr><td align="left">BLOGGER_EMAIL</td><td align="left"><a href="mailto:xxxxx@gmail.com">xxxxx@gmail.com</a></td><td align="left"><code>[可选]</code> 博主通知收件地址，默认使用 SENDER_EMAIL</td></tr><tr><td align="left">AKISMET_KEY</td><td align="left">xxxxxxxxxxxx</td><td align="left"><code>[可选]</code>Akismet Key 用于垃圾评论检测，设为 MANUAL_REVIEW 开启人工审核，留空不使用反垃圾</td></tr></tbody></table><h3 id="邮件通知模板"><a href="#邮件通知模板" class="headerlink" title="邮件通知模板"></a>邮件通知模板</h3><p>邮件通知模板在<strong>云引擎环境变量</strong>中设定，可自定义通知邮件标题及内容模板。</p><table><thead><tr><th align="left">环境变量</th><th align="left">示例</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left"><code>MAIL_SUBJECT</code></td><td align="left"><code>$&#123;PARENT_NICK&#125;</code>，您在 <code>$&#123;SITE_NAME&#125;</code> 上的评论收到了回复</td><td align="left"><code>[可选]</code>@通知邮件主题（标题）模板</td></tr><tr><td align="left"><code>MAIL_TEMPLATE</code></td><td align="left">见下文</td><td align="left"><code>[可选]</code>@通知邮件内容模板</td></tr><tr><td align="left"><code>MAIL_SUBJECT_ADMIN</code></td><td align="left"><code>$&#123;SITE_NAME&#125;</code> 上有新评论了</td><td align="left"><code>[可选]</code> 博主邮件通知主题模板</td></tr><tr><td align="left"><code>MAIL_TEMPLATE_ADMIN</code></td><td align="left">见下文</td><td align="left"><code>[可选]</code> 博主邮件通知内容模板</td></tr></tbody></table><p>邮件通知包含两种，分别是<code>被@通知</code>（上面的 <code>MAIL_TEMPLATE</code>）和<code>博主通知</code>（上面的 <code>MAIL_TEMPLATE_ADMIN</code>），这两种模板都可以完全自定义。默认使用经典的蓝色风格模板。</p><p>默认<code>被@通知</code>邮件内容模板如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;&quot;&gt;&lt;h2 style&#x3D;&quot;border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;&quot;&gt;您在&lt;a style&#x3D;&quot;text-decoration:none;color: #12ADDB;&quot; href&#x3D;&quot;$&#123;SITE_URL&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;            $&#123;SITE_NAME&#125;&lt;&#x2F;a&gt;上的评论有了新的回复&lt;&#x2F;h2&gt; $&#123;PARENT_NICK&#125; 同学，您曾发表评论：&lt;div style&#x3D;&quot;padding:0 12px 0 12px;margin-top:18px&quot;&gt;&lt;div style&#x3D;&quot;background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;&quot;&gt;            $&#123;PARENT_COMMENT&#125;&lt;&#x2F;div&gt;&lt;p&gt;&lt;strong&gt;$&#123;NICK&#125;&lt;&#x2F;strong&gt;回复说：&lt;&#x2F;p&gt;&lt;div style&#x3D;&quot;background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;&quot;&gt; $&#123;COMMENT&#125;&lt;&#x2F;div&gt;&lt;p&gt;您可以点击&lt;a style&#x3D;&quot;text-decoration:none; color:#12addb&quot; href&#x3D;&quot;$&#123;POST_URL&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;查看回复的完整內容&lt;&#x2F;a&gt;，欢迎再次光临&lt;a style&#x3D;&quot;text-decoration:none; color:#12addb&quot; href&#x3D;&quot;$&#123;SITE_URL&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;$&#123;SITE_NAME&#125;&lt;&#x2F;a&gt;。&lt;br&gt;&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><p>默认博主通知邮件内容模板如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;&quot;&gt;&lt;h2 style&#x3D;&quot;border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;&quot;&gt;您在&lt;a style&#x3D;&quot;text-decoration:none;color: #12ADDB;&quot; href&#x3D;&quot;$&#123;SITE_URL&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;$&#123;SITE_NAME&#125;&lt;&#x2F;a&gt;上的文章有了新的评论&lt;&#x2F;h2&gt;&lt;p&gt;&lt;strong&gt;$&#123;NICK&#125;&lt;&#x2F;strong&gt;回复说：&lt;&#x2F;p&gt;&lt;div style&#x3D;&quot;background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;&quot;&gt; $&#123;COMMENT&#125;&lt;&#x2F;div&gt;&lt;p&gt;您可以点击&lt;a style&#x3D;&quot;text-decoration:none; color:#12addb&quot; href&#x3D;&quot;$&#123;POST_URL&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;查看回复的完整內容&lt;&#x2F;a&gt;&lt;br&gt;&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><p>这里还提供一个彩虹风格的 <code>@通知</code>邮件模板代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;border-radius: 10px 10px 10px 10px;font-size:13px;    color: #555555;width: 666px;font-family:&#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;margin:50px auto;border:1px solid #eee;max-width:100%;background: #ffffff repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);&quot;&gt;&lt;div style&#x3D;&quot;width:100%;background:#49BDAD;color:#ffffff;border-radius: 10px 10px 0 0;background-image: -moz-linear-gradient(0deg, rgb(67, 198, 184), rgb(255, 209, 244));background-image: -webkit-linear-gradient(0deg, rgb(67, 198, 184), rgb(255, 209, 244));height: 66px;&quot;&gt;&lt;p style&#x3D;&quot;font-size:15px;word-break:break-all;padding: 23px 32px;margin:0;background-color: hsla(0,0%,100%,.4);border-radius: 10px 10px 0 0;&quot;&gt;您在&lt;a style&#x3D;&quot;text-decoration:none;color: #ffffff;&quot; href&#x3D;&quot;$&#123;SITE_URL&#125;&quot;&gt; $&#123;SITE_NAME&#125;&lt;&#x2F;a&gt;上的留言有新回复啦！&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;&lt;div style&#x3D;&quot;margin:40px auto;width:90%&quot;&gt;&lt;p&gt;$&#123;PARENT_NICK&#125; 同学，您曾在文章上发表评论：&lt;&#x2F;p&gt;&lt;div style&#x3D;&quot;background: #fafafa repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);margin:20px 0px;padding:15px;border-radius:5px;font-size:14px;color:#555555;&quot;&gt;$&#123;PARENT_COMMENT&#125;&lt;&#x2F;div&gt;&lt;p&gt;$&#123;NICK&#125; 给您的回复如下：&lt;&#x2F;p&gt;&lt;div style&#x3D;&quot;background: #fafafa repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);margin:20px 0px;padding:15px;border-radius:5px;font-size:14px;color:#555555;&quot;&gt;$&#123;COMMENT&#125;&lt;&#x2F;div&gt;&lt;p&gt;您可以点击&lt;a style&#x3D;&quot;text-decoration:none; color:#12addb&quot; href&#x3D;&quot;$&#123;POST_URL&#125;#comments&quot;&gt;查看回复的完整內容&lt;&#x2F;a&gt;，欢迎再次光临&lt;a style&#x3D;&quot;text-decoration:none; color:#12addb&quot;                href&#x3D;&quot;$&#123;SITE_URL&#125;&quot;&gt; $&#123;SITE_NAME&#125;&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;a:link&#123;text-decoration:none&#125;a:visited&#123;text-decoration:none&#125;a:hover&#123;text-decoration:none&#125;a:active&#123;text-decoration:none&#125;&lt;&#x2F;style&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><h3 id="定时任务设置"><a href="#定时任务设置" class="headerlink" title="定时任务设置"></a>定时任务设置</h3><p>目前实现了两种云函数定时任务：</p><ul><li>(1) 自动唤醒，定时访问 Web APP 二级域名防止云引擎休眠；</li><li>(2) 每天定时检查 24 小时内漏发的邮件通知。</li></ul><p>进入云引擎 - 定时任务中，创建定时器，创建两个定时任务。</p><ul><li>选择 <code>self-wake</code> 云函数，Cron 表达式为 <code>0 0/30 7-23 * * ?</code>，表示每天早 6 点到晚 23 点每隔 30 分钟访问云引擎，<code>ADMIN_URL</code> 环境变量务必设置正确</li><li>选择 <code>resend-mails</code> 云函数，Cron 表达式为 <code>0 0 8 * * ?</code>，表示每天早 8 点检查过去 24 小时内漏发的通知邮件并补发</li></ul><p>添加定时器后记得点击启动方可生效。</p><p>至此，Valine Admin 已经可以正常工作，更多以下是可选的进阶配置。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;hexo 搭建评论系统 valine，记录一下相关配置&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="valine" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/valine/"/>
+    
+    
+    <category term="hexo" scheme="https://dieselchen.work/tags/hexo/"/>
+    
+    <category term="valine" scheme="https://dieselchen.work/tags/valine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Snippets加速修改markdown的颜色背景色</title>
+    <link href="https://dieselchen.work/archives/ba1f9be9.html"/>
+    <id>https://dieselchen.work/archives/ba1f9be9.html</id>
+    <published>2021-02-25T19:01:54.000Z</published>
+    <updated>2021-03-17T03:19:02.963Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>新认识了一款mac中的效率神奇 Alfred 4，和mac自带的spotlight<br>  很相似，据网友说更加强大，感觉和utools也差不多，本次主要使用了Snippets的功能。</p></blockquote><span id="more"></span><p>typora里面如何快捷改变字体颜色？平常我们可以通过下述代码进行字体颜色修改：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;red&quot;</span>&gt;</span>需要改变颜色的内容<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">or</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&#x27;color:字体颜色;background:背景颜色;font-size:文字大小;&#x27;</span>&gt;</span>需要改变颜色的内容<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><p>但是每次需要输入的字符未免有些长，不知道大家在使用中是如何解决的？</p><h3 id="mac的方法：Alfred-代码块变法"><a href="#mac的方法：Alfred-代码块变法" class="headerlink" title="mac的方法：Alfred 代码块变法"></a>mac的方法：<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Alfred 代码块变法</span></h3><p>当然任何支持<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Snippets</span>的软件均可（例如 Text Expander），由于 <span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Alfred 4</span>用的太过顺手，那么话不多说，下面开始介绍</p><ol><li>首先打开Alfred 4 的偏好设置<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Features -&gt; Snippets</span></li><li>点击添加一条记录</li></ol><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317111813537.png" alt="image-20210317111813537"></p><pre><code> 3. 添加内容如下</code></pre><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317111856198.png" alt="image-20210317111856198"></p><p>Name可以任意设置，keyword设置为自定义的快捷键即可，其余的均为默认</p><p>Snippets文本如下</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&#x27;color:&#123;cursor&#125;;background:背景颜色;font-size:文字大小;&#x27;</span>&gt;</span>&#123;clipboard:0&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><p>为了方便起见，这里直接将剪贴板中最新的记录当作文本，即{clipboard:0}，所以使用时直接⌘+X即可</p><p>其中<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>{cursor}</span>是保证插入后即可直接设置颜色，不需要重复移动光标</p><p>添加后点击保存即可</p><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>最后在此强调一下使用流程（假设已经）</p><ol><li>使用⌘+X拷贝至剪贴板，而后使用快捷键打开alfred</li><li>使用之前设置的keyword 即可完成输入（当然也可以修改为输入keyword直接扩展为上述html代码，如下（keyword为<code>span</code>）</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;新认识了一款mac中的效率神奇 Alfred 4，和mac自带的spotlight&lt;br&gt;  很相似，据网友说更加强大，感觉和utools也差不多，本次主要使用了Snippets的功能。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="效率工具" scheme="https://dieselchen.work/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Snippets" scheme="https://dieselchen.work/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/Snippets/"/>
+    
+    
+    <category term="Alfred" scheme="https://dieselchen.work/tags/Alfred/"/>
+    
+    <category term="Snippets" scheme="https://dieselchen.work/tags/Snippets/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本博客hexo用到的插件总结</title>
+    <link href="https://dieselchen.work/archives/18ebb8d9.html"/>
+    <id>https://dieselchen.work/archives/18ebb8d9.html</id>
+    <published>2021-02-25T18:47:27.000Z</published>
+    <updated>2021-02-26T08:52:41.779Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>hexo + next + github pages 搭建的个人静态博客，网上有很多搭建的过程，这里就不再叙述。重点记录一下博客中用到的插件</p></blockquote><span id="more"></span><h2 id="Hexo-一键部署插件"><a href="#Hexo-一键部署插件" class="headerlink" title="Hexo 一键部署插件"></a>Hexo 一键部署插件</h2><h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><ul><li><a href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></li></ul><h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>然后修改站点配置文件 <span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>_config.yml</span>中的配置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="string">-</span><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">git@github.com:Diesel-Chen/diesel-chen.github.io.git</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><h2 id="Hexo文章永久链接插件"><a href="#Hexo文章永久链接插件" class="headerlink" title="Hexo文章永久链接插件"></a>Hexo文章永久链接插件</h2><h3 id="地址-1"><a href="#地址-1" class="headerlink" title="地址"></a>地址</h3><ul><li><a href="https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a></li></ul><h3 id="安装配置-1"><a href="#安装配置-1" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>然后我们可以在站点配置文件<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>_config.yml</span>中修改为:</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://dieselchen.work</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">archives/:abbrlink.html</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line"><span class="attr">alg:</span> <span class="string">crc32</span></span><br><span class="line">  <span class="attr">rep:</span> <span class="string">hex</span></span><br><span class="line">  <span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure><h2 id="Hexo字数和阅读时间统计插件"><a href="#Hexo字数和阅读时间统计插件" class="headerlink" title="Hexo字数和阅读时间统计插件"></a>Hexo字数和阅读时间统计插件</h2><h3 id="地址-2"><a href="#地址-2" class="headerlink" title="地址"></a>地址</h3><ul><li><a href="https://github.com/theme-next/hexo-symbols-count-time">hexo-symbols-count-time</a></li></ul><h3 id="安装配置-2"><a href="#安装配置-2" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure><p>在站点配置文件<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>_config.yml</span>中添加一下代码:</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">total_symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">total_time:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>然后由于此插件集成在Next中，然后修改主题配置文件<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>_config.yml</span>:</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">separated_meta:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">item_text_post:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">item_text_total:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">awl:</span> <span class="number">4</span></span><br><span class="line"><span class="attr">wpm:</span> <span class="number">275</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;hexo + next + github pages 搭建的个人静态博客，网上有很多搭建的过程，这里就不再叙述。重点记录一下博客中用到的插件&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="hexo" scheme="https://dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://dieselchen.work/tags/hexo/"/>
+    
+    <category term="博客搭建" scheme="https://dieselchen.work/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+</feed>
