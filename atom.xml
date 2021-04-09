@@ -6,7 +6,7 @@
   <link href="https://www.dieselchen.work/atom.xml" rel="self"/>
   
   <link href="https://www.dieselchen.work/"/>
-  <updated>2021-04-07T09:30:33.421Z</updated>
+  <updated>2021-04-09T15:13:21.814Z</updated>
   <id>https://www.dieselchen.work/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://www.dieselchen.work/archives/f05bbbc9.html"/>
     <id>https://www.dieselchen.work/archives/f05bbbc9.html</id>
     <published>2021-04-07T08:50:07.000Z</published>
-    <updated>2021-04-07T09:30:33.421Z</updated>
+    <updated>2021-04-09T15:13:21.814Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>学习了慕课网 golang爬虫。爬取珍爱网，从单机版–&gt;并发版–&gt;分布式版</p><p>本文对此过程做个总结</p></blockquote><span id="more"></span>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>学习了慕课网 golang爬虫。爬取珍爱网，从单机版–&gt;并发版–&gt;分布式版</p><p>本文对此过程做个总结</p></blockquote><span id="more"></span><h2 id="架构图演进"><a href="#架构图演进" class="headerlink" title="架构图演进"></a>架构图演进</h2><h3 id="单机版爬虫"><a href="#单机版爬虫" class="headerlink" title="单机版爬虫"></a>单机版爬虫</h3><p><img src="https://image.dieselchen.work/uPic/2021/04/09/%E5%8D%95%E6%9C%BA%E7%89%88%20%E7%88%AC%E8%99%AB.png" alt="单机版 爬虫"></p><h3 id="并发版爬虫-简单版调度器"><a href="#并发版爬虫-简单版调度器" class="headerlink" title="并发版爬虫(简单版调度器)"></a>并发版爬虫(简单版调度器)</h3><ul><li>把fetcher和parser封装成worker，输入request，输出requestresult.</li><li>新增scheduler，engine拿到request扔给scheduler。worker的输入输出都是channel</li><li>所有的worker共用一个输入。致命缺点！会产生循环等待</li></ul><p><img src="https://image.dieselchen.work/uPic/2021/04/09/%E5%B9%B6%E5%8F%91%E7%89%88%E7%88%AC%E8%99%AB%EF%BC%88%E7%AE%80%E5%8D%95%E7%89%88%E8%B0%83%E5%BA%A6%E5%99%A8%EF%BC%89.png" alt="并发版爬虫（简单版调度器）"></p><h3 id="并发版爬虫-并发版调度器"><a href="#并发版爬虫-并发版调度器" class="headerlink" title="并发版爬虫(并发版调度器)"></a>并发版爬虫(并发版调度器)</h3><ul><li>engine把request送给scheduler，scheduler给每个request启动一个groutine</li></ul>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
