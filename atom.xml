@@ -6,7 +6,7 @@
   <link href="https://www.dieselchen.work/atom.xml" rel="self"/>
   
   <link href="https://www.dieselchen.work/"/>
-  <updated>2021-04-09T15:13:21.814Z</updated>
+  <updated>2021-05-07T04:10:51.202Z</updated>
   <id>https://www.dieselchen.work/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Gorm遇到的坑</title>
+    <link href="https://www.dieselchen.work/archives/3e3fcedd.html"/>
+    <id>https://www.dieselchen.work/archives/3e3fcedd.html</id>
+    <published>2021-05-07T04:06:19.000Z</published>
+    <updated>2021-05-07T04:10:51.202Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使用Gorm遇到的坑</p></blockquote><span id="more"></span><p>Gorm是用go语言编写的orm框架，它将数据库的结构与语言(golang)本身的数据结构对应了起来，其目的是为了加快我们CRUD的速度，简化sql语句的书写，利用对象的思想，让Gorm框架为我们拼接sql语句。但是在使用过程中有不少的坑还是需要注意一下。</p><h3 id="使用struct更新仅适用于非零值"><a href="#使用struct更新仅适用于非零值" class="headerlink" title="使用struct更新仅适用于非零值"></a>使用struct更新仅适用于非零值</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">user:=User&#123;</span><br><span class="line">Name:<span class="string">&quot;&quot;</span>,</span><br><span class="line">Age:<span class="number">0</span>,</span><br><span class="line">Actived:<span class="literal">false</span>,</span><br><span class="line">&#125;</span><br><span class="line">db.Model(&amp;user).Updates(user)</span><br><span class="line"><span class="comment">//此时不会更新这些零值，如需更新零值使用map</span></span><br><span class="line">userMap:=<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>&#123;&#125;&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>:<span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>:<span class="number">0</span>,</span><br><span class="line">  <span class="string">&quot;actived&quot;</span>:<span class="number">0</span>,</span><br><span class="line">&#125;</span><br><span class="line">db.Model(&amp;user).Updates(userMap)</span><br></pre></td></tr></table></figure><h3 id="Gorm表名尾部自动加s"><a href="#Gorm表名尾部自动加s" class="headerlink" title="Gorm表名尾部自动加s"></a>Gorm表名尾部自动加s</h3><p>Gorm处理数据结构的时候遵循的是首字母规则和驼峰规则。对于结构体User，根据约定，其表名为users。</p><p>这里有两种方式去修改表名：第一种就是去掉这个默认设置；第二种就是在保留默认设置的基础上通过重新设定表名来替换。</p><p>先说如何通过重新设定表名来替换，可以实现 <code>Tabler</code> 接口来更改默认表名，例如：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Tabler <span class="keyword">interface</span> &#123;</span><br><span class="line">TableName() <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// TableName 会将User的表名重写为 `new_user`</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(User)</span> <span class="title">TableName</span><span class="params">()</span><span class="title">string</span></span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="string">&quot;new_user&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可以在创建数据库连接的时候，去掉这个默认设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.SingularTable(true)</span><br></pre></td></tr></table></figure><h3 id="错误的使用ErrRecordNotFound"><a href="#错误的使用ErrRecordNotFound" class="headerlink" title="错误的使用ErrRecordNotFound"></a>错误的使用ErrRecordNotFound</h3><p>在我印象中有个错误的认知：如果Gorm没有找到record，则会返回<code>ErrRecordNotFound</code> 的错误，但是在具体使用中并不是这样</p><h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  db := gorm.Open(<span class="string">&quot;mysql&quot;</span>,url)</span><br><span class="line">  user := &amp;User&#123;&#125;</span><br><span class="line">  users := <span class="built_in">make</span>([]*User, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">  err := db.Model(user).Where(<span class="string">&quot;id = ?&quot;</span>, <span class="number">1</span>).First(user).Error</span><br><span class="line">  fmt.Println(err, user)</span><br><span class="line"></span><br><span class="line">  err = db.Model(user).Where(<span class="string">&quot;id = ?&quot;</span>, <span class="number">1</span>).Find(&amp;users).Error</span><br><span class="line">  fmt.Println(err, user)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">record not found &amp;&#123;<span class="number">0</span>  &#125;</span><br><span class="line">&lt;<span class="literal">nil</span>&gt; &amp;&#123;<span class="number">0</span>  &#125;</span><br></pre></td></tr></table></figure><h3 id="使用Gorm-Model后无法查询数据"><a href="#使用Gorm-Model后无法查询数据" class="headerlink" title="使用Gorm.Model后无法查询数据"></a>使用Gorm.Model后无法查询数据</h3><ul><li>Scan error on column index 1, name “created_at”: unsupported Scan, storing driver.Value type []uint8</li></ul><p>解决方法：</p><p>打开数据库的时候加上parseTime=true</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root:123456@tcp(127.0.0.1:3306)&#x2F;mapdb?charset&#x3D;utf8&amp;parseTime&#x3D;true</span><br></pre></td></tr></table></figure><h3 id="数据库字段映射"><a href="#数据库字段映射" class="headerlink" title="数据库字段映射"></a>数据库字段映射</h3><ul><li>正常的数据库字段映射 user_name 映射为UserName</li><li>带梳子的数据库字段映射 api_ip_1映射为ApiIp_1而非ApiIp1</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;使用Gorm遇到的坑&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    
+    
+    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    
+  </entry>
   
   <entry>
     <title>golang原生实现爬虫架构</title>
