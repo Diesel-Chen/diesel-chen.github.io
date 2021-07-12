@@ -6,7 +6,7 @@
   <link href="https://www.dieselchen.work/atom.xml" rel="self"/>
   
   <link href="https://www.dieselchen.work/"/>
-  <updated>2021-05-27T04:17:45.940Z</updated>
+  <updated>2021-07-12T09:50:07.067Z</updated>
   <id>https://www.dieselchen.work/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>git提交了想撤回怎么做？</title>
+    <link href="https://www.dieselchen.work/archives/fc0a4be0.html"/>
+    <id>https://www.dieselchen.work/archives/fc0a4be0.html</id>
+    <published>2021-07-12T09:47:37.000Z</published>
+    <updated>2021-07-12T09:50:07.067Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>写完代码后，我们一般这样 git add . //添加所有文件 git commit -m “本功能全部完成”   执行完commit后，想撤回commit，怎么办？</p></blockquote><span id="more"></span><p>写完代码后，我们一般这样</p><p>git add . //添加所有文件</p><p>git commit -m “本功能全部完成”</p><p>执行完commit后，想撤回commit，怎么办？</p><p>这样凉拌：</p><p><strong>git reset –soft HEAD^</strong></p><p>这样就成功的撤销了你的commit</p><p>注意，仅仅是撤回commit操作，您写的代码仍然保留。</p><h2 id="说一下个人理解"><a href="#说一下个人理解" class="headerlink" title="说一下个人理解"></a>说一下个人理解</h2><p>HEAD^的意思是上一个版本，也可以写成HEAD~1</p><p>如果你进行了2次commit，想都撤回，可以使用HEAD~2</p><h2 id="至于这几个参数："><a href="#至于这几个参数：" class="headerlink" title="至于这几个参数："></a>至于这几个参数：</h2><h3 id="–mixed"><a href="#–mixed" class="headerlink" title="–mixed"></a>–mixed</h3><p>意思是：不删除工作空间改动代码，撤销commit，并且撤销git add . 操作</p><p>这个为默认参数,git reset –mixed HEAD^ 和 git reset HEAD^ 效果是一样的。</p><h3 id="–soft"><a href="#–soft" class="headerlink" title="–soft"></a>–soft</h3><p>不删除工作空间改动代码，撤销commit，不撤销git add . </p><h3 id="–hard"><a href="#–hard" class="headerlink" title="–hard"></a>–hard</h3><p>删除工作空间改动代码，撤销commit，撤销git add . </p><p>注意完成这个操作后，就恢复到了上一次的commit状态。</p><h3 id="顺便说一下，如果commit注释写错了，只是想改一下注释，只需要："><a href="#顺便说一下，如果commit注释写错了，只是想改一下注释，只需要：" class="headerlink" title="顺便说一下，如果commit注释写错了，只是想改一下注释，只需要："></a>顺便说一下，如果commit注释写错了，只是想改一下注释，只需要：</h3><p>git commit –amend</p><p>此时会进入默认vim编辑器，修改注释完毕后保存就好了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;写完代码后，我们一般这样 git add . //添加所有文件 git commit -m “本功能全部完成”   执行完commit后，想撤回commit，怎么办？&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Git" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Git/"/>
+    
+    
+    <category term="Git" scheme="https://www.dieselchen.work/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>golang精度丢失问题</title>
     <link href="https://www.dieselchen.work/archives/9359d6b3.html"/>
     <id>https://www.dieselchen.work/archives/9359d6b3.html</id>
     <published>2021-05-27T04:11:36.000Z</published>
-    <updated>2021-05-27T04:17:45.940Z</updated>
+    <updated>2021-05-27T04:18:07.696Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>最近fix一个奇怪的bug，这个bug源于是为了解决商品价格在计算的时候因为有小数，在计算的时候由于存在精度丢失所以选择了乘 100 以分单位进行计算。但是在golang中 float64类型的 13.8 ✖️ 100 ！=1380</p></blockquote><span id="more"></span><p>在遇到这个bug之前。我一度以为浮点数的精度丢失问题，在保留2位小数的情况下，乘100变成整数再进行加减计算就不会丢精度，但事实是，乘法本身算出来的数就已经走样了。</p><h3 id="浮点数如何存储的-IEEE-754"><a href="#浮点数如何存储的-IEEE-754" class="headerlink" title="浮点数如何存储的-IEEE-754"></a>浮点数如何存储的-IEEE-754</h3><p>浮点数数据类型主要有：单精度float32、双精度float64</p><p><img src="https://image.dieselchen.work/uPic/2021/05/27/image-20210527115559707.png" alt="image-20210527115559707"></p><p><img src="https://image.dieselchen.work/uPic/2021/05/27/image-20210527115620932.png" alt="image-20210527115620932"></p><p>IEEE-754 标准是一个浮点数标准，存在 32、64、128 bit 三种格式（上面两幅图分别是 32 bit 和 64 bit 的情况，结构是一致的）</p><p>IEEE-754 标准将 64 位分为三部分：</p><ul><li><strong>sign</strong>，1 bit 的标识位，0 为正数，1 为负数</li><li><strong>exponent</strong>，指数，11 bit</li><li><strong>fraction</strong>，小数部分，52 bit</li></ul><h3 id="什么是精度丢失"><a href="#什么是精度丢失" class="headerlink" title="什么是精度丢失"></a>什么是精度丢失</h3><p> 计算机在处理数据都涉及到数据的转换和各种复杂运算，比如，不同单位换算，不同进制（如二进制十进制）换算等，很多除法运算不能除尽，比如10÷3=3.3333…..无穷无尽，而精度是有限的，3.3333333x3并不等于10，经过复杂的处理后得到的十进制数据并不精确，精度越高越精确。float32和float64的精度是由尾数的位数来决定的,其整数部分始终是一个隐含着的“1”，由于它是不变的，故不能对精度造成影响。float32：2^23 = 8388608，一共七位，由于最左为1的一位省略了，这意味着最多能表示8位数：28388608 = 16777216 。有8位有效数字，但绝对能保证的为7位，也即float32的精度为7<del>8位有效数字；float64：2^52 = 4503599627370496，一共16位，同理，float64的精度为16</del>17位。</p><p><strong>所谓的精度丢失就是无限循环小数在计算机怎么存储？计算机再大的内存它也存不下，对吧! 所以不能存储一个相对于数学来说的值，只能存储一个近似值，所以当计算机存储后再取出来用时就会出现精度问题。</strong></p><h3 id="Golang的解决方案"><a href="#Golang的解决方案" class="headerlink" title="Golang的解决方案"></a>Golang的解决方案</h3><p>使用第三方库 decimal</p><p>运行：go get github.com/shopspring/decimal</p><p>在运算开始前，设置你需要的精确的小数位数，自动四舍五入</p><p>decimal.DivisionPrecision = 2 // 保留两位小数，如有更多位，则进行四舍五入保留两位小数</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  1.2+3 float和int相加</span></span><br><span class="line"><span class="keyword">var</span> num1 <span class="keyword">float64</span> = <span class="number">1.1</span></span><br><span class="line"><span class="keyword">var</span> num2 <span class="keyword">int</span> = <span class="number">2</span></span><br><span class="line">d1:=decimal.NewFromFloat(num1).Add(decimal.NewFromFloat(<span class="keyword">float64</span>(num2)))</span><br><span class="line"></span><br><span class="line"><span class="comment">//加 Add</span></span><br><span class="line"><span class="comment">//减 Sub</span></span><br><span class="line"><span class="comment">//乘 Mul</span></span><br><span class="line"><span class="comment">//除 Div</span></span><br><span class="line"><span class="comment">//decimal运算得到的结果可以转成自己想要的数据类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 13.8 *100</span></span><br><span class="line"><span class="keyword">var</span>  priceInt <span class="keyword">int64</span></span><br><span class="line"><span class="keyword">var</span> priceFloat <span class="keyword">float64</span> =<span class="number">13.8</span></span><br><span class="line">price:= decimal.NewFromFloat(priceFloat).Mul(decimal.NewFromInt(<span class="keyword">int64</span>(<span class="number">100</span>))).IntPart()</span><br></pre></td></tr></table></figure>]]></content>
     
