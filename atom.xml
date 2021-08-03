@@ -6,7 +6,7 @@
   <link href="https://www.dieselchen.work/atom.xml" rel="self"/>
   
   <link href="https://www.dieselchen.work/"/>
-  <updated>2021-07-12T09:50:07.067Z</updated>
+  <updated>2021-08-03T10:25:27.251Z</updated>
   <id>https://www.dieselchen.work/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021年8月入门级电脑推荐</title>
+    <link href="https://www.dieselchen.work/archives/8764d356.html"/>
+    <id>https://www.dieselchen.work/archives/8764d356.html</id>
+    <published>2021-08-03T09:31:43.000Z</published>
+    <updated>2021-08-03T10:25:27.251Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>远房表弟中考考了省里最好的高中，正直暑假想配台电脑，列了一份清单。</p></blockquote><span id="more"></span><h3 id="配置一：京东整机"><a href="#配置一：京东整机" class="headerlink" title="配置一：京东整机"></a>配置一：京东整机</h3><p>处理器：i7-860 、i7-920、i7-930、i7-940随机发货   4核8线程  基本频率2.66GHz 最大睿频2.99GHz</p><p>显卡：   GTX1050 4g独显</p><p>主板：   英特尔 H55</p><p>内存：   镁光 8*2 16g双通道   ddr3 频率1600</p><p>硬盘：   镁光 nvme M.2 512固态硬盘</p><p>显示器 ：24寸 1080p 75Hz va面板</p><p>到手价：<span style='color:;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>3880元</span></p><p>优点：这个价位性价比还是可以的。和实体店一样，赠送鼠标 键盘 鼠标垫。收到货连上电源线就可以用</p><p>缺点：处理器频率偏低了，主板太老了可扩展性也不太行。只支持ddr3内存。内存虽说16g但是 ddr3频率有点低。现在都是ddr4 入门级。个人不太推荐这款。主要核心 cpu和主板都有点老。不好升级。主板是2010年出的，</p><p>cpu是2008年上市的。相当于 10年之前的顶级配置 在 10年之后便宜价出售。</p><h3 id="配置二：京东整机"><a href="#配置二：京东整机" class="headerlink" title="配置二：京东整机"></a>配置二：京东整机</h3><p>处理器：i5 10400F 6核心12线程 基本频率2.9GHz 最大睿频4.3GHz</p><p>显卡：    GTX1050Ti 4g独显</p><p>主板：    微星 B560M</p><p>内存：    威刚 8G ddr4  频率2666</p><p>硬盘：   256  nvme M.2 固态硬盘</p><p>到手价：<span style='color:;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>3599元</span>    </p><p>优点：处理器+主板都是近两年的新品。比较推荐。显卡入门级。内存也是ddr4 。</p><p>缺点：1显示器需要单独购买。500元左右可以买到入门级配置 24寸+1080p+75hz +ips面板 那合计 要在4100-4200左右。2.独立显卡考虑运送过程中有损坏，和主机分开发货，需要安装一下。有安装视频。</p><p>内存还是推荐16g ddr4 硬盘 500G固态 那就+500 总预算 4100+显示器价格 ～ 4600左右</p><h3 id="配置三：淘宝"><a href="#配置三：淘宝" class="headerlink" title="配置三：淘宝"></a>配置三：淘宝</h3><p><img src="https://image.dieselchen.work/uPic/2021/08/01/image-20210801125709535.png" alt="image-20210801125709535"></p><p>总价格：<span style='color:;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>3899元</span>     </p><p>和配置二 +500元后 4100元相比 。内存频率 2666-》3200 而且便宜200元。</p><p>也是需要单独安装独立显卡和单独买显示器</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;远房表弟中考考了省里最好的高中，正直暑假想配台电脑，列了一份清单。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="硬件" scheme="https://www.dieselchen.work/categories/%E7%A1%AC%E4%BB%B6/"/>
+    
+    <category term="台式机" scheme="https://www.dieselchen.work/categories/%E7%A1%AC%E4%BB%B6/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
+    
+    
+    <category term="台式电脑" scheme="https://www.dieselchen.work/tags/%E5%8F%B0%E5%BC%8F%E7%94%B5%E8%84%91/"/>
+    
+    <category term="组装电脑" scheme="https://www.dieselchen.work/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/"/>
+    
+    <category term="硬件" scheme="https://www.dieselchen.work/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git提交了想撤回怎么做？</title>
     <link href="https://www.dieselchen.work/archives/fc0a4be0.html"/>
     <id>https://www.dieselchen.work/archives/fc0a4be0.html</id>
     <published>2021-07-12T09:47:37.000Z</published>
-    <updated>2021-07-12T09:50:07.067Z</updated>
+    <updated>2021-07-12T09:50:34.622Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>写完代码后，我们一般这样 git add . //添加所有文件 git commit -m “本功能全部完成”   执行完commit后，想撤回commit，怎么办？</p></blockquote><span id="more"></span><p>写完代码后，我们一般这样</p><p>git add . //添加所有文件</p><p>git commit -m “本功能全部完成”</p><p>执行完commit后，想撤回commit，怎么办？</p><p>这样凉拌：</p><p><strong>git reset –soft HEAD^</strong></p><p>这样就成功的撤销了你的commit</p><p>注意，仅仅是撤回commit操作，您写的代码仍然保留。</p><h2 id="说一下个人理解"><a href="#说一下个人理解" class="headerlink" title="说一下个人理解"></a>说一下个人理解</h2><p>HEAD^的意思是上一个版本，也可以写成HEAD~1</p><p>如果你进行了2次commit，想都撤回，可以使用HEAD~2</p><h2 id="至于这几个参数："><a href="#至于这几个参数：" class="headerlink" title="至于这几个参数："></a>至于这几个参数：</h2><h3 id="–mixed"><a href="#–mixed" class="headerlink" title="–mixed"></a>–mixed</h3><p>意思是：不删除工作空间改动代码，撤销commit，并且撤销git add . 操作</p><p>这个为默认参数,git reset –mixed HEAD^ 和 git reset HEAD^ 效果是一样的。</p><h3 id="–soft"><a href="#–soft" class="headerlink" title="–soft"></a>–soft</h3><p>不删除工作空间改动代码，撤销commit，不撤销git add . </p><h3 id="–hard"><a href="#–hard" class="headerlink" title="–hard"></a>–hard</h3><p>删除工作空间改动代码，撤销commit，撤销git add . </p><p>注意完成这个操作后，就恢复到了上一次的commit状态。</p><h3 id="顺便说一下，如果commit注释写错了，只是想改一下注释，只需要："><a href="#顺便说一下，如果commit注释写错了，只是想改一下注释，只需要：" class="headerlink" title="顺便说一下，如果commit注释写错了，只是想改一下注释，只需要："></a>顺便说一下，如果commit注释写错了，只是想改一下注释，只需要：</h3><p>git commit –amend</p><p>此时会进入默认vim编辑器，修改注释完毕后保存就好了。</p>]]></content>
     
