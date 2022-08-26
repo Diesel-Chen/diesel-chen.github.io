@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.dieselchen.work/archives/a23e5172.html</loc>
-    
-    <lastmod>2022-08-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.dieselchen.work/about/index.html</loc>
     
     <lastmod>2022-08-25</lastmod>
@@ -18,7 +11,7 @@
   <url>
     <loc>https://www.dieselchen.work/archives/71bcff18.html</loc>
     
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-08-05</lastmod>
     
   </url>
   
@@ -26,6 +19,13 @@
     <loc>https://www.dieselchen.work/archives/44fdb130.html</loc>
     
     <lastmod>2022-06-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/archives/a23e5172.html</loc>
+    
+    <lastmod>2022-01-01</lastmod>
     
   </url>
   
