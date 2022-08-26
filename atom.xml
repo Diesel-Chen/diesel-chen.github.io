@@ -67,6 +67,31 @@
   </entry>
   
   <entry>
+    <title>2021年终总结</title>
+    <link href="https://www.dieselchen.work/archives/a23e5172.html"/>
+    <id>https://www.dieselchen.work/archives/a23e5172.html</id>
+    <published>2022-01-01T02:05:35.000Z</published>
+    <updated>2022-08-26T02:10:26.128Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>2021年就这样过去了，这一年有得有失，稍微总结一下</p></blockquote><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;2021年就这样过去了，这一年有得有失，稍微总结一下&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="总结" scheme="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="成长与收获" scheme="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
+    
+    
+    <category term="总结" scheme="https://www.dieselchen.work/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021年8月入门级电脑推荐</title>
     <link href="https://www.dieselchen.work/archives/8764d356.html"/>
     <id>https://www.dieselchen.work/archives/8764d356.html</id>
@@ -527,33 +552,6 @@
     <category term="hexo" scheme="https://www.dieselchen.work/tags/hexo/"/>
     
     <category term="valine" scheme="https://www.dieselchen.work/tags/valine/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Snippets加速修改markdown的颜色背景色</title>
-    <link href="https://www.dieselchen.work/archives/ba1f9be9.html"/>
-    <id>https://www.dieselchen.work/archives/ba1f9be9.html</id>
-    <published>2021-02-25T19:01:54.000Z</published>
-    <updated>2021-03-17T03:19:02.963Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>新认识了一款mac中的效率神奇 Alfred 4，和mac自带的spotlight<br>  很相似，据网友说更加强大，感觉和utools也差不多，本次主要使用了Snippets的功能。</p></blockquote><span id="more"></span><p>typora里面如何快捷改变字体颜色？平常我们可以通过下述代码进行字体颜色修改：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;red&quot;</span>&gt;</span>需要改变颜色的内容<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">or</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&#x27;color:字体颜色;background:背景颜色;font-size:文字大小;&#x27;</span>&gt;</span>需要改变颜色的内容<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><p>但是每次需要输入的字符未免有些长，不知道大家在使用中是如何解决的？</p><h3 id="mac的方法：Alfred-代码块变法"><a href="#mac的方法：Alfred-代码块变法" class="headerlink" title="mac的方法：Alfred 代码块变法"></a>mac的方法：<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Alfred 代码块变法</span></h3><p>当然任何支持<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Snippets</span>的软件均可（例如 Text Expander），由于 <span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Alfred 4</span>用的太过顺手，那么话不多说，下面开始介绍</p><ol><li>首先打开Alfred 4 的偏好设置<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>Features -&gt; Snippets</span></li><li>点击添加一条记录</li></ol><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317111813537.png" alt="image-20210317111813537"></p><pre><code> 3. 添加内容如下</code></pre><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317111856198.png" alt="image-20210317111856198"></p><p>Name可以任意设置，keyword设置为自定义的快捷键即可，其余的均为默认</p><p>Snippets文本如下</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&#x27;color:&#123;cursor&#125;;background:背景颜色;font-size:文字大小;&#x27;</span>&gt;</span>&#123;clipboard:0&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><p>为了方便起见，这里直接将剪贴板中最新的记录当作文本，即{clipboard:0}，所以使用时直接⌘+X即可</p><p>其中<span style='color:red;background:rgb(249,240,242);font-size:文字大小;padding-left:5px;padding-right:5px;'>{cursor}</span>是保证插入后即可直接设置颜色，不需要重复移动光标</p><p>添加后点击保存即可</p><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>最后在此强调一下使用流程（假设已经）</p><ol><li>使用⌘+X拷贝至剪贴板，而后使用快捷键打开alfred</li><li>使用之前设置的keyword 即可完成输入（当然也可以修改为输入keyword直接扩展为上述html代码，如下（keyword为<code>span</code>）</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;新认识了一款mac中的效率神奇 Alfred 4，和mac自带的spotlight&lt;br&gt;  很相似，据网友说更加强大，感觉和utools也差不多，本次主要使用了Snippets的功能。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="效率工具" scheme="https://www.dieselchen.work/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Snippets" scheme="https://www.dieselchen.work/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/Snippets/"/>
-    
-    
-    <category term="Alfred" scheme="https://www.dieselchen.work/tags/Alfred/"/>
-    
-    <category term="Snippets" scheme="https://www.dieselchen.work/tags/Snippets/"/>
     
   </entry>
   
