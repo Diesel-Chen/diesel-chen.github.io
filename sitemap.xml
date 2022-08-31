@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://www.dieselchen.work/archives/1180b2c7.html</loc>
+    
+    <lastmod>2022-06-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.dieselchen.work/archives/18e82ec3.html</loc>
     
     <lastmod>2022-05-01</lastmod>
@@ -651,6 +658,13 @@
   
   <url>
     <loc>https://www.dieselchen.work/categories/Zookeeper/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/categories/Golang/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

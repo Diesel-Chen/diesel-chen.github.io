@@ -44,6 +44,29 @@
   </entry>
   
   <entry>
+    <title>go-zero 入门概述篇</title>
+    <link href="https://www.dieselchen.work/archives/1180b2c7.html"/>
+    <id>https://www.dieselchen.work/archives/1180b2c7.html</id>
+    <published>2022-06-11T10:07:05.000Z</published>
+    <updated>2022-06-11T10:07:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>go-zero 包含极简的 API 定义和生成工具 goctl，可以根据定义的 api 文件一键生成 Go, iOS, Android, Kotlin, Dart, TypeScript, JavaScript 代码，并可直接运行。</p></blockquote><span id="more"></span><h1 id="1、简介："><a href="#1、简介：" class="headerlink" title="1、简介："></a>1、简介：</h1><p>go-zero（收录于 CNCF 云原生技术全景图：<a href="https://landscape.cncf.io/?selected=go-zero%EF%BC%89%E6%98%AF%E4%B8%80%E4%B8%AA%E9%9B%86%E6%88%90%E4%BA%86%E5%90%84%E7%A7%8D%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E7%9A%84">https://landscape.cncf.io/?selected=go-zero）是一个集成了各种工程实践的</a> web 和 rpc 框架。通过弹性设计保障了大并发服务端的稳定性，经受了充分的实战检验。</p><p>使用 go-zero 的好处：</p><ul><li>轻松获得支撑千万日活服务的稳定性</li><li>内建级联超时控制、限流、自适应熔断、自适应降载等微服务治理能力，无需配置和额外代码</li><li>微服务治理中间件可无缝集成到其它现有框架使用</li><li>极简的 API 描述，一键生成各端代码</li><li>自动校验客户端请求参数合法性</li><li>大量微服务治理和并发工具包</li></ul><p><a href="https://img2022.cnblogs.com/blog/1774189/202207/1774189-20220723204015843-1205422348.png"><img src="https://img2022.cnblogs.com/blog/1774189/202207/1774189-20220723204015843-1205422348.png" alt="img"></a></p><h1 id="2、特点"><a href="#2、特点" class="headerlink" title="2、特点"></a>2、特点</h1><p>go-zero 是一个集成了各种工程实践的包含 web 和 rpc 框架，有如下主要特点：</p><ul><li>强大的工具支持，尽可能少的代码编写</li><li>极简的接口</li><li>完全兼容 net/http</li><li>支持中间件，方便扩展</li><li>高性能</li><li>面向故障编程，弹性设计</li><li>内建服务发现、负载均衡</li><li>内建限流、熔断、降载，且自动触发，自动恢复</li><li>API 参数自动校验</li><li>超时级联控制</li><li>自动缓存控制</li><li>链路跟踪、统计报警等</li><li>高并发支撑，稳定保障了疫情期间每天的流量洪峰</li></ul><h1 id="3、选择go-zero原因"><a href="#3、选择go-zero原因" class="headerlink" title="3、选择go-zero原因"></a>3、选择go-zero原因</h1><p>go-zero 为提供了许多高并发场景下的实用工具，如：</p><ul><li>为了降低接口耗时往往需要并发的请求依赖的服务，这个时候可以使用 mapreduce 并行的处理请求；</li><li>面对海量请求为了降低Redis压力和提高响应时间，可以使用 collection 构建本地缓存；</li><li>避免用户连续请求造成服务压力可以使用 limit 做用户级别的限流等等。</li></ul><p>好的框架能够给项目开发带来事半功倍的效果，Go-zero的简洁易用性与内置的开箱即用的工具和服务治理能力助力构建一个高并发高可靠的系统。</p><h1 id="4、需求"><a href="#4、需求" class="headerlink" title="4、需求"></a>4、需求</h1><p>为了更加贴近真实的项目开发，项目会基于真实的产品需求进行构建。商城是接触比较多而又比较复杂的系统，所以决定通过构建商城系统来学习如何基于 go-zero 构建高并发系统。实现一个 mvp版本，在mvp版本中把 go-zero 的核心功能和构建高并发商城系统的核心点演示。</p><p>如下思维导图列出了该电商系统主要实现的功能：</p><p><a href="https://img2022.cnblogs.com/blog/1774189/202207/1774189-20220723204049474-678427595.png"><img src="https://img2022.cnblogs.com/blog/1774189/202207/1774189-20220723204049474-678427595.png" alt="img"></a></p><p>从以上思维导图可以看出整个电商系统功能还是比较多的，根据业务职能做如下微服务的划分：</p><ul><li>商品服务(product) - 商品的添加、信息查询、库存管理等功能</li><li>购物车服务(cart) - 购物车的增删改查</li><li>订单服务(order) - 生成订单，订单管理</li><li>支付服务(pay) - 通过调用第三方支付实现支付功能</li><li>账号服务(user) - 用户信息、等级、封禁、地址管理</li><li>推荐服务(recommend) - 首页商品推荐</li><li>评论服务(reply) - 商品的评论功能、评论的回复功能</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;go-zero 包含极简的 API 定义和生成工具 goctl，可以根据定义的 api 文件一键生成 Go, iOS, Android, Kotlin, Dart, TypeScript, JavaScript 代码，并可直接运行。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Golang" scheme="https://www.dieselchen.work/categories/Golang/"/>
+    
+    
+    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ImageMagick学习笔记</title>
     <link href="https://www.dieselchen.work/archives/18e82ec3.html"/>
     <id>https://www.dieselchen.work/archives/18e82ec3.html</id>
@@ -509,33 +532,6 @@
     <category term="并发模型" scheme="https://www.dieselchen.work/tags/%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
     
     <category term="Goroutine" scheme="https://www.dieselchen.work/tags/Goroutine/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 部署到服务器上</title>
-    <link href="https://www.dieselchen.work/archives/60f3c3ab.html"/>
-    <id>https://www.dieselchen.work/archives/60f3c3ab.html</id>
-    <published>2021-03-07T10:19:20.000Z</published>
-    <updated>2021-03-07T10:40:17.546Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>本站之前的博客是部署在github pages 上的，考虑到国内用户并不是都可以科学上网，并且我在20年双11买的阿里云轻量型ecs 一直闲置，今天捣鼓一下，把hexo 部署到阿里云上</p></blockquote><span id="more"></span><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://zhuanlan.zhihu.com/p/82437065">带你跳过各种坑，一次性把 Hexo 博客部署到自己的服务器</a></li><li><a href="https://www.jianshu.com/p/70bf58c48010">HEXO 部署到云服务器详细指南</a></li></ul><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>你得拥有一台云服务器，阿里云，腾讯云都可以，我们通过ssh连接到 服务器，下载git、nginx，具体的下载步骤就不说了，网上都有。</p><h2 id="创建git私有库"><a href="#创建git私有库" class="headerlink" title="创建git私有库"></a>创建git私有库</h2><h3 id="在云服务器上创建一个-GIT-用户，用来运行-GIT-服务"><a href="#在云服务器上创建一个-GIT-用户，用来运行-GIT-服务" class="headerlink" title="在云服务器上创建一个 GIT 用户，用来运行 GIT 服务"></a>在云服务器上创建一个 GIT 用户，用来运行 GIT 服务</h3><ul><li>创建用户：<code>adduser git</code></li><li>设置密码：<code>passwd git</code></li></ul><h3 id="创建证书"><a href="#创建证书" class="headerlink" title="创建证书"></a>创建证书</h3><ul><li>切换到git用户：<code>su git</code></li><li>创建.ssh目录：<code>mkdir .ssh &amp;&amp; chmod 700 .ssh</code></li><li>然后在云服务创建<code>authorized_keys</code>公钥保存文件：<code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code></li></ul><h3 id="创建git仓库目录"><a href="#创建git仓库目录" class="headerlink" title="创建git仓库目录"></a>创建git仓库目录</h3><p>创建一个名为blog的git仓库</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/git/repos</span><br><span class="line">cd /home/git/repos</span><br><span class="line">git <span class="keyword">init</span> --bare blog.git</span><br></pre></td></tr></table></figure><h3 id="配置GitHOOKS"><a href="#配置GitHOOKS" class="headerlink" title="配置GitHOOKS"></a>配置GitHOOKS</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /<span class="keyword">var</span>/repo/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure><p>添加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">git --work-tree=/home/git/project/blog --git-dir=/home/git/repos/blog.git checkout -f</span><br></pre></td></tr></table></figure><p>然后保存退出，并设置权限</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /<span class="keyword">var</span>/repo/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure><h3 id="改变-BLOG-GIT-目录的拥有者为-GIT-用户"><a href="#改变-BLOG-GIT-目录的拥有者为-GIT-用户" class="headerlink" title="改变 BLOG.GIT 目录的拥有者为 GIT 用户"></a>改变 BLOG.GIT 目录的拥有者为 GIT 用户</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R git:git blog.git</span><br></pre></td></tr></table></figure><h3 id="创建静态文件目录"><a href="#创建静态文件目录" class="headerlink" title="创建静态文件目录"></a>创建静态文件目录</h3><ul><li>创建静态文件目录（文章网页）：<code>mkdir /home/git/project/blog</code></li><li>链接git仓库：<code>chown -R git:git /home/git/project/blog</code></li><li>配置权限：<code>chmod -R 755 /home/git/project/blog</code><br> 这样git仓库更新便会自动同步到hexo目录下</li></ul><h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">    - git@github.com:Diesel-Chen&#x2F;diesel-chen.github.io.git</span><br><span class="line">    - git@47.116.78.14:&#x2F;home&#x2F;git&#x2F;repos&#x2F;blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本站之前的博客是部署在github pages 上的，考虑到国内用户并不是都可以科学上网，并且我在20年双11买的阿里云轻量型ecs 一直闲置，今天捣鼓一下，把hexo 部署到阿里云上&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="博客搭建" scheme="https://www.dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    <category term="hexo" scheme="https://www.dieselchen.work/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/"/>
-    
-    
-    <category term="hexo" scheme="https://www.dieselchen.work/tags/hexo/"/>
-    
-    <category term="博客搭建" scheme="https://www.dieselchen.work/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
