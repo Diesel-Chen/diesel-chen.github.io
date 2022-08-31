@@ -16,9 +16,16 @@
   </url>
   
   <url>
-    <loc>https://www.dieselchen.work/archives/44fdb130.html</loc>
+    <loc>https://www.dieselchen.work/archives/18e82ec3.html</loc>
     
-    <lastmod>2022-06-24</lastmod>
+    <lastmod>2022-05-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/archives/398b07d0.html</loc>
+    
+    <lastmod>2022-03-18</lastmod>
     
   </url>
   
@@ -33,6 +40,13 @@
     <loc>https://www.dieselchen.work/archives/2700d4b7.html</loc>
     
     <lastmod>2021-12-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/archives/44fdb130.html</loc>
+    
+    <lastmod>2021-11-01</lastmod>
     
   </url>
   
@@ -445,7 +459,7 @@
   </url>
   
   <url>
-    <loc>https://www.dieselchen.work/tags/Dokcer/</loc>
+    <loc>https://www.dieselchen.work/tags/Zookeeper/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -622,14 +636,21 @@
   </url>
   
   <url>
-    <loc>https://www.dieselchen.work/categories/Dokcer/</loc>
+    <loc>https://www.dieselchen.work/categories/Docker/Java/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.dieselchen.work/categories/Docker/Java/</loc>
+    <loc>https://www.dieselchen.work/categories/ImageMagick/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/categories/Zookeeper/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
