@@ -22,18 +22,20 @@
     var CONFIG = {"hostname":"www.dieselchen.work","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DieselChen">
-<meta property="og:url" content="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/index.html">
+  <meta name="description" content="平常在数据库选型时，会考虑到MySQL、PostgreSQL、MongoDB、sqlite，但你知道他们之间的区别吗？一直以来都没有一个清晰的认知，所以最近两个月的时间看了几本数据库相关的书籍并且阅读了 MySQL 的官方文档，在此来总结一下相关知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单了解一下Mysql和InnoDB">
+<meta property="og:url" content="https://www.dieselchen.work/archives/e6f74ec.html">
 <meta property="og:site_name" content="DieselChen">
-<meta property="og:description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
+<meta property="og:description" content="平常在数据库选型时，会考虑到MySQL、PostgreSQL、MongoDB、sqlite，但你知道他们之间的区别吗？一直以来都没有一个清晰的认知，所以最近两个月的时间看了几本数据库相关的书籍并且阅读了 MySQL 的官方文档，在此来总结一下相关知识点">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-15T07:40:10.000Z">
+<meta property="article:modified_time" content="2021-08-15T07:40:10.000Z">
 <meta property="article:author" content="Diesel-Chen">
-<meta property="article:tag" content="go学习分享、Java学习分享、个人博客、博客搭建、服务端开发、后端日常开发记录">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/">
+<link rel="canonical" href="https://www.dieselchen.work/archives/e6f74ec.html">
 
 
 <script id="page-configurations">
@@ -41,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 成长与收获 | DieselChen</title>
+  <title>简单了解一下Mysql和InnoDB | DieselChen</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G46QNP0S5F"></script>
     <script>
@@ -192,57 +194,199 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.dieselchen.work/archives/e6f74ec.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Diesel-Chen">
+      <meta itemprop="description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DieselChen">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          简单了解一下Mysql和InnoDB
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-15 15:40:10" itemprop="dateCreated datePublished" datetime="2021-08-15T15:40:10+08:00">2021-08-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">成长与收获
-          <small>分类</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/e6f74ec.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/e6f74ec.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <blockquote>
+<p>平常在数据库选型时，会考虑到MySQL、PostgreSQL、MongoDB、sqlite，但你知道他们之间的区别吗？一直以来都没有一个清晰的认知，所以最近两个月的时间看了几本数据库相关的书籍并且阅读了 MySQL 的官方文档，在此来总结一下相关知识点</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="数据库的定义"><a href="#数据库的定义" class="headerlink" title="数据库的定义"></a>数据库的定义</h2><p>很多开发者在最开始时其实都对数据库有一个比较模糊的认识，觉得数据库就是一堆数据的集合，但是实际却比这复杂的多，数据库领域中有两个词非常容易混淆，也就是<em>数据库</em>和<em>实例</em>：</p>
+<ul>
+<li>数据库：物理操作文件系统或其他形式文件类型的集合；</li>
+<li>实例：MySQL 数据库由后台线程以及一个共享内存区组成；</li>
+</ul>
+<h2 id="事务与隔离级别"><a href="#事务与隔离级别" class="headerlink" title="事务与隔离级别"></a>事务与隔离级别</h2><p>在介绍了锁之后，我们再来谈谈数据库中一个非常重要的概念 —— 事务；相信只要是一个合格的软件工程师就对事务的特性有所了解，其中被人经常提起的就是事务的原子性，在数据提交工作时，要么保证所有的修改都能够提交，要么就所有的修改全部回滚。</p>
+<p>但是事务还遵循包括原子性在内的 ACID 四大特性：原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability）；文章不会对这四大特性全部展开进行介绍，相信你能够通过 Google 和数据库相关的书籍轻松获得有关它们的概念，本文最后要介绍的就是事务的四种隔离级别。</p>
+<h3 id="几种隔离级别"><a href="#几种隔离级别" class="headerlink" title="几种隔离级别"></a>几种隔离级别</h3><p>事务的隔离性是数据库处理数据的几大基础之一，而隔离级别其实就是提供给用户用于在性能和可靠性做出选择和权衡的配置项。</p>
+<p>ISO 和 ANSI SQL 标准制定了四种事务隔离级别，而 InnoDB 遵循了 SQL:1992 标准中的四种隔离级别：<code>READ UNCOMMITED</code>、<code>READ COMMITED</code>、<code>REPEATABLE READ</code> 和 <code>SERIALIZABLE</code>；每个事务的隔离级别其实都比上一级多解决了一个问题：</p>
+<ul>
+<li><code>RAED UNCOMMITED</code>：使用查询语句不会加锁，可能会读到未提交的行（Dirty Read）；</li>
+<li><code>READ COMMITED</code>：只对记录加记录锁，而不会在记录之间加间隙锁，所以允许新的记录插入到被锁定记录的附近，所以再多次使用查询语句时，可能得到不同的结果（Non-Repeatable Read）；</li>
+<li><code>REPEATABLE READ</code>：多次读取同一范围的数据会返回第一次查询的快照，不会返回不同的数据行，但是可能发生幻读（Phantom Read）；</li>
+<li><code>SERIALIZABLE</code>：InnoDB 隐式地将全部的查询语句加上共享锁，解决了幻读的问题；</li>
+</ul>
+<p>MySQL 中默认的事务隔离级别就是 <code>REPEATABLE READ</code>，但是它通过 Next-Key 锁也能够在某种程度上解决幻读的问题。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-01-01T10:05:35+08:00"
-              content="2022-01-01">
-          01-01
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Diesel-Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.dieselchen.work/archives/e6f74ec.html" title="简单了解一下Mysql和InnoDB">https://www.dieselchen.work/archives/e6f74ec.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/archives/a23e5172.html" itemprop="url">
-            <span itemprop="name">2021年终总结</span>
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:15px;margin-top:30px;">-----------本文结束<i class="fa fa-heart"></i>感谢您的阅读-----------</div>
+    
+</div>
+  
+      </div>
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archives/8764d356.html" rel="prev" title="2021年8月入门级电脑推荐">
+      <i class="fa fa-chevron-left"></i> 2021年8月入门级电脑推荐
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/archives/a23e5172.html" rel="next" title="2021年终总结">
+      2021年终总结 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -289,6 +433,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">数据库的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1%E4%B8%8E%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">事务与隔离级别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E7%A7%8D%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="nav-number">2.1.</span> <span class="nav-text">几种隔离级别</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
