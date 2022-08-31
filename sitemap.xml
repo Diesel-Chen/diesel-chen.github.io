@@ -30,6 +30,20 @@
   </url>
   
   <url>
+    <loc>https://www.dieselchen.work/archives/2700d4b7.html</loc>
+    
+    <lastmod>2021-12-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/archives/3647edf5.html</loc>
+    
+    <lastmod>2021-09-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.dieselchen.work/archives/e6f74ec.html</loc>
     
     <lastmod>2021-08-15</lastmod>
@@ -416,6 +430,27 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://www.dieselchen.work/tags/Docker/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/tags/Java/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/tags/Dokcer/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -574,6 +609,27 @@
   
   <url>
     <loc>https://www.dieselchen.work/categories/MySQL/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/categories/Docker/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/categories/Dokcer/</loc>
+    <lastmod>2022-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.dieselchen.work/categories/Docker/Java/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
