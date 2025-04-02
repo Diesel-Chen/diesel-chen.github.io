@@ -3,11 +3,11 @@
   <title>DieselChen</title>
   
   <subtitle>个人博客,记录一下学习的点滴～</subtitle>
-  <link href="https://www.dieselchen.work/atom.xml" rel="self"/>
+  <link href="https://blog.gwjzc.top/atom.xml" rel="self"/>
   
-  <link href="https://www.dieselchen.work/"/>
+  <link href="https://blog.gwjzc.top/"/>
   <updated>2022-08-05T09:41:41.000Z</updated>
-  <id>https://www.dieselchen.work/</id>
+  <id>https://blog.gwjzc.top/</id>
   
   <author>
     <name>Diesel-Chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>近期关于图像相关的技术选型及总结</title>
-    <link href="https://www.dieselchen.work/archives/71bcff18.html"/>
-    <id>https://www.dieselchen.work/archives/71bcff18.html</id>
+    <link href="https://blog.gwjzc.top/archives/71bcff18.html"/>
+    <id>https://blog.gwjzc.top/archives/71bcff18.html</id>
     <published>2022-08-05T09:41:41.000Z</published>
     <updated>2022-08-05T09:41:41.000Z</updated>
     
@@ -32,21 +32,21 @@
     
     
     
-    <category term="总结" scheme="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="https://blog.gwjzc.top/categories/%E6%80%BB%E7%BB%93/"/>
     
-    <category term="ImageMagick" scheme="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/ImageMagick/"/>
+    <category term="ImageMagick" scheme="https://blog.gwjzc.top/categories/%E6%80%BB%E7%BB%93/ImageMagick/"/>
     
     
-    <category term="总结" scheme="https://www.dieselchen.work/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="https://blog.gwjzc.top/tags/%E6%80%BB%E7%BB%93/"/>
     
-    <category term="ImageMagick" scheme="https://www.dieselchen.work/tags/ImageMagick/"/>
+    <category term="ImageMagick" scheme="https://blog.gwjzc.top/tags/ImageMagick/"/>
     
   </entry>
   
   <entry>
     <title>go-zero 入门概述篇</title>
-    <link href="https://www.dieselchen.work/archives/1180b2c7.html"/>
-    <id>https://www.dieselchen.work/archives/1180b2c7.html</id>
+    <link href="https://blog.gwjzc.top/archives/1180b2c7.html"/>
+    <id>https://blog.gwjzc.top/archives/1180b2c7.html</id>
     <published>2022-06-11T10:07:05.000Z</published>
     <updated>2022-06-11T10:07:05.000Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
   </entry>
   
   <entry>
     <title>ImageMagick学习笔记</title>
-    <link href="https://www.dieselchen.work/archives/18e82ec3.html"/>
-    <id>https://www.dieselchen.work/archives/18e82ec3.html</id>
+    <link href="https://blog.gwjzc.top/archives/18e82ec3.html"/>
+    <id>https://blog.gwjzc.top/archives/18e82ec3.html</id>
     <published>2022-05-01T09:18:08.000Z</published>
     <updated>2022-05-01T09:18:08.000Z</updated>
     
@@ -82,17 +82,17 @@
     
     
     
-    <category term="ImageMagick" scheme="https://www.dieselchen.work/categories/ImageMagick/"/>
+    <category term="ImageMagick" scheme="https://blog.gwjzc.top/categories/ImageMagick/"/>
     
     
-    <category term="ImageMagick" scheme="https://www.dieselchen.work/tags/ImageMagick/"/>
+    <category term="ImageMagick" scheme="https://blog.gwjzc.top/tags/ImageMagick/"/>
     
   </entry>
   
   <entry>
     <title>Zookeeper学习笔记</title>
-    <link href="https://www.dieselchen.work/archives/398b07d0.html"/>
-    <id>https://www.dieselchen.work/archives/398b07d0.html</id>
+    <link href="https://blog.gwjzc.top/archives/398b07d0.html"/>
+    <id>https://blog.gwjzc.top/archives/398b07d0.html</id>
     <published>2022-03-18T08:57:14.000Z</published>
     <updated>2022-03-18T08:57:14.000Z</updated>
     
@@ -105,17 +105,17 @@
     
     
     
-    <category term="Zookeeper" scheme="https://www.dieselchen.work/categories/Zookeeper/"/>
+    <category term="Zookeeper" scheme="https://blog.gwjzc.top/categories/Zookeeper/"/>
     
     
-    <category term="Zookeeper" scheme="https://www.dieselchen.work/tags/Zookeeper/"/>
+    <category term="Zookeeper" scheme="https://blog.gwjzc.top/tags/Zookeeper/"/>
     
   </entry>
   
   <entry>
     <title>2021年终总结</title>
-    <link href="https://www.dieselchen.work/archives/a23e5172.html"/>
-    <id>https://www.dieselchen.work/archives/a23e5172.html</id>
+    <link href="https://blog.gwjzc.top/archives/a23e5172.html"/>
+    <id>https://blog.gwjzc.top/archives/a23e5172.html</id>
     <published>2022-01-01T02:05:35.000Z</published>
     <updated>2022-01-01T02:05:35.000Z</updated>
     
@@ -128,19 +128,19 @@
     
     
     
-    <category term="总结" scheme="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="https://blog.gwjzc.top/categories/%E6%80%BB%E7%BB%93/"/>
     
-    <category term="成长与收获" scheme="https://www.dieselchen.work/categories/%E6%80%BB%E7%BB%93/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
+    <category term="成长与收获" scheme="https://blog.gwjzc.top/categories/%E6%80%BB%E7%BB%93/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
     
     
-    <category term="总结" scheme="https://www.dieselchen.work/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="https://blog.gwjzc.top/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>Docker构建一个简单的java开发环境</title>
-    <link href="https://www.dieselchen.work/archives/2700d4b7.html"/>
-    <id>https://www.dieselchen.work/archives/2700d4b7.html</id>
+    <link href="https://blog.gwjzc.top/archives/2700d4b7.html"/>
+    <id>https://blog.gwjzc.top/archives/2700d4b7.html</id>
     <published>2021-12-11T08:44:00.000Z</published>
     <updated>2021-12-11T08:44:00.000Z</updated>
     
@@ -153,21 +153,21 @@
     
     
     
-    <category term="Docker" scheme="https://www.dieselchen.work/categories/Docker/"/>
+    <category term="Docker" scheme="https://blog.gwjzc.top/categories/Docker/"/>
     
-    <category term="Java" scheme="https://www.dieselchen.work/categories/Docker/Java/"/>
+    <category term="Java" scheme="https://blog.gwjzc.top/categories/Docker/Java/"/>
     
     
-    <category term="Docker" scheme="https://www.dieselchen.work/tags/Docker/"/>
+    <category term="Docker" scheme="https://blog.gwjzc.top/tags/Docker/"/>
     
-    <category term="Java" scheme="https://www.dieselchen.work/tags/Java/"/>
+    <category term="Java" scheme="https://blog.gwjzc.top/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>上海的互联网公司</title>
-    <link href="https://www.dieselchen.work/archives/44fdb130.html"/>
-    <id>https://www.dieselchen.work/archives/44fdb130.html</id>
+    <link href="https://blog.gwjzc.top/archives/44fdb130.html"/>
+    <id>https://blog.gwjzc.top/archives/44fdb130.html</id>
     <published>2021-11-01T02:05:35.000Z</published>
     <updated>2021-11-01T02:05:35.000Z</updated>
     
@@ -180,17 +180,17 @@
     
     
     
-    <category term="公司" scheme="https://www.dieselchen.work/categories/%E5%85%AC%E5%8F%B8/"/>
+    <category term="公司" scheme="https://blog.gwjzc.top/categories/%E5%85%AC%E5%8F%B8/"/>
     
     
-    <category term="公司" scheme="https://www.dieselchen.work/tags/%E5%85%AC%E5%8F%B8/"/>
+    <category term="公司" scheme="https://blog.gwjzc.top/tags/%E5%85%AC%E5%8F%B8/"/>
     
   </entry>
   
   <entry>
     <title>Docker简单概述</title>
-    <link href="https://www.dieselchen.work/archives/3647edf5.html"/>
-    <id>https://www.dieselchen.work/archives/3647edf5.html</id>
+    <link href="https://blog.gwjzc.top/archives/3647edf5.html"/>
+    <id>https://blog.gwjzc.top/archives/3647edf5.html</id>
     <published>2021-09-20T08:30:32.000Z</published>
     <updated>2021-09-20T08:30:32.000Z</updated>
     
@@ -203,17 +203,17 @@
     
     
     
-    <category term="Docker" scheme="https://www.dieselchen.work/categories/Docker/"/>
+    <category term="Docker" scheme="https://blog.gwjzc.top/categories/Docker/"/>
     
     
-    <category term="Docker" scheme="https://www.dieselchen.work/tags/Docker/"/>
+    <category term="Docker" scheme="https://blog.gwjzc.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>简单了解一下Mysql和InnoDB</title>
-    <link href="https://www.dieselchen.work/archives/e6f74ec.html"/>
-    <id>https://www.dieselchen.work/archives/e6f74ec.html</id>
+    <link href="https://blog.gwjzc.top/archives/e6f74ec.html"/>
+    <id>https://blog.gwjzc.top/archives/e6f74ec.html</id>
     <published>2021-08-15T07:40:10.000Z</published>
     <updated>2021-08-15T07:40:10.000Z</updated>
     
@@ -226,17 +226,17 @@
     
     
     
-    <category term="MySQL" scheme="https://www.dieselchen.work/categories/MySQL/"/>
+    <category term="MySQL" scheme="https://blog.gwjzc.top/categories/MySQL/"/>
     
     
-    <category term="MySQL" scheme="https://www.dieselchen.work/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://blog.gwjzc.top/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>2021年8月入门级电脑推荐</title>
-    <link href="https://www.dieselchen.work/archives/8764d356.html"/>
-    <id>https://www.dieselchen.work/archives/8764d356.html</id>
+    <link href="https://blog.gwjzc.top/archives/8764d356.html"/>
+    <id>https://blog.gwjzc.top/archives/8764d356.html</id>
     <published>2021-08-03T09:31:43.000Z</published>
     <updated>2021-08-03T10:26:57.992Z</updated>
     
@@ -249,23 +249,23 @@
     
     
     
-    <category term="硬件" scheme="https://www.dieselchen.work/categories/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://blog.gwjzc.top/categories/%E7%A1%AC%E4%BB%B6/"/>
     
-    <category term="台式机" scheme="https://www.dieselchen.work/categories/%E7%A1%AC%E4%BB%B6/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
+    <category term="台式机" scheme="https://blog.gwjzc.top/categories/%E7%A1%AC%E4%BB%B6/%E5%8F%B0%E5%BC%8F%E6%9C%BA/"/>
     
     
-    <category term="台式电脑" scheme="https://www.dieselchen.work/tags/%E5%8F%B0%E5%BC%8F%E7%94%B5%E8%84%91/"/>
+    <category term="台式电脑" scheme="https://blog.gwjzc.top/tags/%E5%8F%B0%E5%BC%8F%E7%94%B5%E8%84%91/"/>
     
-    <category term="组装电脑" scheme="https://www.dieselchen.work/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/"/>
+    <category term="组装电脑" scheme="https://blog.gwjzc.top/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/"/>
     
-    <category term="硬件" scheme="https://www.dieselchen.work/tags/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://blog.gwjzc.top/tags/%E7%A1%AC%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>git提交了想撤回怎么做？</title>
-    <link href="https://www.dieselchen.work/archives/fc0a4be0.html"/>
-    <id>https://www.dieselchen.work/archives/fc0a4be0.html</id>
+    <link href="https://blog.gwjzc.top/archives/fc0a4be0.html"/>
+    <id>https://blog.gwjzc.top/archives/fc0a4be0.html</id>
     <published>2021-07-12T09:47:37.000Z</published>
     <updated>2021-07-12T09:50:34.622Z</updated>
     
@@ -278,19 +278,19 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Git" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Git/"/>
+    <category term="Git" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Git/"/>
     
     
-    <category term="Git" scheme="https://www.dieselchen.work/tags/Git/"/>
+    <category term="Git" scheme="https://blog.gwjzc.top/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>golang精度丢失问题</title>
-    <link href="https://www.dieselchen.work/archives/9359d6b3.html"/>
-    <id>https://www.dieselchen.work/archives/9359d6b3.html</id>
+    <link href="https://blog.gwjzc.top/archives/9359d6b3.html"/>
+    <id>https://blog.gwjzc.top/archives/9359d6b3.html</id>
     <published>2021-05-27T04:11:36.000Z</published>
     <updated>2021-05-27T04:18:07.696Z</updated>
     
@@ -303,21 +303,21 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
-    <category term="精度丢失" scheme="https://www.dieselchen.work/tags/%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1/"/>
+    <category term="精度丢失" scheme="https://blog.gwjzc.top/tags/%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1/"/>
     
   </entry>
   
   <entry>
     <title>使用Gorm遇到的坑</title>
-    <link href="https://www.dieselchen.work/archives/3e3fcedd.html"/>
-    <id>https://www.dieselchen.work/archives/3e3fcedd.html</id>
+    <link href="https://blog.gwjzc.top/archives/3e3fcedd.html"/>
+    <id>https://blog.gwjzc.top/archives/3e3fcedd.html</id>
     <published>2021-05-07T04:06:19.000Z</published>
     <updated>2021-05-07T04:10:58.158Z</updated>
     
@@ -330,19 +330,19 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
   </entry>
   
   <entry>
     <title>golang原生实现爬虫架构</title>
-    <link href="https://www.dieselchen.work/archives/f05bbbc9.html"/>
-    <id>https://www.dieselchen.work/archives/f05bbbc9.html</id>
+    <link href="https://blog.gwjzc.top/archives/f05bbbc9.html"/>
+    <id>https://blog.gwjzc.top/archives/f05bbbc9.html</id>
     <published>2021-04-07T08:50:07.000Z</published>
     <updated>2021-04-09T15:13:21.814Z</updated>
     
@@ -356,21 +356,21 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
-    <category term="爬虫" scheme="https://www.dieselchen.work/tags/%E7%88%AC%E8%99%AB/"/>
+    <category term="爬虫" scheme="https://blog.gwjzc.top/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>go源码分析-sync.Pool</title>
-    <link href="https://www.dieselchen.work/archives/e7b919d2.html"/>
-    <id>https://www.dieselchen.work/archives/e7b919d2.html</id>
+    <link href="https://blog.gwjzc.top/archives/e7b919d2.html"/>
+    <id>https://blog.gwjzc.top/archives/e7b919d2.html</id>
     <published>2021-03-30T09:51:22.000Z</published>
     <updated>2021-03-30T10:30:45.543Z</updated>
     
@@ -383,21 +383,21 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
-    <category term="源码分析" scheme="https://www.dieselchen.work/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <category term="源码分析" scheme="https://blog.gwjzc.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>记录一下第一次离职</title>
-    <link href="https://www.dieselchen.work/archives/25ce9345.html"/>
-    <id>https://www.dieselchen.work/archives/25ce9345.html</id>
+    <link href="https://blog.gwjzc.top/archives/25ce9345.html"/>
+    <id>https://blog.gwjzc.top/archives/25ce9345.html</id>
     <published>2021-03-17T07:43:57.000Z</published>
     <updated>2021-03-17T15:03:50.671Z</updated>
     
@@ -410,23 +410,23 @@
     
     
     
-    <category term="成长与收获" scheme="https://www.dieselchen.work/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
+    <category term="成长与收获" scheme="https://blog.gwjzc.top/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
     
-    <category term="离职" scheme="https://www.dieselchen.work/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/%E7%A6%BB%E8%81%8C/"/>
+    <category term="离职" scheme="https://blog.gwjzc.top/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/%E7%A6%BB%E8%81%8C/"/>
     
     
-    <category term="牛牛成长" scheme="https://www.dieselchen.work/tags/%E7%89%9B%E7%89%9B%E6%88%90%E9%95%BF/"/>
+    <category term="牛牛成长" scheme="https://blog.gwjzc.top/tags/%E7%89%9B%E7%89%9B%E6%88%90%E9%95%BF/"/>
     
-    <category term="离职" scheme="https://www.dieselchen.work/tags/%E7%A6%BB%E8%81%8C/"/>
+    <category term="离职" scheme="https://blog.gwjzc.top/tags/%E7%A6%BB%E8%81%8C/"/>
     
-    <category term="跳槽" scheme="https://www.dieselchen.work/tags/%E8%B7%B3%E6%A7%BD/"/>
+    <category term="跳槽" scheme="https://blog.gwjzc.top/tags/%E8%B7%B3%E6%A7%BD/"/>
     
   </entry>
   
   <entry>
     <title>golang学习笔记</title>
-    <link href="https://www.dieselchen.work/archives/f20814c0.html"/>
-    <id>https://www.dieselchen.work/archives/f20814c0.html</id>
+    <link href="https://blog.gwjzc.top/archives/f20814c0.html"/>
+    <id>https://blog.gwjzc.top/archives/f20814c0.html</id>
     <published>2021-03-17T04:25:17.000Z</published>
     <updated>2021-03-17T15:17:29.521Z</updated>
     
@@ -439,21 +439,21 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
-    <category term="学习笔记" scheme="https://www.dieselchen.work/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.gwjzc.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>牛牛App登陆过程</title>
-    <link href="https://www.dieselchen.work/archives/7474afea.html"/>
-    <id>https://www.dieselchen.work/archives/7474afea.html</id>
+    <link href="https://blog.gwjzc.top/archives/7474afea.html"/>
+    <id>https://blog.gwjzc.top/archives/7474afea.html</id>
     <published>2021-03-17T03:24:37.000Z</published>
     <updated>2021-03-17T03:44:21.149Z</updated>
     
@@ -466,21 +466,21 @@
     
     
     
-    <category term="架构设计" scheme="https://www.dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    <category term="架构设计" scheme="https://blog.gwjzc.top/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="技术文档" scheme="https://www.dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    <category term="技术文档" scheme="https://blog.gwjzc.top/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
     
     
-    <category term="登陆" scheme="https://www.dieselchen.work/tags/%E7%99%BB%E9%99%86/"/>
+    <category term="登陆" scheme="https://blog.gwjzc.top/tags/%E7%99%BB%E9%99%86/"/>
     
-    <category term="用户中心" scheme="https://www.dieselchen.work/tags/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/"/>
+    <category term="用户中心" scheme="https://blog.gwjzc.top/tags/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/"/>
     
   </entry>
   
   <entry>
     <title>集成钉钉扫码登陆</title>
-    <link href="https://www.dieselchen.work/archives/d3f55236.html"/>
-    <id>https://www.dieselchen.work/archives/d3f55236.html</id>
+    <link href="https://blog.gwjzc.top/archives/d3f55236.html"/>
+    <id>https://blog.gwjzc.top/archives/d3f55236.html</id>
     <published>2021-03-17T03:08:47.000Z</published>
     <updated>2021-03-17T03:44:21.150Z</updated>
     
@@ -493,23 +493,23 @@
     
     
     
-    <category term="架构设计" scheme="https://www.dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    <category term="架构设计" scheme="https://blog.gwjzc.top/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="技术文档" scheme="https://www.dieselchen.work/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    <category term="技术文档" scheme="https://blog.gwjzc.top/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
     
     
-    <category term="钉钉" scheme="https://www.dieselchen.work/tags/%E9%92%89%E9%92%89/"/>
+    <category term="钉钉" scheme="https://blog.gwjzc.top/tags/%E9%92%89%E9%92%89/"/>
     
-    <category term="扫码登录" scheme="https://www.dieselchen.work/tags/%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/"/>
+    <category term="扫码登录" scheme="https://blog.gwjzc.top/tags/%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/"/>
     
-    <category term="技术文档" scheme="https://www.dieselchen.work/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    <category term="技术文档" scheme="https://blog.gwjzc.top/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>go语言的并发模型GPM</title>
-    <link href="https://www.dieselchen.work/archives/c5d273ba.html"/>
-    <id>https://www.dieselchen.work/archives/c5d273ba.html</id>
+    <link href="https://blog.gwjzc.top/archives/c5d273ba.html"/>
+    <id>https://blog.gwjzc.top/archives/c5d273ba.html</id>
     <published>2021-03-09T03:05:30.000Z</published>
     <updated>2021-03-17T03:44:21.146Z</updated>
     
@@ -522,16 +522,16 @@
     
     
     
-    <category term="语言" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/"/>
+    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Golang" scheme="https://www.dieselchen.work/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
     
     
-    <category term="Golang" scheme="https://www.dieselchen.work/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
-    <category term="并发模型" scheme="https://www.dieselchen.work/tags/%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
+    <category term="并发模型" scheme="https://blog.gwjzc.top/tags/%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
     
-    <category term="Goroutine" scheme="https://www.dieselchen.work/tags/Goroutine/"/>
+    <category term="Goroutine" scheme="https://blog.gwjzc.top/tags/Goroutine/"/>
     
   </entry>
   
