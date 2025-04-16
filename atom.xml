@@ -6,7 +6,7 @@
   <link href="https://blog.gwjzc.top/atom.xml" rel="self"/>
   
   <link href="https://blog.gwjzc.top/"/>
-  <updated>2025-04-03T02:34:05.000Z</updated>
+  <updated>2025-04-14T03:13:26.000Z</updated>
   <id>https://blog.gwjzc.top/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>客户分析功能讨论</title>
+    <link href="https://blog.gwjzc.top/archives/e4f50009.html"/>
+    <id>https://blog.gwjzc.top/archives/e4f50009.html</id>
+    <published>2025-04-14T03:13:26.000Z</published>
+    <updated>2025-04-14T03:13:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>简化API开发流程 客户分析完发送 邮件</p></blockquote><span id="more"></span><h3 id="会议主题：产品任务与优化"><a href="#会议主题：产品任务与优化" class="headerlink" title="会议主题：产品任务与优化"></a><strong>会议主题：产品任务与优化</strong></h3><p><strong>会议时间：</strong> 2025年4月14日 14:25 - 15:00<br><strong>参会人员：</strong> 说话人A（主导）、说话人B（参与讨论）</p><hr><h4 id="一、当前任务与优先级"><a href="#一、当前任务与优先级" class="headerlink" title="一、当前任务与优先级"></a><strong>一、当前任务与优先级</strong></h4><ol><li><strong>页面更新任务</strong><ul><li><strong>目标</strong>：根据最新设计稿更新指定页面样式，支持流式对象输出。</li><li><strong>负责人</strong>：小关</li><li><strong>备注</strong>：需先分析现有音频找课任务的流式输出逻辑，再同步到新页面。</li></ul></li><li><strong>客户分析功能优化</strong><ul><li><strong>调整内容</strong>：<ul><li>将原“Company Research”功能独立为“分析客户”任务类型。</li><li>创建页面优化：输入框文案改为“输入客户公司名称或网址”，按钮文案改为“开始研究”。</li><li>逻辑调整：取消原列表页设计，改为在“样品”模块下新增独立页面“客户列表”。</li></ul></li><li><strong>后续计划</strong>：未来可能将客户列表与任务列表数据融合（需前端处理）。</li><li><strong>争议点</strong>：当前逻辑存在设计问题（如一个任务包含多个客户），需老板确认是否合理。</li></ul></li><li><strong>邮件通知功能迁移</strong><ul><li><strong>任务</strong>：将后端的邮件通知代码迁移至前端项目。</li><li><strong>实现方式</strong>：<ul><li>新建<code>email.ts</code>工具类，接收标题、邮箱、内容参数。</li><li>使用AI生成测试用例，确保功能覆盖。</li></ul></li><li><strong>负责人</strong>：朱晨</li></ul></li><li><strong>图片变种生成功能</strong><ul><li><strong>当前问题</strong>：UI设计逻辑混乱，需求不明确。</li><li><strong>临时方案</strong>：<ul><li>优先开发对话框式聊天页面，支持上传产品图后通过AI生成设计变种。</li><li>简化流程，跳过“灵感分析”步骤，直接生成并修改设计。</li></ul></li><li><strong>后续</strong>：待其他任务完成后细化。</li></ul></li></ol><hr><h4 id="二、技术实现规范"><a href="#二、技术实现规范" class="headerlink" title="二、技术实现规范"></a><strong>二、技术实现规范</strong></h4><ol><li><strong>简化API开发流程</strong><ul><li><strong>适用场景</strong>：单表或简单逻辑的增删改查。</li><li><strong>步骤</strong>：<ol><li>通过<code>db pull</code>同步后端表结构到前端。</li><li>使用AI生成Server Action代码（含测试用例）。</li><li>人工校验后直接集成到前端项目。</li></ol></li><li><strong>优势</strong>：减少人工编码，10-30分钟即可完成基础功能。</li></ul></li><li><strong>前端项目配置</strong><ul><li><strong>AI工具配置</strong>：<ul><li>在<code>.env</code>中配置自定义OpenAI API Key（低成本，约1万Token/0.1元）。</li><li>可尝试谷歌免费API（需测试兼容性）。</li></ul></li><li><strong>注意事项</strong>：<ul><li>Server Action文件需添加<code>use server</code>标识。</li><li>表结构变更仅在后端操作，前端通过<code>db pull</code>同步。</li></ul></li></ul></li><li><strong>测试规范</strong><ul><li>AI生成的测试用例需实际运行，确保覆盖增删改查边界场景。</li><li>测试数据需隔离，避免污染生产数据。</li></ul></li></ol><hr><h4 id="三、争议与待确认事项"><a href="#三、争议与待确认事项" class="headerlink" title="三、争议与待确认事项"></a><strong>三、争议与待确认事项</strong></h4><ol><li><strong>客户分析任务逻辑</strong><ul><li>当前设计允许一个任务关联多个客户，但未明确是否合理，需老板确认需求意图。</li></ul></li><li><strong>图片变种生成流程</strong><ul><li>团队认为现有UI设计过于复杂，建议简化为核心聊天式交互，需与老板对齐预期。</li></ul></li></ol><hr><h4 id="四、后续行动计划"><a href="#四、后续行动计划" class="headerlink" title="四、后续行动计划"></a><strong>四、后续行动计划</strong></h4><table><thead><tr><th align="left">任务</th><th align="left">负责人</th><th align="left">时间节点</th></tr></thead><tbody><tr><td align="left">页面样式更新</td><td align="left">小关</td><td align="left">优先处理</td></tr><tr><td align="left">客户列表页开发</td><td align="left">小白</td><td align="left">本周内</td></tr><tr><td align="left">邮件通知迁移</td><td align="left">朱晨</td><td align="left">本周内</td></tr><tr><td align="left">图片变种Demo开发</td><td align="left">待定</td><td align="left">其他完成后</td></tr></tbody></table><hr><p><strong>会议结论</strong>：</p><ul><li>对需求模糊的功能采取“最小化可行方案”，避免过度设计。</li><li>鼓励使用AI辅助开发，提升简单功能的交付效率。</li><li>争议点需在群内同步并等待老板反馈。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;简化API开发流程 客户分析完发送 邮件&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/"/>
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/tags/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/tags/%E8%91%B5%E6%99%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收藏喜欢等商品优化</title>
+    <link href="https://blog.gwjzc.top/archives/66d15e30.html"/>
+    <id>https://blog.gwjzc.top/archives/66d15e30.html</id>
+    <published>2025-04-07T02:54:42.000Z</published>
+    <updated>2025-04-07T02:54:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>收藏喜欢等商品优化</p></blockquote><span id="more"></span><h3 id="会议总结：商品功能优化会"><a href="#会议总结：商品功能优化会" class="headerlink" title="会议总结：商品功能优化会"></a><strong>会议总结：商品功能优化会</strong></h3><p><strong>时间：</strong> 2025/04/07 10:33 - 11:23<br><strong>主题：</strong> 商品功能逻辑调整与优化</p><hr><h4 id="一、核心功能调整：喜欢-→-收藏"><a href="#一、核心功能调整：喜欢-→-收藏" class="headerlink" title="一、核心功能调整：喜欢 → 收藏"></a><strong>一、核心功能调整：喜欢 → 收藏</strong></h4><ol><li><strong>移除原有“喜欢”功能</strong><ul><li>删除标记喜欢、商品列表点击喜欢筛选的逻辑。</li><li>业务逻辑上彻底废弃，API 改造为“收藏”功能。</li></ul></li><li><strong>收藏功能设计</strong><ul><li><strong>图标与交互</strong>：<ul><li>商品图片中的“喜欢”图标改为“收藏”。</li><li>Hover 时显示操作选项：新建文件夹或选择已有文件夹加入收藏。</li></ul></li><li><strong>列表页调整</strong>：<ul><li>移除“喜欢”按钮及筛选功能。</li><li>收藏入口移至顶部导航栏（“我的” → “私密” → 新增“收藏”标签）。</li></ul></li></ul></li><li><strong>收藏列表展示逻辑</strong><ul><li>顶部显示分类标签：<strong>全部</strong>、<strong>文件夹1</strong>、<strong>文件夹2</strong>（默认展示“全部”下的收藏列表）。</li><li>点击文件夹仅显示该文件夹内收藏的商品。</li><li><strong>限制</strong>：不支持二级文件夹，仅允许单层文件夹结构。</li></ul></li></ol><hr><h4 id="二、权限与文案优化"><a href="#二、权限与文案优化" class="headerlink" title="二、权限与文案优化"></a><strong>二、权限与文案优化</strong></h4><ol><li><strong>商品编辑权限</strong><ul><li>仅商品创建者可修改“公开/私密”状态，其他用户无操作权限。</li></ul></li><li><strong>文案调整</strong><ul><li>“我创建的”改为“我的”。</li><li>“更新时间”改为“状态”，并增加操作者头像显示。</li></ul></li></ol><hr><h4 id="三、商品列表与操作逻辑"><a href="#三、商品列表与操作逻辑" class="headerlink" title="三、商品列表与操作逻辑"></a><strong>三、商品列表与操作逻辑</strong></h4><ol><li><strong>“我的”标签页</strong><ul><li>默认展示用户创建的公开商品。</li><li>勾选商品后，底部工具条增加“设为私密”按钮。</li></ul></li><li><strong>“私密”标签页</strong><ul><li>工具条增加“设为公开”按钮，支持批量操作。</li></ul></li><li><strong>包装方案显示</strong><ul><li>列表页表头固定宽度，无论是否存在“一件一箱/两件一箱”选项。</li></ul></li></ol><hr><h4 id="四、交互与样式优化"><a href="#四、交互与样式优化" class="headerlink" title="四、交互与样式优化"></a><strong>四、交互与样式优化</strong></h4><ol><li><strong>图片相关</strong><ul><li>轮播图需按顺序从第一张开始播放。</li><li>优化图片加载状态提示（如加载动画）。</li></ul></li><li><strong>其他细节</strong><ul><li>商品列表增加滚动条，支持滑动浏览。</li><li>创建任务时默认不预选类型（需用户手动选择）。</li><li>文字样式调整（如“更新状态”不加粗）。</li></ul></li></ol><hr><h4 id="五、其他说明"><a href="#五、其他说明" class="headerlink" title="五、其他说明"></a><strong>五、其他说明</strong></h4><ol><li><strong>暂不调整的内容</strong><ul><li>画布功能、设计相关改动延后处理，优先完成业务逻辑优化。</li></ul></li><li><strong>API 改造建议</strong><ul><li>评估是否复用原“喜欢”API 或新建“收藏”API，需技术侧确认。</li></ul></li><li><strong>历史问题</strong><ul><li>原“喜欢”功能因绑定文件夹和推荐逻辑复杂，改为“收藏”后更符合用户习惯（参考抖音/淘宝收藏模式）。</li></ul></li></ol><hr><h4 id="六、后续任务分配"><a href="#六、后续任务分配" class="headerlink" title="六、后续任务分配"></a><strong>六、后续任务分配</strong></h4><ul><li>开发按优先级拆分任务，复杂功能可逐步处理。</li><li>任务进度需在文档中标记，确保团队同步。</li></ul><p><strong>会议结论：</strong> 聚焦收藏功能重构，简化交互逻辑，提升用户体验，技术侧需配合API调整与细节优化。</p><hr><p><strong>附：关键决策点</strong><br>✅ 彻底废弃“喜欢”功能，全面转向“收藏”。<br>✅ 收藏仅支持单层文件夹，禁止二级嵌套。<br>✅ 权限控制严格区分创建者与非创建者操作。<br>✅ 交互优化以“默认简洁+灵活操作”为原则。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;收藏喜欢等商品优化&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/"/>
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/tags/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/tags/%E8%91%B5%E6%99%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>图片编辑器会议</title>
@@ -55,6 +109,33 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;讨论了图片生成与产品库扩充&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/"/>
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/tags/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/tags/%E8%91%B5%E6%99%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>产品优化讨论</title>
+    <link href="https://blog.gwjzc.top/archives/cc552ea2.html"/>
+    <id>https://blog.gwjzc.top/archives/cc552ea2.html</id>
+    <published>2025-03-20T02:52:16.000Z</published>
+    <updated>2025-03-20T02:52:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>产品优化讨论</p></blockquote><span id="more"></span><h3 id="会议总结：产品优化讨论"><a href="#会议总结：产品优化讨论" class="headerlink" title="会议总结：产品优化讨论"></a><strong>会议总结：产品优化讨论</strong></h3><p><strong>时间</strong>：2025/03/20 17:14 - 17:52<br><strong>参与人</strong>：说话人A（主导）、说话人B（开发）、说话人C（前端）</p><hr><h4 id="一、核心议题与结论"><a href="#一、核心议题与结论" class="headerlink" title="一、核心议题与结论"></a><strong>一、核心议题与结论</strong></h4><ol><li><strong>多品类产品分析逻辑</strong><ul><li>当前实现：用户选择两个不同品类时，系统独立分析每个产品（分别向AI发送请求），返回结果以数组形式包含两个产品的分析数据。</li><li>问题点：<ul><li>总结功能是否基于两个产品联合生成？需确认AI返回的总结是否合并了多产品信息。</li><li>定位客户时，需明确搜索逻辑（是否分别走接口）。</li></ul></li></ul></li><li><strong>搜索优化</strong><ul><li><strong>文本搜索 vs 图片搜索</strong>：<ul><li>当前使用产品标题（name）进行文本搜索，但图片搜索效果更优（如一次性刀叉勺案例）。</li><li>图片搜索需处理向量相似度阈值问题（不同产品阈值差异大，可能导致结果过多或过少）。</li></ul></li><li><strong>改进方向</strong>：<ul><li>优先使用图片URL链接搜索，限制返回结果数量（如Top 100）。</li><li>前端需调整产品列表搜索逻辑，忽略大小写（SQL查询优化）。</li></ul></li></ul></li><li><strong>客户定位逻辑</strong><ul><li>当前流程：<ol><li>分别搜索每个产品，获取关联商品列表（如产品A搜出20个，产品B搜出22个）。</li><li>去重后汇总店铺（如42个），按商品数量排序，随机选取5~15个目标客户。</li></ol></li><li>问题点：<ul><li>部分店铺类目杂乱（如自然流量店铺含上万商品），需标记或过滤异常数据。</li></ul></li></ul></li><li><strong>数据源与联系人问题</strong><ul><li>当前联系人数据为Mock数据，需接入真实来源（如爬虫或第三方API）。</li><li>产品库数据需自动化更新（目前依赖本地代理爬取国外网站，线上部署需解决访问速度问题）。</li></ul></li><li><strong>流式输出技术问题</strong><ul><li>当前AI接口是否支持流式输出结构体（如JSON）尚不明确，需进一步测试：<ul><li>文本聊天可流式输出，但结构体返回机制未验证。</li><li>服务端可尝试转换响应为流式JS对象，需与前端配合调试。</li></ul></li></ul></li><li><strong>前端交互优化</strong><ul><li>产品列表中的“未选中”状态逻辑需调整：<ul><li>当前未选中产品在分析时会被忽略，但列表需保留记录（后续可能需复制或删除功能）。</li><li>建议默认全选，或仅支持多选删除操作。</li></ul></li></ul></li></ol><hr><h4 id="二、新增功能讨论：外部数据集成"><a href="#二、新增功能讨论：外部数据集成" class="headerlink" title="二、新增功能讨论：外部数据集成"></a><strong>二、新增功能讨论：外部数据集成</strong></h4><ol><li><strong>公司深度分析工具</strong><ul><li><strong>流程</strong>：输入公司名称 → AI自动研究（耗时约10分钟，优化后目标3-4分钟） → 生成报告。</li><li><strong>输出内容</strong>：<ul><li>基础信息（创始人、员工规模、融资情况等）。</li><li>进出口数据（海关记录、供应链伙伴、热门产品）。</li><li>新闻动态（如融资目的、业务扩展计划）。</li></ul></li><li><strong>技术实现</strong>：<ul><li>多步骤AI反思模型（搜索→分析→总结），依赖长上下文模型（如GPT-4o）。</li><li>成本控制：分阶段执行任务（初步分析后决定是否深度研究），单次任务目标成本＜5元。</li></ul></li></ul></li><li><strong>应用场景</strong><ul><li>销售辅助：手动调用分析工具，匹配客户需求与产品库。</li><li>后续集成：在客户搜索环节直接联网分析，评估合作潜力（如销量、产品匹配度）。</li></ul></li></ol><hr><h4 id="三、后续行动计划"><a href="#三、后续行动计划" class="headerlink" title="三、后续行动计划"></a><strong>三、后续行动计划</strong></h4><ol><li><strong>技术优化</strong><ul><li>图片搜索优先于文本搜索，调整向量相似度阈值策略。</li><li>验证AI结构体流式输出可行性，协调前后端测试。</li><li>自动化产品库更新（部署线上爬虫，解决代理问题）。</li></ul></li><li><strong>功能迭代</strong><ul><li>客户定位逻辑增强：过滤异常店铺，优化随机选取算法。</li><li>外部数据工具集成：简化输出形式（如表格化公司关键数据）。</li></ul></li><li><strong>会议待决事项</strong><ul><li>流式输出技术细节确认（联系AI服务商或查阅SDK文档）。</li><li>未选中产品列表的交互设计最终方案。</li></ul></li></ol><p><strong>备注</strong>：部分问题需次日会议进一步讨论（如产品列表交互优化）。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;产品优化讨论&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -445,89 +526,6 @@
     <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
     <category term="源码分析" scheme="https://blog.gwjzc.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记录一下第一次离职</title>
-    <link href="https://blog.gwjzc.top/archives/25ce9345.html"/>
-    <id>https://blog.gwjzc.top/archives/25ce9345.html</id>
-    <published>2021-03-17T07:43:57.000Z</published>
-    <updated>2021-03-17T15:03:50.671Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>20年6月毕业，7月底在上海找到一份工作。总结一下在牛牛成长的收获。在职时间2020-7-31 ～2021-3-17</p></blockquote><span id="more"></span><h3 id="找到第一份工作的激动"><a href="#找到第一份工作的激动" class="headerlink" title="找到第一份工作的激动"></a>找到第一份工作的激动</h3><p>​        毕业了找工作很难，现阶段程序员初级岗很饱和，想找到一份不错的工作还是有难度的。记得当时牛牛成长一面是视频面：文林哥给我面的，说真的当时面的很不好，我简历上写的很夸张，导致很多问题问深了就不会了。当时我记得文林问了一句，你觉得你的优势在哪？我抓住了这个机会说我学习能力很强，我也很想转go开发。可能是因为我当时真的很想进这家公司，在hr问我期望薪资的时候，我压到了6k左右。在二面之前已经拿到一个外包的offer。当时也是很激动，但还好没有去外包。外包是程序员的一生黑，能不去外包尽量不去外包。二面是和磊哥聊的，当时聊的还挺不错的，就斗胆要了7k，谁知当场就拿到了offer。</p><h3 id="第一个月的压力之大"><a href="#第一个月的压力之大" class="headerlink" title="第一个月的压力之大"></a>第一个月的压力之大</h3><p>​        从java转go对我来说挑战挺大的，因为我java学的也不咋样，所以每天回到家里还是会继续熟悉项目、熟悉数据库表的设计、熟悉各种框架。这一个月体重飙升，因为朝10晚7，再加会班，到家基本上10-11点了。再猛吃一顿，对于我这种易胖体质来说简直是灾难。可能是因为压力有点大导致自己的精神面貌可能不是很好，解决一些问题给人的感觉很困难。其实我分析过为啥文林、磊哥对我的评价 那么低，我一直抱着一种被低估的心态参与工作 ，虽说自我感觉是能够在规定时间完成任务，但可能言语之间就暴露了自己的问题。导致我心态发生变化是我打听到两个前端应届生都比我高2k，但实力感觉和我差不多。</p><h3 id="艰难的涨薪"><a href="#艰难的涨薪" class="headerlink" title="艰难的涨薪"></a>艰难的涨薪</h3><p>​        我好像在第三个月就开始提涨薪了，因为自我感觉良好，我做的东西还是很多的。但直接被否定了，可能对我的打击挺大的，不管怎么样我应该在平时的工作中都受到了影响。在任务驱动的环境下，我还是按部就班的完成leader布置的任务。可能问林看到我完成度还不错，跟我说让我转node，给app后端写服务就给我涨薪到 10k，但是当场就被磊哥拦下了，当时诗文已经走了，磊哥想带着我用go去写一些东西，而且想把我们现有的服务用CI、CD的方式部署。说当我完成了就给我涨薪。没过多久文林就走了，从那时候感觉app团队做的东西肯定要凉，磊哥还是继续带领我们做事情。我花了一周的时间完成了CI、CD，紧接着参与了app后端数据提供、用户中心搭建。我在年前看完成度不错又再一次和磊哥提了涨薪，磊哥给予我的是肯定，但也说了我现在还需要继续学，给我推荐了一本书《clean code》、让我 多看看源码。也说了差不多2个月就会给我涨薪。还提醒了我，我们现在的最重要的任务就是完成App的开发。转眼间就快到除夕了。在过年之前我还是把sms短信登陆做完了，可能是照着node写的，当时磊哥直接在群里@我说做的不行，我也进行了反驳，我之前一直找他说怎么设计sms表，一直没给回复，说先把oauth2完成。我也是先给个demo，在群里激辩起来。可能是我做的不对吧，自己才疏学浅，没有达到磊哥的要求。我是真的没想到磊哥年终奖居然给我了不到300。这一下子给我打醒了，这段时间的工作毫无意义，自己的绩效是最差的，我做的所有东西都是无用功 ，没有给公司带来任务的利益。之后……之后磊哥就带领着核心成员投奔了文林，其实这波操作我是真的没想到的。</p><h3 id="学习成长过程"><a href="#学习成长过程" class="headerlink" title="学习成长过程"></a>学习成长过程</h3><p>​        其实我在牛牛成长的这半年内，自己学到的东西还是很多的。比如 linux命令的熟练掌握 、git流程的掌握 、前后端连调、从产品、开发、测试、验收的整体流程等等。具体到项目就是我做了wbs后端leads线索公海、leads状态流转、找教练功能。cms改了很多很多bug，越来越熟悉cms系统，熟悉各种表结构。小程序也做了体能测试等。自己写了很多sql 完成bi报表。也进行了sql优化。explain分析sql。知道了docker、dockerfile、docker-compose、k8s。在磊哥的带领下用 go-zero从0-1起了个新的项目。集成了钉钉的扫码登录 ，自己基于oauth2的标准协议提供了授权接口。总的来说学到了很多、在 大牛们的带领下，我算是入了后端的门了 。</p><h3 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h3><p>​        今天办理了离职、明天就要奔赴新的公司、认识新的同事、在新的环境里工作。我希望自己可以在新的工作环境中提高自己的工作效率，和同事们处好关系，保持一个积极向上的乐观心态。一步一个脚印，加油！</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;20年6月毕业，7月底在上海找到一份工作。总结一下在牛牛成长的收获。在职时间2020-7-31 ～2021-3-17&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="成长与收获" scheme="https://blog.gwjzc.top/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/"/>
-    
-    <category term="离职" scheme="https://blog.gwjzc.top/categories/%E6%88%90%E9%95%BF%E4%B8%8E%E6%94%B6%E8%8E%B7/%E7%A6%BB%E8%81%8C/"/>
-    
-    
-    <category term="牛牛成长" scheme="https://blog.gwjzc.top/tags/%E7%89%9B%E7%89%9B%E6%88%90%E9%95%BF/"/>
-    
-    <category term="离职" scheme="https://blog.gwjzc.top/tags/%E7%A6%BB%E8%81%8C/"/>
-    
-    <category term="跳槽" scheme="https://blog.gwjzc.top/tags/%E8%B7%B3%E6%A7%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>golang学习笔记</title>
-    <link href="https://blog.gwjzc.top/archives/f20814c0.html"/>
-    <id>https://blog.gwjzc.top/archives/f20814c0.html</id>
-    <published>2021-03-17T04:25:17.000Z</published>
-    <updated>2021-03-17T15:17:29.521Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>golang一些用法记录一下（持续更新）</p></blockquote><span id="more"></span><h2 id="golang中截取字符串"><a href="#golang中截取字符串" class="headerlink" title="golang中截取字符串"></a>golang中截取字符串</h2><h3 id="截取普通英文字符串"><a href="#截取普通英文字符串" class="headerlink" title="截取普通英文字符串"></a>截取普通英文字符串</h3><p>当你需要截取字符串中的一部分时，可以使用像截取数组某部分那样来操作</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s := <span class="string">&quot;GoXHelloWorldX&quot;</span></span><br><span class="line">content:=s[<span class="number">3</span>:<span class="built_in">len</span>(s)<span class="number">-1</span>]</span><br><span class="line">fmt.Println(content)</span><br></pre></td></tr></table></figure><p>运行结果为： HelloWorld</p><h3 id="截取带中文字符串"><a href="#截取带中文字符串" class="headerlink" title="截取带中文字符串"></a>截取带中文字符串</h3><p>一个中文字符肯定不止一个字节，难道我还得遍历每个字节，判断编码，那也太麻烦了吧。我们不需要考虑那么多，除了byte还有另外一个类型rune，使用它完全不用考虑unicode字节问题，一个中文就只占一个数组下标</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s:=<span class="string">&quot;我He你好吗？&quot;</span></span><br><span class="line">content:=[]<span class="keyword">rune</span>(s)[<span class="number">3</span>:]</span><br><span class="line">fmt.Println(content)</span><br></pre></td></tr></table></figure><p>运行结果：你好吗？</p><h2 id="golang-string-和int-转换"><a href="#golang-string-和int-转换" class="headerlink" title="golang string 和int 转换"></a>golang string 和int 转换</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//string转成int：</span></span><br><span class="line"><span class="keyword">int</span>, err := strconv.Atoi(<span class="keyword">string</span>)</span><br><span class="line"><span class="comment">//string转成int64：</span></span><br><span class="line"><span class="keyword">int64</span>, err := strconv.ParseInt(<span class="keyword">string</span>, <span class="number">10</span>, <span class="number">64</span>)</span><br><span class="line"><span class="comment">//int转成string：</span></span><br><span class="line"><span class="keyword">string</span> := strconv.Itoa(<span class="keyword">int</span>)</span><br><span class="line"><span class="comment">//int64转成string：</span></span><br><span class="line"><span class="keyword">string</span> := strconv.FormatInt(<span class="keyword">int64</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;golang一些用法记录一下（持续更新）&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
-    
-    
-    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
-    
-    <category term="学习笔记" scheme="https://blog.gwjzc.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>牛牛App登陆过程</title>
-    <link href="https://blog.gwjzc.top/archives/7474afea.html"/>
-    <id>https://blog.gwjzc.top/archives/7474afea.html</id>
-    <published>2021-03-17T03:24:37.000Z</published>
-    <updated>2021-03-17T03:44:21.149Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>牛牛成长直播app搭建用户中心</p></blockquote><span id="more"></span><p>牛牛APP登录全流程</p><p>当前流程如下</p><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317113919021.png" alt="image-20210317113919021"></p><h1 id="验证码登录过程描述"><a href="#验证码登录过程描述" class="headerlink" title="验证码登录过程描述"></a>验证码登录过程描述</h1><h2 id="请求发送验证码"><a href="#请求发送验证码" class="headerlink" title="请求发送验证码"></a>请求发送验证码</h2><ol><li>查找 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#ngf20O">sms_codes</a> 记录，是否存在手机号相同且未过期的验证码。如不存在，新建记录；如存在，更新验证码的过期时间。</li><li>追加相关的设备信息。</li><li>检查 <strong>手机号</strong> 与 <strong>国家区号</strong> 发送次数是否被限制，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">403</a></li><li>检查腾讯云短信服务是否发送成功，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">503</a></li><li>发送成功</li></ol><h2 id="验证发送的验证码"><a href="#验证发送的验证码" class="headerlink" title="验证发送的验证码"></a>验证发送的验证码</h2><ol><li>正则匹配 code 是否通过，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">403</a></li><li>查找 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#ngf20O">sms_codes</a> 存在未验证的短信验证码，否则直接返回失败。错误码 <a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">404</a></li><li>通过 <strong>手机号</strong> 与 <strong>国家区号</strong> 查找用户，如果查找不到完成自动注册</li><li>生成 tshn 的 access_token</li><li>验证成功</li></ol><h1 id="OAuth-登录鉴权过程"><a href="#OAuth-登录鉴权过程" class="headerlink" title="OAuth 登录鉴权过程"></a>OAuth 登录鉴权过程</h1><h2 id="请求OAuth2授权码"><a href="#请求OAuth2授权码" class="headerlink" title="请求OAuth2授权码"></a>请求OAuth2授权码</h2><table><thead><tr><th>接口地址</th><th>GET /oauth/authorize</th><th></th></tr></thead><tbody><tr><td>请求参数</td><td>client_id</td><td>客户端标识，如 “nnapp-student”</td></tr><tr><td></td><td>response_type</td><td>这里按照规范约定值为 “code”</td></tr><tr><td></td><td>redirect_uri</td><td>请求成功后的回调地址，例如 <a href="https://example.com/oauth/callback">https://example.com/oauth/callback</a></td></tr><tr><td></td><td>state</td><td>规范中约定的防止 CSRF 的值，通常为随机字符串</td></tr><tr><td>请求头</td><td>Authorization</td><td>tshn 专用的 access token</td></tr><tr><td></td><td>x-user-id</td><td>用户在 tshn 中 userid</td></tr><tr><td>返回结果</td><td>重定向到 redirect_uri 参数指定的地址</td><td>在本例中，会返回重定向请求到 <a href="https://example.com/oauth/callback?code=xxxx&amp;state=xx">https://example.com/oauth/callback?code=xxxx&amp;state=xx</a> 其中 code 为后续换取 access token 所用的临时验证码</td></tr></tbody></table><h2 id="换取Access-Token"><a href="#换取Access-Token" class="headerlink" title="换取Access Token"></a>换取Access Token</h2><table><thead><tr><th>接口地址</th><th>POST /oauth/token</th><th></th></tr></thead><tbody><tr><td>请求参数</td><td>code</td><td>用于换取 access code 的验证码，由上一个接口返回，例如 “xxxx”</td></tr><tr><td></td><td>grant_type</td><td>按照规范约定，此处为 “authorization_code”</td></tr><tr><td></td><td>client_id</td><td>用于表明客户端身份的标识，如 “nncz-student”</td></tr><tr><td></td><td>client_secret</td><td>客户端 client_id 对应的密钥</td></tr><tr><td>请求头</td><td>Authorization</td><td>tshn 专用的 access token</td></tr><tr><td></td><td>x-user-id</td><td>用户在 tshn 中 userid</td></tr><tr><td>返回结果</td><td>一个 JSON object</td><td>{  “access_token”: “”,  “token_type: “Bearer”,  “expires_at”: “unix timestamp”,  “role”: “coach”, //  “scope”: …,  “refresh_token”: … }</td></tr></tbody></table><h2 id="刷新Access-Token"><a href="#刷新Access-Token" class="headerlink" title="刷新Access Token"></a>刷新Access Token</h2><table><thead><tr><th>接口地址</th><th>POST /oauth/token</th><th></th></tr></thead><tbody><tr><td>请求参数</td><td>refresh_token</td><td>refresh_token</td></tr><tr><td></td><td>grant_type</td><td>按照规范约定，此处为 “refresh_token”</td></tr><tr><td></td><td>client_id</td><td>用于表明客户端身份的标识，如 “nncz-student”</td></tr><tr><td></td><td>client_secret</td><td>客户端 client_id 对应的密钥</td></tr><tr><td>请求头</td><td>Authorization</td><td>tshn 专用的 access token</td></tr><tr><td></td><td>x-user-id</td><td>用户在 tshn 中 userid</td></tr><tr><td>返回结果</td><td>一个 JSON object</td><td>{  “access_token”: “”,  “token_type: “Bearer”,  “expires_at”: “unix timestamp”,  “role”: “coach”, //  “scope”: …,  “refresh_token”: … }</td></tr></tbody></table><h1 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h1><h2 id="SMS-接口"><a href="#SMS-接口" class="headerlink" title="SMS 接口"></a>SMS 接口</h2><h3 id="发送验证码"><a href="#发送验证码" class="headerlink" title="发送验证码"></a>发送验证码</h3><table><thead><tr><th>请求路径</th><th>/sms/send</th></tr></thead><tbody><tr><td>请求方法</td><td>POST</td></tr><tr><td>请求头</td><td>content-type: application/x-www-form-urlencoded</td></tr><tr><td>请求参数</td><td>phone=17671773306&amp;country_code=86&amp;unique_id=xxx&amp;device_id=iPhone13%2C4&amp;mac_address=xxx&amp;ip_address=127.0.0.1</td></tr><tr><td>返回</td><td>Status=200 {“message”: “发送成功”}</td></tr><tr><td>错误码error</td><td><a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">牛牛APP登录全流程</a></td></tr></tbody></table><h3 id="检查验证码"><a href="#检查验证码" class="headerlink" title="检查验证码"></a>检查验证码</h3><table><thead><tr><th>请求路径</th><th>/sms/verify</th></tr></thead><tbody><tr><td>请求方法</td><td>POST</td></tr><tr><td>请求头</td><td>content-type: application/x-www-form-urlencoded</td></tr><tr><td>请求参数</td><td>phone=17671773306&amp;country_code=86&amp;code=9999</td></tr><tr><td>返回</td><td>Status=200 {“tshn_access_token”:token,”user_id”:1000000} tshn 用 token（通过 jwt 方式加密），token 的内容包含 {  userId: … // 学生 id 从 100 0000 开始  role: … // 可能值为 coach, student  exp: … // timestamp   iat: ..//timestamp } Status!=200  {    “error”: “invalid-code-error”,    “error_description”: “验证码没有通过正则匹配” }</td></tr><tr><td>错误码error</td><td><a href="https://e1z7tg61mh.feishu.cn/docs/doccncpydiPIcsDoT4pktxBsdof#toyMPx">牛牛APP登录全流程</a></td></tr></tbody></table><h3 id="错误码"><a href="#错误码" class="headerlink" title="错误码"></a>错误码</h3><table><thead><tr><th><strong>error</strong></th><th><strong>message</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>100</td><td>action_not_found</td><td>操作的方法不存在</td></tr><tr><td>403</td><td>send-restricted</td><td>该手机号发送次数受到限制</td></tr><tr><td>403</td><td>invalid-code-error</td><td>验证码没有通过正则匹配  regex: <strong>/^\d{4}$/</strong></td></tr><tr><td>404</td><td>code-not-found</td><td>没有查询到匹配的验证码</td></tr><tr><td>500</td><td>find-user-error</td><td>没有查询到该手机号绑定的用户（自动注册功能完成后该错误失效）</td></tr><tr><td>503</td><td>send-fail-error</td><td>短信发送失败了（腾讯云短信服务）</td></tr><tr><td>999</td><td>incomplete_device_info</td><td>没有设备信息</td></tr></tbody></table><h2 id="OAuth-接口"><a href="#OAuth-接口" class="headerlink" title="OAuth 接口"></a>OAuth 接口</h2><h3 id="获取授权"><a href="#获取授权" class="headerlink" title="获取授权"></a>获取授权</h3><h3 id="获取-AccessToken"><a href="#获取-AccessToken" class="headerlink" title="获取 AccessToken"></a>获取 AccessToken</h3><h3 id="请求业务接口"><a href="#请求业务接口" class="headerlink" title="请求业务接口"></a>请求业务接口</h3><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="SMS-相关表结构"><a href="#SMS-相关表结构" class="headerlink" title="SMS 相关表结构"></a>SMS 相关表结构</h2><h3 id="sms-code-包含gorm-Model"><a href="#sms-code-包含gorm-Model" class="headerlink" title="sms_code(包含gorm.Model)"></a>sms_code(包含gorm.Model)</h3><table><thead><tr><th>属性</th><th>类型</th><th>备注</th></tr></thead><tbody><tr><td>phone</td><td>varchar(30)</td><td>手机号，如：131012345678</td></tr><tr><td>country_code</td><td>varchar(10)</td><td>地区号，如 86，与手机号一同构成唯一标识</td></tr><tr><td>expire_at</td><td>timestamp</td><td>“2020-01-01 13:05:39”，表示这个 code 的过期时间</td></tr><tr><td>code</td><td>String</td><td>四位数字，例如 9527</td></tr><tr><td>verified</td><td>tinyint</td><td>默认为 0，当通过 /verify API 验证过以后会设置为 1</td></tr></tbody></table><h3 id="sms-client-包含gorm-Model"><a href="#sms-client-包含gorm-Model" class="headerlink" title="sms_client(包含gorm.Model)"></a>sms_client(包含gorm.Model)</h3><table><thead><tr><th>属性</th><th>类型</th><th>备注</th></tr></thead><tbody><tr><td>sms_code_id</td><td>int</td><td>sms_code_id    sms_code的主键</td></tr><tr><td>device_id</td><td>varchar(100)</td><td>设备ID</td></tr><tr><td>mac_address</td><td>varchar(100)</td><td>设备网卡的mac地址(ios7之后无法检索出)</td></tr><tr><td>unique_id</td><td>varchar(255)</td><td>设备唯一标识</td></tr><tr><td>ip_address</td><td>varchar(50)</td><td>设备网卡分配的ip地址</td></tr></tbody></table><p><img src="https://image.dieselchen.work/uPic/2021/03/17/image-20210317114229778.png" alt="image-20210317114229778"></p><h2 id="OAuth-相关表结构-（tshn-的数据库中）"><a href="#OAuth-相关表结构-（tshn-的数据库中）" class="headerlink" title="OAuth 相关表结构 （tshn 的数据库中）"></a>OAuth 相关表结构 （tshn 的数据库中）</h2><h3 id="oauth-client-包含gorm-Model"><a href="#oauth-client-包含gorm-Model" class="headerlink" title="oauth_client(包含gorm.Model)"></a>oauth_client(包含gorm.Model)</h3><table><thead><tr><th>client_id</th><th>varchar(255)</th><th>发起对资源请求的客户端标识符，对应 /oauth/authorize 请求中的 client_id。客户端是指 手机端 app，或者小程序，等。</th></tr></thead><tbody><tr><td>client_secret</td><td>varchar(255)</td><td>对应请求中的参数 client_secret</td></tr><tr><td>redirect_uri</td><td>varchar(255)</td><td>重定向地址    “<a href="https://chat3.nncz.cn/oauth/callback&quot;">https://chat3.nncz.cn/oauth/callback&quot;</a></td></tr><tr><td>data</td><td>json</td><td>clientInfo Json存储信息</td></tr></tbody></table><h3 id="oauth-token-包含gorm-Model"><a href="#oauth-token-包含gorm-Model" class="headerlink" title="oauth_token(包含gorm.Model)"></a>oauth_token(包含gorm.Model)</h3><table><thead><tr><th>code</th><th>varchar(255)</th><th>授权码 authorization_code</th></tr></thead><tbody><tr><td>access</td><td>varchar(255)</td><td>access_token</td></tr><tr><td>refresh</td><td>varchar(255)</td><td>refresh_token</td></tr><tr><td>expire_at</td><td>timestamp</td><td>refresh过期时间</td></tr><tr><td>data</td><td>json</td><td>tokenInfo Json存储信息</td></tr></tbody></table><h2 id="短信配置"><a href="#短信配置" class="headerlink" title="短信配置"></a>短信配置</h2><table><thead><tr><th>常量名称</th><th>描述</th></tr></thead><tbody><tr><td>secretId</td><td>腾讯云Apikey的id</td></tr><tr><td>secretKey</td><td>腾讯云Apikey的key</td></tr><tr><td>smsAppId</td><td>短信服务的项目appId</td></tr><tr><td>smsSign</td><td>短信签名</td></tr><tr><td>smsTemplateID</td><td>短信模版id</td></tr></tbody></table><h2 id="登录配置"><a href="#登录配置" class="headerlink" title="登录配置"></a>登录配置</h2><table><thead><tr><th>code</th><th>有效期时长，默认 5分钟</th></tr></thead><tbody><tr><td>access_token</td><td>有效期，默认 6 小时</td></tr><tr><td>refresh_token</td><td>刷新token，默认 30 天</td></tr></tbody></table><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol><li><a href="https://zhuanlan.zhihu.com/p/89020647">OAuth 2.0 详解</a></li><li><a href="http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html">OAuth 2.0 的四种方式</a>（阮一峰的博客）</li><li>oauth2-server 的<a href="https://oauth2-server.readthedocs.io/">开发文档</a></li><li><a href="https://tools.ietf.org/html/rfc6749.html">RFC 6749</a></li><li><a href="https://www.oauth.com/playground/">OAuth Playground</a></li><li><a href="https://console.cloud.tencent.com/api/explorer?Product=sms">QCloud API Explorer(短信)</a></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;牛牛成长直播app搭建用户中心&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="架构设计" scheme="https://blog.gwjzc.top/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="技术文档" scheme="https://blog.gwjzc.top/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
-    
-    
-    <category term="登陆" scheme="https://blog.gwjzc.top/tags/%E7%99%BB%E9%99%86/"/>
-    
-    <category term="用户中心" scheme="https://blog.gwjzc.top/tags/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/"/>
     
   </entry>
   
