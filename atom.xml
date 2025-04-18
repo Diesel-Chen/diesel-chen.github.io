@@ -6,7 +6,7 @@
   <link href="https://blog.gwjzc.top/atom.xml" rel="self"/>
   
   <link href="https://blog.gwjzc.top/"/>
-  <updated>2025-04-14T03:13:26.000Z</updated>
+  <updated>2025-04-18T08:56:30.000Z</updated>
   <id>https://blog.gwjzc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>客户分析变更讨论</title>
+    <link href="https://blog.gwjzc.top/archives/857a03ed.html"/>
+    <id>https://blog.gwjzc.top/archives/857a03ed.html</id>
+    <published>2025-04-18T08:56:30.000Z</published>
+    <updated>2025-04-18T08:56:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>任务与客户分析结构调整</p></blockquote><span id="more"></span><h3 id="会议总结：客户分析变更安排"><a href="#会议总结：客户分析变更安排" class="headerlink" title="会议总结：客户分析变更安排"></a><strong>会议总结：客户分析变更安排</strong></h3><p><strong>会议时间</strong>：2025年4月18日 16:34 - 16:53</p><hr><h4 id="核心变更内容"><a href="#核心变更内容" class="headerlink" title="核心变更内容"></a><strong>核心变更内容</strong></h4><ol><li><strong>任务与客户分析结构调整</strong><ul><li>一个任务下支持多个客户分析，每个任务包含一个客户列表。</li><li>客户列表来源：<ul><li>当前仅支持手动输入（网址或客户名称），暂不支持从客户库选择。</li><li>列表显示优化：优先显示网址，若无则显示客户名称。</li></ul></li></ul></li><li><strong>分析流程</strong><ul><li><strong>独立分析</strong>：<ul><li>勾选客户后执行分析，每个客户生成独立报告（单独表格展示）。</li><li>状态管理：分析中（显示进度百分比）、已完成、失败（可重启）、可手动停止。</li><li><strong>停止分析实现</strong>：需通过异步任务循环检测取消状态，非直接队列中断。</li></ul></li><li><strong>对比分析</strong>：<ul><li>先完成各客户的独立分析，再基于多份报告生成对比报告（合并表格展示）。</li><li>若客户已独立分析过，可直接引用结果生成对比报告。</li><li>报告数量：N个客户独立报告 + 1份对比报告（暂不隐藏中间报告）。</li></ul></li></ul></li><li><strong>报告生成与导出</strong><ul><li>分析完成后自动生成报告，包含：<ul><li>思维导图（数据为Markdown格式，导出支持Markdown文本）。</li><li>文本内容（导出PDF）。</li></ul></li><li>详情页展示：思维导图 + 文本，暂不显示分析过程。</li></ul></li><li><strong>数据结构调整</strong><ul><li>任务类型需扩展：原仅<code>agent task</code>，现需支持<code>客户分析任务</code>。</li><li>方案选项：<ul><li>扩展原表字段，或新增<code>job</code>表关联子任务（如<code>agent task</code>或客户分析）。</li></ul></li><li>抽象任务结构：任务列表统一展示，详情页按类型动态渲染。</li></ul></li></ol><hr><h4 id="待明确与后续事项"><a href="#待明确与后续事项" class="headerlink" title="待明确与后续事项"></a><strong>待明确与后续事项</strong></h4><ol><li><strong>技术实现细节</strong><ul><li>停止分析功能优先级：若实现复杂可延后处理。</li><li>流式对象输出：小关优先评估可行性，遇到问题及时反馈。</li><li>批量删除需求：小关需跟进群消息处理（使用Server Action实现）。</li></ul></li><li><strong>其他任务安排</strong><ul><li>朱晨：评估“Android自动扩充产品库”开发周期，优先处理或调整顺序。</li></ul></li></ol><hr><h4 id="关键注意事项"><a href="#关键注意事项" class="headerlink" title="关键注意事项"></a><strong>关键注意事项</strong></h4><ul><li><strong>对比分析逻辑</strong>：确保先独立分析再聚合，提示词可暂简化，后续优化。</li><li><strong>数据兼容性</strong>：调整任务表结构时需兼容历史<code>agent task</code>数据。</li><li><strong>进度反馈</strong>：分析中需实时更新进度（每完成一个步骤更新20%）。</li></ul><p><strong>下一步行动</strong>：</p><ul><li>开发团队按分工推进（任务拆分、接口调整、UI适配），阻塞问题及时同步。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;任务与客户分析结构调整&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/"/>
+    
+    
+    <category term="会议总结" scheme="https://blog.gwjzc.top/tags/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="葵普" scheme="https://blog.gwjzc.top/tags/%E8%91%B5%E6%99%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>客户分析功能讨论</title>
@@ -499,33 +526,6 @@
     <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
     
     <category term="爬虫" scheme="https://blog.gwjzc.top/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>go源码分析-sync.Pool</title>
-    <link href="https://blog.gwjzc.top/archives/e7b919d2.html"/>
-    <id>https://blog.gwjzc.top/archives/e7b919d2.html</id>
-    <published>2021-03-30T09:51:22.000Z</published>
-    <updated>2021-03-30T10:30:45.543Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。</p></blockquote><span id="more"></span><h2 id="大佬博文"><a href="#大佬博文" class="headerlink" title="大佬博文"></a>大佬博文</h2><ul><li><a href="https://changkun.us/archives/2018/09/256/">欧神 源码分析</a></li><li><a href="https://reading.hidevops.io/reading/20180817/2018-08-17-sync-pool-reading.pdf">Go 夜读</a></li><li><a href="https://juejin.cn/post/6844903903046320136">源码分析，伪共享</a></li><li><a href="https://zhuanlan.zhihu.com/p/99710992">golang的对象池sync.pool源码解读</a></li><li><a href="https://www.jianshu.com/p/2e08332481c5">sync.Pool 的实现与演进</a></li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;go萌新入门，本文记录一下大佬们的优秀博文，精心研读，日积月累。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="语言" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Golang" scheme="https://blog.gwjzc.top/categories/%E8%AF%AD%E8%A8%80/Golang/"/>
-    
-    
-    <category term="Golang" scheme="https://blog.gwjzc.top/tags/Golang/"/>
-    
-    <category term="源码分析" scheme="https://blog.gwjzc.top/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   

@@ -22,21 +22,21 @@
     var CONFIG = {"hostname":"blog.gwjzc.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="golang一些用法记录一下（持续更新）">
+  <meta name="description" content="任务与客户分析结构调整">
 <meta property="og:type" content="article">
-<meta property="og:title" content="golang学习笔记">
-<meta property="og:url" content="https://blog.gwjzc.top/archives/f20814c0.html">
+<meta property="og:title" content="客户分析变更讨论">
+<meta property="og:url" content="https://blog.gwjzc.top/archives/857a03ed.html">
 <meta property="og:site_name" content="DieselChen">
-<meta property="og:description" content="golang一些用法记录一下（持续更新）">
+<meta property="og:description" content="任务与客户分析结构调整">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-17T04:25:17.000Z">
-<meta property="article:modified_time" content="2021-03-17T15:17:29.521Z">
+<meta property="article:published_time" content="2025-04-18T08:56:30.000Z">
+<meta property="article:modified_time" content="2025-04-18T08:56:30.000Z">
 <meta property="article:author" content="Diesel-Chen">
-<meta property="article:tag" content="Golang">
-<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="会议总结">
+<meta property="article:tag" content="葵普">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.gwjzc.top/archives/f20814c0.html">
+<link rel="canonical" href="https://blog.gwjzc.top/archives/857a03ed.html">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>golang学习笔记 | DieselChen</title>
+  <title>客户分析变更讨论 | DieselChen</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G46QNP0S5F"></script>
     <script>
@@ -202,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/f20814c0.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/857a03ed.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -215,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          golang学习笔记
+          客户分析变更讨论
         </h1>
 
         <div class="post-meta">
@@ -224,9 +224,8 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-17 12:25:17 / 修改时间：23:17:29" itemprop="dateCreated datePublished" datetime="2021-03-17T12:25:17+08:00">2021-03-17</time>
+              <time title="创建时间：2025-04-18 16:56:30" itemprop="dateCreated datePublished" datetime="2025-04-18T16:56:30+08:00">2025-04-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,11 +233,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">语言</span></a>
+                  <a href="/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">会议总结</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%AD%E8%A8%80/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+                  <a href="/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/" itemprop="url" rel="index"><span itemprop="name">葵普</span></a>
                 </span>
             </span>
 
@@ -258,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/f20814c0.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/f20814c0.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/857a03ed.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/857a03ed.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -269,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>568</span>
+              <span>830</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -289,20 +288,79 @@
 
       
         <blockquote>
-<p>golang一些用法记录一下（持续更新）</p>
+<p>任务与客户分析结构调整</p>
 </blockquote>
 <span id="more"></span>
 
-<h2 id="golang中截取字符串"><a href="#golang中截取字符串" class="headerlink" title="golang中截取字符串"></a>golang中截取字符串</h2><h3 id="截取普通英文字符串"><a href="#截取普通英文字符串" class="headerlink" title="截取普通英文字符串"></a>截取普通英文字符串</h3><p>当你需要截取字符串中的一部分时，可以使用像截取数组某部分那样来操作</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s := <span class="string">&quot;GoXHelloWorldX&quot;</span></span><br><span class="line">content:=s[<span class="number">3</span>:<span class="built_in">len</span>(s)<span class="number">-1</span>]</span><br><span class="line">fmt.Println(content)</span><br></pre></td></tr></table></figure>
-
-<p>运行结果为： HelloWorld</p>
-<h3 id="截取带中文字符串"><a href="#截取带中文字符串" class="headerlink" title="截取带中文字符串"></a>截取带中文字符串</h3><p>一个中文字符肯定不止一个字节，难道我还得遍历每个字节，判断编码，那也太麻烦了吧。我们不需要考虑那么多，除了byte还有另外一个类型rune，使用它完全不用考虑unicode字节问题，一个中文就只占一个数组下标</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s:=<span class="string">&quot;我He你好吗？&quot;</span></span><br><span class="line">content:=[]<span class="keyword">rune</span>(s)[<span class="number">3</span>:]</span><br><span class="line">fmt.Println(content)</span><br></pre></td></tr></table></figure>
-
-<p>运行结果：你好吗？</p>
-<h2 id="golang-string-和int-转换"><a href="#golang-string-和int-转换" class="headerlink" title="golang string 和int 转换"></a>golang string 和int 转换</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//string转成int：</span></span><br><span class="line"><span class="keyword">int</span>, err := strconv.Atoi(<span class="keyword">string</span>)</span><br><span class="line"><span class="comment">//string转成int64：</span></span><br><span class="line"><span class="keyword">int64</span>, err := strconv.ParseInt(<span class="keyword">string</span>, <span class="number">10</span>, <span class="number">64</span>)</span><br><span class="line"><span class="comment">//int转成string：</span></span><br><span class="line"><span class="keyword">string</span> := strconv.Itoa(<span class="keyword">int</span>)</span><br><span class="line"><span class="comment">//int64转成string：</span></span><br><span class="line"><span class="keyword">string</span> := strconv.FormatInt(<span class="keyword">int64</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-
+<h3 id="会议总结：客户分析变更安排"><a href="#会议总结：客户分析变更安排" class="headerlink" title="会议总结：客户分析变更安排"></a><strong>会议总结：客户分析变更安排</strong></h3><p><strong>会议时间</strong>：2025年4月18日 16:34 - 16:53</p>
+<hr>
+<h4 id="核心变更内容"><a href="#核心变更内容" class="headerlink" title="核心变更内容"></a><strong>核心变更内容</strong></h4><ol>
+<li><strong>任务与客户分析结构调整</strong><ul>
+<li>一个任务下支持多个客户分析，每个任务包含一个客户列表。</li>
+<li>客户列表来源：<ul>
+<li>当前仅支持手动输入（网址或客户名称），暂不支持从客户库选择。</li>
+<li>列表显示优化：优先显示网址，若无则显示客户名称。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>分析流程</strong><ul>
+<li><strong>独立分析</strong>：<ul>
+<li>勾选客户后执行分析，每个客户生成独立报告（单独表格展示）。</li>
+<li>状态管理：分析中（显示进度百分比）、已完成、失败（可重启）、可手动停止。</li>
+<li><strong>停止分析实现</strong>：需通过异步任务循环检测取消状态，非直接队列中断。</li>
+</ul>
+</li>
+<li><strong>对比分析</strong>：<ul>
+<li>先完成各客户的独立分析，再基于多份报告生成对比报告（合并表格展示）。</li>
+<li>若客户已独立分析过，可直接引用结果生成对比报告。</li>
+<li>报告数量：N个客户独立报告 + 1份对比报告（暂不隐藏中间报告）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>报告生成与导出</strong><ul>
+<li>分析完成后自动生成报告，包含：<ul>
+<li>思维导图（数据为Markdown格式，导出支持Markdown文本）。</li>
+<li>文本内容（导出PDF）。</li>
+</ul>
+</li>
+<li>详情页展示：思维导图 + 文本，暂不显示分析过程。</li>
+</ul>
+</li>
+<li><strong>数据结构调整</strong><ul>
+<li>任务类型需扩展：原仅<code>agent task</code>，现需支持<code>客户分析任务</code>。</li>
+<li>方案选项：<ul>
+<li>扩展原表字段，或新增<code>job</code>表关联子任务（如<code>agent task</code>或客户分析）。</li>
+</ul>
+</li>
+<li>抽象任务结构：任务列表统一展示，详情页按类型动态渲染。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="待明确与后续事项"><a href="#待明确与后续事项" class="headerlink" title="待明确与后续事项"></a><strong>待明确与后续事项</strong></h4><ol>
+<li><strong>技术实现细节</strong><ul>
+<li>停止分析功能优先级：若实现复杂可延后处理。</li>
+<li>流式对象输出：小关优先评估可行性，遇到问题及时反馈。</li>
+<li>批量删除需求：小关需跟进群消息处理（使用Server Action实现）。</li>
+</ul>
+</li>
+<li><strong>其他任务安排</strong><ul>
+<li>朱晨：评估“Android自动扩充产品库”开发周期，优先处理或调整顺序。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="关键注意事项"><a href="#关键注意事项" class="headerlink" title="关键注意事项"></a><strong>关键注意事项</strong></h4><ul>
+<li><strong>对比分析逻辑</strong>：确保先独立分析再聚合，提示词可暂简化，后续优化。</li>
+<li><strong>数据兼容性</strong>：调整任务表结构时需兼容历史<code>agent task</code>数据。</li>
+<li><strong>进度反馈</strong>：分析中需实时更新进度（每完成一个步骤更新20%）。</li>
+</ul>
+<p><strong>下一步行动</strong>：</p>
+<ul>
+<li>开发团队按分工推进（任务拆分、接口调整、UI适配），阻塞问题及时同步。</li>
+</ul>
 
     </div>
 
@@ -318,7 +376,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.gwjzc.top/archives/f20814c0.html" title="golang学习笔记">https://blog.gwjzc.top/archives/f20814c0.html</a>
+    <a href="https://blog.gwjzc.top/archives/857a03ed.html" title="客户分析变更讨论">https://blog.gwjzc.top/archives/857a03ed.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -358,8 +416,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Golang/" rel="tag"><i class="fa fa-tag"></i> Golang</a>
-              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+              <a href="/tags/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/" rel="tag"><i class="fa fa-tag"></i> 会议总结</a>
+              <a href="/tags/%E8%91%B5%E6%99%AE/" rel="tag"><i class="fa fa-tag"></i> 葵普</a>
           </div>
 
         
@@ -368,13 +426,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/archives/7474afea.html" rel="prev" title="牛牛App登陆过程">
-      <i class="fa fa-chevron-left"></i> 牛牛App登陆过程
+    <a href="/archives/e4f50009.html" rel="prev" title="客户分析功能讨论">
+      <i class="fa fa-chevron-left"></i> 客户分析功能讨论
     </a></div>
-      <div class="post-nav-item">
-    <a href="/archives/25ce9345.html" rel="next" title="记录一下第一次离职">
-      记录一下第一次离职 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -434,7 +489,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#golang%E4%B8%AD%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.</span> <span class="nav-text">golang中截取字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%AA%E5%8F%96%E6%99%AE%E9%80%9A%E8%8B%B1%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.1.</span> <span class="nav-text">截取普通英文字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%AA%E5%8F%96%E5%B8%A6%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.2.</span> <span class="nav-text">截取带中文字符串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#golang-string-%E5%92%8Cint-%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">golang string 和int 转换</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93%EF%BC%9A%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E5%8F%98%E6%9B%B4%E5%AE%89%E6%8E%92"><span class="nav-number">1.</span> <span class="nav-text">会议总结：客户分析变更安排</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%8F%98%E6%9B%B4%E5%86%85%E5%AE%B9"><span class="nav-number">1.1.</span> <span class="nav-text">核心变更内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%85%E6%98%8E%E7%A1%AE%E4%B8%8E%E5%90%8E%E7%BB%AD%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.2.</span> <span class="nav-text">待明确与后续事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.3.</span> <span class="nav-text">关键注意事项</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
