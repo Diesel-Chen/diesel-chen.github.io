@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"blog.gwjzc.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Zookeeper是一个分布式应用程序协调服务，主要负责集中维护配置信息的服务，提供分布式的同步机制。其所有的服务都是做为其他分布式应用的基础。">
+  <meta name="description" content="深入剖析了中国房地产市场及精装房问题的历史根源、发展脉络和深层机制，指出土地财政、土地金融、开发商高周转高杠杆模式与政策的互动如何塑造当前局面。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Zookeeper学习笔记">
-<meta property="og:url" content="https://blog.gwjzc.top/archives/398b07d0.html">
+<meta property="og:title" content="中国房地产市场与精装房问题剖析">
+<meta property="og:url" content="https://blog.gwjzc.top/archives/91a69400.html">
 <meta property="og:site_name" content="DieselChen">
-<meta property="og:description" content="Zookeeper是一个分布式应用程序协调服务，主要负责集中维护配置信息的服务，提供分布式的同步机制。其所有的服务都是做为其他分布式应用的基础。">
+<meta property="og:description" content="深入剖析了中国房地产市场及精装房问题的历史根源、发展脉络和深层机制，指出土地财政、土地金融、开发商高周转高杠杆模式与政策的互动如何塑造当前局面。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-18T08:57:14.000Z">
-<meta property="article:modified_time" content="2022-03-18T08:57:14.000Z">
+<meta property="article:published_time" content="2025-04-14T15:05:23.000Z">
+<meta property="article:modified_time" content="2025-04-14T15:05:23.000Z">
 <meta property="article:author" content="Diesel-Chen">
-<meta property="article:tag" content="Zookeeper">
+<meta property="article:tag" content="装修">
+<meta property="article:tag" content="诡计up">
+<meta property="article:tag" content="通识课入门">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.gwjzc.top/archives/398b07d0.html">
+<link rel="canonical" href="https://blog.gwjzc.top/archives/91a69400.html">
 
 
 <script id="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>Zookeeper学习笔记 | DieselChen</title>
+  <title>中国房地产市场与精装房问题剖析 | DieselChen</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G46QNP0S5F"></script>
     <script>
@@ -201,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/398b07d0.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/91a69400.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -214,7 +216,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Zookeeper学习笔记
+          中国房地产市场与精装房问题剖析
         </h1>
 
         <div class="post-meta">
@@ -224,7 +226,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-03-18 16:57:14" itemprop="dateCreated datePublished" datetime="2022-03-18T16:57:14+08:00">2022-03-18</time>
+              <time title="创建时间：2025-04-14 23:05:23" itemprop="dateCreated datePublished" datetime="2025-04-14T23:05:23+08:00">2025-04-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -232,7 +234,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Zookeeper/" itemprop="url" rel="index"><span itemprop="name">Zookeeper</span></a>
+                  <a href="/categories/%E8%A3%85%E4%BF%AE/" itemprop="url" rel="index"><span itemprop="name">装修</span></a>
                 </span>
             </span>
 
@@ -252,8 +254,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/archives/398b07d0.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/398b07d0.html" itemprop="commentCount"></span>
+    <a title="valine" href="/archives/91a69400.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/91a69400.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -263,14 +265,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.3k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -283,127 +285,139 @@
 
       
         <blockquote>
-<p>Zookeeper是一个分布式应用程序协调服务，主要负责集中维护配置信息的服务，提供分布式的同步机制。其所有的服务都是做为其他分布式应用的基础。</p>
+<p>深入剖析了中国房地产市场及精装房问题的历史根源、发展脉络和深层机制，指出土地财政、土地金融、开发商高周转高杠杆模式与政策的互动如何塑造当前局面。</p>
 </blockquote>
 <span id="more"></span>
 
-<h2 id="Zookeeper-介绍"><a href="#Zookeeper-介绍" class="headerlink" title="Zookeeper 介绍"></a>Zookeeper 介绍</h2><p>Zookeeper是Google Chubby的一个开源实现，是现在很多分布式应用的重要组件，包括诸如Hadoop、HBase、Kafka等，可以说现在Zookeeper是大家必须掌握的一门软件。</p>
-<p>Zookeeper主要提供以下几种服务：<br>1、命名服务<br>2、配置管理<br>3、集群管理<br>4、分布式锁<br>5、队列管理</p>
-<h2 id="Zookeeper的特点"><a href="#Zookeeper的特点" class="headerlink" title="Zookeeper的特点"></a>Zookeeper的特点</h2><ul>
-<li>简单：Zookeeper的核心是一个精简的文件系统，它支持一些简单的操作和一些抽象操作，例如，排序和通知。</li>
-<li>丰富：Zookeeper的原语操作是很丰富的，可实现一些协调数据结构和协议。例如，分布式队列、分布式锁和一组同级别节点中的“领导者选举”。</li>
-<li>高可用：Zookeeper支持集群模式，可以很容易的解决单点故障问题。</li>
-<li>松耦合式交互：不同进程间的交互不需要了解彼此，甚至可以不必同时存在，某进程在zookeeper中留下消息后，该进程结束后其它进程还可以读这条消息。</li>
-<li>资源库：Zookeeper实现了一个关于通用协调模式的开源共享存储库，能使开发者免于编写这类通用协议。</li>
+<h1 id="中国房地产市场与精装房问题剖析"><a href="#中国房地产市场与精装房问题剖析" class="headerlink" title="中国房地产市场与精装房问题剖析"></a>中国房地产市场与精装房问题剖析</h1><h2 id="核心主题"><a href="#核心主题" class="headerlink" title="核心主题"></a>核心主题</h2><p>视频从宏观经济和历史角度探讨了中国房地产市场，特别是“精装房”问题的由来、现状及其对中国经济和普通民众生活的影响。内容并非装修教程，而是分析房地产问题成因，并对未来趋势和个人选择提出看法。</p>
+<h2 id="主要观点与内容"><a href="#主要观点与内容" class="headerlink" title="主要观点与内容"></a>主要观点与内容</h2><h3 id="引言与问题提出"><a href="#引言与问题提出" class="headerlink" title="引言与问题提出"></a>引言与问题提出</h3><ul>
+<li><strong>主题敏感</strong>：房地产话题敏感，呼吁观众理性讨论。</li>
+<li><strong>行业痛点</strong>：房地产常被认为是“最深恶痛绝”的行业。</li>
+<li><strong>精装房问题</strong>：频发质量丑闻（如万科、绿地漏水，汤臣一品豪宅问题导致业主女儿抑郁），被形容为“恶心加倍”。</li>
+<li><strong>核心疑问</strong>：精装房质量差、居住需求难满足的根源是什么？</li>
+<li><strong>视频结构</strong>：分为“毛坯房”、“精装房”、“时代”三部分，参考吴晓波、安小欢、白紫璇等人资料。</li>
 </ul>
-<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><p>为了熟悉Zookeeper的常用操作，最简单的办法就是使用Docker。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull zookeeper</span><br><span class="line"><span class="comment"># 完成后启动zookeeper</span></span><br><span class="line">$ docker run -p 2181:2181 zookeeper</span><br><span class="line"><span class="comment"># 重新打开一个Terminal界面，查找到当前容器的ID，登陆到容器中</span></span><br><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                        NAMES</span><br><span class="line">63c3aa117fca        zookeeper           <span class="string">&quot;/docker-entrypoint.…&quot;</span>   About a minute ago   Up About a minute   2888/tcp, 0.0.0.0:2181-&gt;2181/tcp, 3888/tcp   infallible_saha</span><br><span class="line">$ docker <span class="built_in">exec</span> -it 63c3aa117fca bash</span><br></pre></td></tr></table></figure>
-
-<p>现在一个单机版的Zookeeper就运行起来了，可以尝试常用的命令了。</p>
-<h3 id="查看Server运行状态"><a href="#查看Server运行状态" class="headerlink" title="查看Server运行状态"></a>查看Server运行状态</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bash-4.4<span class="comment"># ./zkServer.sh status</span></span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /conf/zoo.cfg</span><br><span class="line">Mode: standalone</span><br></pre></td></tr></table></figure>
-
-<h3 id="客户端连接服务器"><a href="#客户端连接服务器" class="headerlink" title="客户端连接服务器"></a>客户端连接服务器</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bash-4.4<span class="comment"># ./zkCli.sh </span></span><br><span class="line">Connecting to localhost:2181</span><br></pre></td></tr></table></figure>
-
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li>查看: <code>ls</code></li>
-<li>获取节点数据和更新信息: <code>get /zookeeper</code></li>
+<hr>
+<h3 id="第一部分：毛坯房的由来"><a href="#第一部分：毛坯房的由来" class="headerlink" title="第一部分：毛坯房的由来"></a>第一部分：毛坯房的由来</h3><ul>
+<li><strong>全球反差</strong>：全球多数国家交付精装房，毛坯房（水泥盒子）是中国特色，本身不合理（如同买衣服要自己缝）。</li>
+<li><strong>非个性化需求</strong>：多数业主追求方便、省心、实惠，而非极致个性化。优质精装房可满足需求。</li>
+<li><strong>毛坯房弊端</strong>：<ul>
+<li>资源浪费：主体改造每年浪费300亿。</li>
+<li>环境污染：每户装修产生约2吨垃圾。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 3] get /zookeeper</span><br><span class="line"></span><br><span class="line">cZxid = 0x0</span><br><span class="line">ctime = Thu Jan 01 00:00:00 GMT 1970</span><br><span class="line">mZxid = 0x0</span><br><span class="line">mtime = Thu Jan 01 00:00:00 GMT 1970</span><br><span class="line">pZxid = 0x0</span><br><span class="line">cversion = -1</span><br><span class="line">dataVersion = 0</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 0</span><br><span class="line">numChildren = 1</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>获取节点的更新信息: <code>stat /zookeeper</code></li>
-<li>创建节点: <code>craete [-s] [-e] path data acl</code>，<code>-s</code>表示创建顺序节点，<code>-e</code>表示创建临时节点。</li>
+</li>
+<li><strong>精装房优势</strong>：规模化装修提高效率、降低成本、提升价值、增强竞争力。</li>
+<li><strong>历史溯源</strong>：毛坯房为何成为主流？<ul>
+<li>**改革开放初期 (1978-1993)**：经济建设为中心，计划经济转向市场经济。地方政府获“财政包干”自主权，GDP高速增长。</li>
+<li>**财政包干弊端 (1990s初)**：地方“藏富”，中央财政枯竭，宏观调控能力减弱。</li>
+<li><strong>1994年分税制改革</strong>：加强中央财政，土地转让收益权留给地方，埋下“土地财政”伏笔。</li>
+<li><strong>地方财政压力</strong>：分税制后，地方需新财源，投资成为关键。</li>
+<li><strong>土地财政形成</strong>：土地转让（卖地）为城市建设积累资金。</li>
+<li><strong>1998年房改</strong>：取消福利分房，开启商品房时代，开放住房信贷，房地产成为支柱产业。</li>
+<li>**招拍挂制度 (2002起)**：规范土地出让，土地财政成型。</li>
+<li><strong>早期良性循环</strong>：土地财政 -&gt; 城市基建 -&gt; 吸引人口 -&gt; 房价上涨 -&gt; 土地增值 -&gt; 更多财政收入。改善居住条件，带动相关产业。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 6] create /spring hello</span><br><span class="line">Created /spring</span><br><span class="line">[zk: localhost:2181(CONNECTED) 9] get /spring</span><br><span class="line">hello</span><br><span class="line">cZxid = 0x4</span><br><span class="line">ctime = Fri Apr 05 09:30:55 GMT 2019</span><br><span class="line">mZxid = 0x4</span><br><span class="line">mtime = Fri Apr 05 09:30:55 GMT 2019</span><br><span class="line">pZxid = 0x4</span><br><span class="line">cversion = 0</span><br><span class="line">dataVersion = 0</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 5</span><br><span class="line">numChildren = 0</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改节点: <code>set path data [version]</code>，可以看到dataVersion变成了1</li>
+</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 11] <span class="built_in">set</span> /spring spring-v1</span><br><span class="line">cZxid = 0x4</span><br><span class="line">ctime = Fri Apr 05 09:30:55 GMT 2019</span><br><span class="line">mZxid = 0x5</span><br><span class="line">mtime = Fri Apr 05 09:34:19 GMT 2019</span><br><span class="line">pZxid = 0x4</span><br><span class="line">cversion = 0</span><br><span class="line">dataVersion = 1</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 9</span><br><span class="line">numChildren = 0</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除节点: <code>delete path [version]</code></li>
+<h4 id="土地财政的演变：土地金融"><a href="#土地财政的演变：土地金融" class="headerlink" title="土地财政的演变：土地金融"></a>土地财政的演变：土地金融</h4><ul>
+<li><strong>资金需求扩大</strong>：土地财政不足以支撑高速城市化。</li>
+<li><strong>土地金融模式</strong>：地方政府成立“城投公司”（LGFV），以土地抵押借贷，开展大规模基建。</li>
+<li><strong>模式优点</strong>：推动城市现代化，改善基础设施和生活。</li>
+<li><strong>模式风险</strong>：依赖土地和债务，经济/房价下行时债务风险巨大。</li>
+<li><strong>2008年金融危机</strong>：“四万亿”刺激和宽松货币政策稳经济，但推高房价，地方债务激增。</li>
+<li><strong>后续刺激</strong>：2015年棚改货币化、2020年疫情后宽松政策，进一步推高房价。</li>
+<li><strong>困局</strong>：房价不能跌成为维持模式的关键，房地产与经济深度绑定。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 17] delete /spring</span><br><span class="line">[zk: localhost:2181(CONNECTED) 18] get /spring</span><br><span class="line">Node does not exist: /spring</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>设置watch事件: <code>stat path [watch]</code></li>
+<hr>
+<h3 id="第二部分：精装房的“兴起”与开发商模式"><a href="#第二部分：精装房的“兴起”与开发商模式" class="headerlink" title="第二部分：精装房的“兴起”与开发商模式"></a>第二部分：精装房的“兴起”与开发商模式</h3><ul>
+<li><strong>毛坯房主导原因</strong>：房价飞涨预期下，“早买房”比“买好房”更重要。开发商提供低成本毛坯房，快速销售获利。</li>
+<li><strong>精装房增多原因</strong>：非市场成熟或开发商良心发现，而是政策驱动：<ul>
+<li>**限价政策 (2011-2016起)**：限制新房备案价，毛坯房利润空间受限。</li>
+<li>**精装房推广政策 (2017起)**：基于环保、效率等，鼓励全装修成品住宅。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 33] <span class="built_in">stat</span> /spring/bootx watch</span><br><span class="line">Node does not exist: /spring/bootx</span><br><span class="line">[zk: localhost:2181(CONNECTED) 34] create /spring/bootx bootx</span><br><span class="line">Created /spring/bootx</span><br><span class="line"></span><br><span class="line">WATCHER::</span><br><span class="line">[zk: localhost:2181(CONNECTED) 35] </span><br><span class="line">WatchedEvent state:SyncConnected <span class="built_in">type</span>:NodeCreated path:/spring/bootx</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>设置watch事件: <code>get path [watch]</code></li>
+</li>
+<li><strong>开发商对策</strong>：利用精装房装修成本不透明，虚报装修标准（如宣称3000元/平，实际成本几百），绕过限价，提高售价和利润。</li>
+<li><strong>房企经营模式</strong>：高周转、高杠杆<ul>
+<li><strong>路径</strong>：通过扩大销量赚钱，而非主要靠提价或降本。</li>
+<li><strong>驱动力</strong>：市场火热时快速扩张，规模大易获低息贷款。</li>
+<li><strong>手段</strong>：大量借贷（银行、信托、供应商欠款等）；快速拿地、开发、销售、回款（如碧桂园“3456”模式）。</li>
+<li><strong>后果</strong>：<ul>
+<li>金融化：实体开发变金融游戏。</li>
+<li>牺牲质量：赶工期、控制成本（拖欠施工方款），导致劣质精装房泛滥。</li>
+<li>高风险：依赖市场热度和融资顺畅，市场转冷或政策收紧（如“三道红线”）易引发债务危机（如恒大、融创爆雷）。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 38] get /spring/booty watch</span><br><span class="line">new-boot-y</span><br><span class="line">cZxid = 0xc</span><br><span class="line">ctime = Fri Apr 05 13:38:36 GMT 2019</span><br><span class="line">mZxid = 0xd</span><br><span class="line">mtime = Fri Apr 05 13:38:48 GMT 2019</span><br><span class="line">pZxid = 0xc</span><br><span class="line">cversion = 0</span><br><span class="line">dataVersion = 1</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 10</span><br><span class="line">numChildren = 0</span><br><span class="line">[zk: localhost:2181(CONNECTED) 39] <span class="built_in">set</span> /spring/booty nnew-boot-y</span><br><span class="line"></span><br><span class="line">WATCHER::</span><br><span class="line"></span><br><span class="line">WatchedEvent state:SyncConnected <span class="built_in">type</span>:NodeDataChanged path:/spring/booty</span><br><span class="line">cZxid = 0xc</span><br><span class="line">ctime = Fri Apr 05 13:38:36 GMT 2019</span><br><span class="line">mZxid = 0xe</span><br><span class="line">mtime = Fri Apr 05 13:39:26 GMT 2019</span><br><span class="line">pZxid = 0xc</span><br><span class="line">cversion = 0</span><br><span class="line">dataVersion = 2</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 11</span><br><span class="line">numChildren = 0</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>xxxx</li>
-<li>xxxx</li>
+</li>
 </ul>
-<h3 id="ACL权限"><a href="#ACL权限" class="headerlink" title="ACL权限"></a>ACL权限</h3><p>ZK的节点有5种操作权限：<code>CREATE、READ、WRITE、DELETE、ADMIN</code> 也就是 增、删、改、查、管理权限。</p>
-<blockquote>
-<p>注：这5种权限中，delete是指对子节点的删除权限，其它4种权限指对自身节点的操作权限。</p>
-</blockquote>
-<p>身份的认证有4种方式：</p>
-<ul>
-<li>world：默认方式，相当于全世界都能访问</li>
-<li>auth：代表已经认证通过的用户(cli中可以通过addauth digest user:pwd 来添加当前上下文中的授权用户)</li>
-<li>digest：即用户名:密码这种方式认证，这也是业务系统中最常用的</li>
-<li>ip：使用Ip地址认证</li>
+</li>
+<li><strong>对开发商的批判</strong>：赚钱时被奉为英雄，留下烂尾楼、劣质房后应承担责任，而非继续奢华生活。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 42] getAcl /spring</span><br><span class="line"><span class="string">&#x27;world,&#x27;</span>anyone</span><br><span class="line">: cdrwa</span><br><span class="line">[zk: localhost:2181(CONNECTED) 43] getAcl /zookeeper</span><br><span class="line"><span class="string">&#x27;world,&#x27;</span>anyone</span><br><span class="line">: cdrwa</span><br></pre></td></tr></table></figure>
+<h4 id="购房与装修建议"><a href="#购房与装修建议" class="headerlink" title="购房与装修建议"></a>购房与装修建议</h4><ul>
+<li><strong>买不买房？</strong><ul>
+<li>视个人情况。房价长期看供需，重点城市大概率稳中有升。</li>
+<li>刚需、改善型且有能力可买；收入不稳、高杠杆者不建议恐慌入市。</li>
+<li>反对纯粹炒房。</li>
+</ul>
+</li>
+<li><strong>选谁的房？</strong><ul>
+<li>优先国资背景房企（保利、中海、华润等），相对稳健。</li>
+<li>尽量选品质高的住宅。</li>
+</ul>
+</li>
+<li><strong>毛坯 vs 精装？</strong><ul>
+<li>同等条件下优先毛坯。</li>
+</ul>
+</li>
+<li><strong>买了精装房怎么办？</strong><ul>
+<li><strong>验房</strong>：非常重要，建议请专业人士或做足功课，及时要求整改。</li>
+<li><strong>装修策略</strong>：<ul>
+<li><strong>上策</strong>：轻硬装，添置便宜家具家电暂住，几年后彻底翻新。</li>
+<li><strong>中策</strong>：直接拆除重装，接受精装溢价损失。</li>
+<li><strong>下策</strong>：局部改造（成本高、难协调、未改部分仍易出问题）。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="第三部分：时代、未来与个人选择"><a href="#第三部分：时代、未来与个人选择" class="headerlink" title="第三部分：时代、未来与个人选择"></a>第三部分：时代、未来与个人选择</h3><ul>
+<li><strong>反对幸灾乐祸</strong>：房地产硬着陆对所有人是灾难，不要期待“看烟花”。</li>
+<li><strong>历史视角</strong>：<ul>
+<li>房地产在资金匮乏、发展需求迫切时期推动中国快速发展，功不可没。</li>
+<li>政策有两面性，是特定条件下的“两害相权取其轻”。</li>
+</ul>
+</li>
+<li><strong>国家政策调整</strong>：<ul>
+<li>“房住不炒”定位明确。</li>
+<li>社会主要矛盾转变：追求美好生活 vs 不平衡不充分发展。</li>
+<li>加强金融监管（约谈信托、三道红线）。</li>
+<li>建设全国统一大市场。</li>
+</ul>
+</li>
+<li><strong>目标</strong>：房地产去金融化、去杠杆，削弱支柱地位，走向健康经济结构，实现共同富裕。</li>
+<li><strong>保持乐观</strong>：<ul>
+<li>相信国家有能力、有决心解决问题，引导房地产回归居住属性，房价回归合理。</li>
+<li>回顾历史，中国克服了更严峻挑战。</li>
+<li>有智慧、有抱负的人在努力，国家在为人民“撑伞”。</li>
+</ul>
+</li>
+<li><strong>反对“躺平”</strong>：<ul>
+<li>承认年轻人压力（房价、就业、生活成本）。</li>
+<li>个人命运与国家命运相连，躺平不利于国家和民族未来。</li>
+<li>中国成就是奋斗出来的，放弃奋斗可能失去现有成果。</li>
+</ul>
+</li>
+<li><strong>个人作为</strong>：<ul>
+<li>理解发展是“前进性与曲折性的统一”，问题属成长阶段。</li>
+<li>政策提供环境，幸福生活需个人奋斗。</li>
+<li>做好本职工作（学习、工作、创业），不当“蛀虫”。</li>
+<li>把握机会，控制风险（不高杠杆）。</li>
+<li>提高能力，积极面对挑战，为解决问题贡献力量。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>深入剖析了中国房地产市场及精装房问题的历史根源、发展脉络和深层机制，指出土地财政、土地金融、开发商高周转高杠杆模式与政策的互动如何塑造当前局面。在批判现实问题的同时，强调房地产的历史贡献和国家政策调整的积极信号，表达审慎乐观的态度，呼吁年轻一代摒弃“躺平”心态，继续奋斗，共同面对和解决时代挑战。</p>
 
-<h2 id="四字命令"><a href="#四字命令" class="headerlink" title="四字命令"></a>四字命令</h2><p>ZooKeeper 支持某些特定的四字命令字母与其的交互。它们大多是查询命令，用来获取 ZooKeeper 服务的当前状态及相关信息。用户在客户端可以通过 <code>telnet</code> 或 <code>nc</code> 向 ZooKeeper 提交相应的命令。 ZooKeeper 常用四字命令如下表所示。</p>
-<table>
-<thead>
-<tr>
-<th>Zookeeper四字命令</th>
-<th>功能描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>conf</td>
-<td>输出相关服务配置的详细信息。</td>
-</tr>
-<tr>
-<td>cons</td>
-<td>列出所有连接到服务器的客户端的完全的连接 / 会话的详细信息。包括“接受 / 发送”的包数量、会话 id 、操作延迟、最后的操作执行等等信息。</td>
-</tr>
-<tr>
-<td>dump</td>
-<td>列出未经处理的会话和临时节点。</td>
-</tr>
-<tr>
-<td>envi</td>
-<td>输出关于服务环境的详细信息（区别于 conf 命令）。</td>
-</tr>
-<tr>
-<td>reqs</td>
-<td>列出未经处理的请求</td>
-</tr>
-<tr>
-<td>ruok</td>
-<td>测试服务是否处于正确状态。如果确实如此，那么服务返回“ imok ”，否则不做任何相应。</td>
-</tr>
-<tr>
-<td>stat</td>
-<td>输出关于性能和连接的客户端的列表。</td>
-</tr>
-<tr>
-<td>wchs</td>
-<td>列出服务器 watch 的详细信息。</td>
-</tr>
-<tr>
-<td>wchc</td>
-<td>通过 session 列出服务器 watch 的详细信息，它的输出是一个与 watch 相关的会话的列表。</td>
-</tr>
-<tr>
-<td>wchp</td>
-<td>通过路径列出服务器 watch 的详细信息。它输出一个与 session 相关的路径。</td>
-</tr>
-</tbody></table>
-<p>使用方法</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="built_in">stat</span> | nc 127.0.0.1 2181</span><br><span class="line">Zookeeper version: 3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 04:05 GMT</span><br><span class="line">Clients:</span><br><span class="line"> /172.17.0.1:53548[0](queued=0,recved=1,sent=0)</span><br><span class="line"> /127.0.0.1:56306[1](queued=0,recved=483,sent=485)</span><br><span class="line"></span><br><span class="line">Latency min/avg/max: 0/0/45</span><br><span class="line">Received: 500</span><br><span class="line">Sent: 501</span><br><span class="line">Connections: 2</span><br><span class="line">Outstanding: 0</span><br><span class="line">Zxid: 0xe</span><br><span class="line">Mode: standalone</span><br><span class="line">Node count: 8</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -418,7 +432,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.gwjzc.top/archives/398b07d0.html" title="Zookeeper学习笔记">https://blog.gwjzc.top/archives/398b07d0.html</a>
+    <a href="https://blog.gwjzc.top/archives/91a69400.html" title="中国房地产市场与精装房问题剖析">https://blog.gwjzc.top/archives/91a69400.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -458,7 +472,9 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Zookeeper/" rel="tag"><i class="fa fa-tag"></i> Zookeeper</a>
+              <a href="/tags/%E8%A3%85%E4%BF%AE/" rel="tag"><i class="fa fa-tag"></i> 装修</a>
+              <a href="/tags/%E8%AF%A1%E8%AE%A1up/" rel="tag"><i class="fa fa-tag"></i> 诡计up</a>
+              <a href="/tags/%E9%80%9A%E8%AF%86%E8%AF%BE%E5%85%A5%E9%97%A8/" rel="tag"><i class="fa fa-tag"></i> 通识课入门</a>
           </div>
 
         
@@ -467,12 +483,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/archives/a23e5172.html" rel="prev" title="2021年终总结">
-      <i class="fa fa-chevron-left"></i> 2021年终总结
+    <a href="/archives/a16118a2.html" rel="prev" title="【设计师】要不要找">
+      <i class="fa fa-chevron-left"></i> 【设计师】要不要找
     </a></div>
       <div class="post-nav-item">
-    <a href="/archives/18e82ec3.html" rel="next" title="ImageMagick学习笔记">
-      ImageMagick学习笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/archives/857a03ed.html" rel="next" title="客户分析变更讨论">
+      客户分析变更讨论 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -533,7 +549,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Zookeeper-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">Zookeeper 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zookeeper%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">Zookeeper的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BServer%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81"><span class="nav-number">3.1.</span> <span class="nav-text">查看Server运行状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.2.</span> <span class="nav-text">客户端连接服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.3.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACL%E6%9D%83%E9%99%90"><span class="nav-number">3.4.</span> <span class="nav-text">ACL权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E5%AD%97%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">四字命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E6%88%BF%E5%9C%B0%E4%BA%A7%E5%B8%82%E5%9C%BA%E4%B8%8E%E7%B2%BE%E8%A3%85%E6%88%BF%E9%97%AE%E9%A2%98%E5%89%96%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">中国房地产市场与精装房问题剖析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E4%B8%BB%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">核心主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E8%A7%82%E7%82%B9%E4%B8%8E%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">主要观点与内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80%E4%B8%8E%E9%97%AE%E9%A2%98%E6%8F%90%E5%87%BA"><span class="nav-number">1.2.1.</span> <span class="nav-text">引言与问题提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E6%AF%9B%E5%9D%AF%E6%88%BF%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">第一部分：毛坯房的由来</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%9F%E5%9C%B0%E8%B4%A2%E6%94%BF%E7%9A%84%E6%BC%94%E5%8F%98%EF%BC%9A%E5%9C%9F%E5%9C%B0%E9%87%91%E8%9E%8D"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">土地财政的演变：土地金融</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9A%E7%B2%BE%E8%A3%85%E6%88%BF%E7%9A%84%E2%80%9C%E5%85%B4%E8%B5%B7%E2%80%9D%E4%B8%8E%E5%BC%80%E5%8F%91%E5%95%86%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.3.</span> <span class="nav-text">第二部分：精装房的“兴起”与开发商模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%AD%E6%88%BF%E4%B8%8E%E8%A3%85%E4%BF%AE%E5%BB%BA%E8%AE%AE"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">购房与装修建议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A%E6%97%B6%E4%BB%A3%E3%80%81%E6%9C%AA%E6%9D%A5%E4%B8%8E%E4%B8%AA%E4%BA%BA%E9%80%89%E6%8B%A9"><span class="nav-number">1.2.4.</span> <span class="nav-text">第三部分：时代、未来与个人选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
