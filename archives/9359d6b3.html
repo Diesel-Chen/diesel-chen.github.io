@@ -51,6 +51,47 @@
     lang   : 'zh-CN'
   };
 </script>
+<!-- Mermaid 图表样式设置 -->
+<style>
+/* 强制 Mermaid 图表使用透明背景 */
+.mermaid, div.mermaid, .post-body .mermaid {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* 确保 SVG 背景透明 */
+.mermaid svg, div.mermaid svg, .post-body .mermaid svg {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* 确保节点样式适合透明背景 */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon,
+.mermaid .node path,
+.post-body .mermaid .node rect,
+.post-body .mermaid .node circle,
+.post-body .mermaid .node ellipse,
+.post-body .mermaid .node polygon,
+.post-body .mermaid .node path {
+  fill: rgba(255, 255, 255, 0.7) !important;
+  stroke: #999 !important;
+}
+
+/* 确保文本清晰可见 */
+.mermaid .label,
+.post-body .mermaid .label {
+  color: #333 !important;
+}
+
+/* Mermaid 图表下方的间距 */
+.mermaid, .post-body .mermaid {
+  margin-bottom: 20px !important;
+}
+</style>
 
   <title>golang精度丢失问题 | DieselChen</title>
   
@@ -985,67 +1026,86 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 
 
 <script>
-// 确保 DOM 完全加载后再执行
+// 更直接的方法确保 Mermaid 图表背景透明
 document.addEventListener('DOMContentLoaded', function() {
-  // 等待一小段时间确保 mermaid.js 已加载
+  // 立即应用透明样式
+  function applyTransparentStyle() {
+    var mermaidDivs = document.querySelectorAll('.mermaid');
+    if (mermaidDivs.length > 0) {
+      console.log('找到 ' + mermaidDivs.length + ' 个 Mermaid 图表，应用透明样式...');
+
+      // 直接对 Mermaid 容器应用样式
+      mermaidDivs.forEach(function(div) {
+        div.style.backgroundColor = 'transparent';
+
+        // 查找并设置 SVG 背景
+        var svg = div.querySelector('svg');
+        if (svg) {
+          svg.style.backgroundColor = 'transparent';
+          // 尝试直接设置属性
+          svg.setAttribute('style', 'background-color: transparent !important');
+        }
+      });
+    }
+  }
+
+  // 立即应用一次
+  applyTransparentStyle();
+
+  // 然后在短暂延迟后再次应用（确保 Mermaid 渲染后）
+  setTimeout(applyTransparentStyle, 1000);
+
+  // 初始化 Mermaid 配置
   setTimeout(function() {
     if (typeof mermaid !== 'undefined') {
       try {
-        // 初始化前重置任何可能的实例
-        if (typeof mermaid.initialize === 'function') {
-          console.log('初始化 Mermaid 图表...');
+        console.log('配置 Mermaid...');
+        mermaid.initialize({
+          theme: 'default',
+          themeVariables: {
+            background: 'transparent',
+            primaryColor: '#a1d76a',
+            secondaryColor: '#6db1c7',
+            tertiaryColor: '#f9c270',
+            primaryTextColor: '#333',
+            lineColor: '#666'
+          },
+          startOnLoad: true,
+          securityLevel: 'loose',
+          backgroundColor: 'transparent'
+        });
 
-          // 确保图表容器有透明背景
-          document.querySelectorAll('.mermaid').forEach(function(el) {
-            el.style.backgroundColor = 'transparent';
-          });
-
-          // 初始化配置
-          mermaid.initialize({
-            theme: 'neutral',
-            // 自定义颜色设置
-            themeVariables: {
-              // 背景颜色 - 设置为透明
-              background: 'transparent',
-              // 主颜色
-              primaryColor: '#a1d76a',
-              // 次要颜色
-              secondaryColor: '#6db1c7',
-              // 第三颜色
-              tertiaryColor: '#f9c270',
-              // 文本颜色
-              primaryTextColor: '#333',
-              // 线条颜色
-              lineColor: '#666'
-            },
-            // 额外设置
-            startOnLoad: true,
-            securityLevel: 'loose',
-            // 使 SVG 背景透明
-            backgroundColor: 'transparent'
-          });
-
-          // 强制重新渲染所有图表
-          mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-        }
+        // 在初始化后再次应用样式
+        setTimeout(applyTransparentStyle, 500);
       } catch (e) {
         console.error('Mermaid 初始化错误:', e);
       }
-    } else {
-      console.warn('Mermaid 库未加载');
     }
-  }, 1000); // 等待1秒确保库加载完成
+  }, 500);
+
+  // 监听可能的页面更新事件
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+        // 如果有新节点添加，检查并应用样式
+        setTimeout(applyTransparentStyle, 200);
+      }
+    });
+  });
+
+  // 监听整个文档的变化
+  observer.observe(document.body, { childList: true, subtree: true });
 });
 </script>
 
+<!-- 内联 Mermaid 样式覆盖 -->
 <style>
-/* 内联样式确保即使 CSS 文件有问题也能应用透明背景 */
-.mermaid, div.mermaid, .post-body .mermaid {
+.mermaid, div.mermaid, .post-body .mermaid, .mermaid > svg {
   background-color: transparent !important;
 }
-.mermaid svg, div.mermaid svg, .post-body .mermaid svg {
-  background-color: transparent !important;
-  background: transparent !important;
+/* 确保文本清晰可见 */
+.mermaid .label text {
+  fill: #333 !important;
 }
 </style>
 
