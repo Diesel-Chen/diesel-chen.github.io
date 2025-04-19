@@ -1887,34 +1887,69 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 
 
 <script>
+// 确保 DOM 完全加载后再执行
 document.addEventListener('DOMContentLoaded', function() {
-  if (typeof mermaid !== 'undefined') {
-    mermaid.initialize({
-      theme: 'neutral',
-      // 自定义颜色设置
-      themeVariables: {
-        // 背景颜色 - 设置为透明
-        background: 'transparent',
-        // 主颜色
-        primaryColor: '#a1d76a',
-        // 次要颜色
-        secondaryColor: '#6db1c7',
-        // 第三颜色
-        tertiaryColor: '#f9c270',
-        // 文本颜色
-        primaryTextColor: '#333',
-        // 线条颜色
-        lineColor: '#666'
-      },
-      // 额外设置
-      startOnLoad: true,
-      securityLevel: 'loose',
-      // 使 SVG 背景透明
-      backgroundColor: 'transparent'
-    });
-  }
+  // 等待一小段时间确保 mermaid.js 已加载
+  setTimeout(function() {
+    if (typeof mermaid !== 'undefined') {
+      try {
+        // 初始化前重置任何可能的实例
+        if (typeof mermaid.initialize === 'function') {
+          console.log('初始化 Mermaid 图表...');
+
+          // 确保图表容器有透明背景
+          document.querySelectorAll('.mermaid').forEach(function(el) {
+            el.style.backgroundColor = 'transparent';
+          });
+
+          // 初始化配置
+          mermaid.initialize({
+            theme: 'neutral',
+            // 自定义颜色设置
+            themeVariables: {
+              // 背景颜色 - 设置为透明
+              background: 'transparent',
+              // 主颜色
+              primaryColor: '#a1d76a',
+              // 次要颜色
+              secondaryColor: '#6db1c7',
+              // 第三颜色
+              tertiaryColor: '#f9c270',
+              // 文本颜色
+              primaryTextColor: '#333',
+              // 线条颜色
+              lineColor: '#666'
+            },
+            // 额外设置
+            startOnLoad: true,
+            securityLevel: 'loose',
+            // 使 SVG 背景透明
+            backgroundColor: 'transparent'
+          });
+
+          // 强制重新渲染所有图表
+          mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+        }
+      } catch (e) {
+        console.error('Mermaid 初始化错误:', e);
+      }
+    } else {
+      console.warn('Mermaid 库未加载');
+    }
+  }, 1000); // 等待1秒确保库加载完成
 });
 </script>
+
+<style>
+/* 内联样式确保即使 CSS 文件有问题也能应用透明背景 */
+.mermaid, div.mermaid, .post-body .mermaid {
+  background-color: transparent !important;
+}
+.mermaid svg, div.mermaid svg, .post-body .mermaid svg {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+</style>
 
 </body>
 </html>
