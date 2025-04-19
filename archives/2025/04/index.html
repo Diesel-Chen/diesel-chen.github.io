@@ -844,7 +844,7 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">63k</span>
+    <span title="站点总字数">62k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -948,7 +948,7 @@ if(canvas.getContext){
 if (document.querySelectorAll('pre.mermaid').length) {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
     mermaid.initialize({
-      theme    : 'forest',
+      theme    : 'neutral',
       logLevel : 3,
       flowchart: { curve     : 'linear' },
       gantt    : { axisFormat: '%m/%d/%Y' },
@@ -1004,6 +1004,39 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     POWERMODE.shake = false;
     document.body.addEventListener('input', POWERMODE);
   </script>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof mermaid !== 'undefined') {
+    mermaid.initialize({
+      theme: 'neutral',
+      // 自定义颜色设置
+      themeVariables: {
+        // 背景颜色 - 设置为透明
+        background: 'transparent',
+        // 主颜色
+        primaryColor: '#a1d76a',
+        // 次要颜色
+        secondaryColor: '#6db1c7',
+        // 第三颜色
+        tertiaryColor: '#f9c270',
+        // 文本颜色
+        primaryTextColor: '#333',
+        // 线条颜色
+        lineColor: '#666'
+      },
+      // 额外设置
+      startOnLoad: true,
+      securityLevel: 'loose',
+      // 使 SVG 背景透明
+      backgroundColor: 'transparent'
+    });
+  }
+});
+</script>
 
 </body>
 </html>
