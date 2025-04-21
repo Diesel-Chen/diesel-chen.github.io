@@ -41,33 +41,6 @@
   </entry>
   
   <entry>
-    <title>客户分析变更讨论</title>
-    <link href="https://blog.gwjzc.top/archives/857a03ed.html"/>
-    <id>https://blog.gwjzc.top/archives/857a03ed.html</id>
-    <published>2025-04-18T08:56:30.000Z</published>
-    <updated>2025-04-18T08:56:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>任务与客户分析结构调整</p></blockquote><span id="more"></span><h3 id="会议总结：客户分析变更安排"><a href="#会议总结：客户分析变更安排" class="headerlink" title="会议总结：客户分析变更安排"></a><strong>会议总结：客户分析变更安排</strong></h3><p><strong>会议时间</strong>：2025年4月18日 16:34 - 16:53</p><hr><h4 id="核心变更内容"><a href="#核心变更内容" class="headerlink" title="核心变更内容"></a><strong>核心变更内容</strong></h4><ol><li><strong>任务与客户分析结构调整</strong><ul><li>一个任务下支持多个客户分析，每个任务包含一个客户列表。</li><li>客户列表来源：<ul><li>当前仅支持手动输入（网址或客户名称），暂不支持从客户库选择。</li><li>列表显示优化：优先显示网址，若无则显示客户名称。</li></ul></li></ul></li><li><strong>分析流程</strong><ul><li><strong>独立分析</strong>：<ul><li>勾选客户后执行分析，每个客户生成独立报告（单独表格展示）。</li><li>状态管理：分析中（显示进度百分比）、已完成、失败（可重启）、可手动停止。</li><li><strong>停止分析实现</strong>：需通过异步任务循环检测取消状态，非直接队列中断。</li></ul></li><li><strong>对比分析</strong>：<ul><li>先完成各客户的独立分析，再基于多份报告生成对比报告（合并表格展示）。</li><li>若客户已独立分析过，可直接引用结果生成对比报告。</li><li>报告数量：N个客户独立报告 + 1份对比报告（暂不隐藏中间报告）。</li></ul></li></ul></li><li><strong>报告生成与导出</strong><ul><li>分析完成后自动生成报告，包含：<ul><li>思维导图（数据为Markdown格式，导出支持Markdown文本）。</li><li>文本内容（导出PDF）。</li></ul></li><li>详情页展示：思维导图 + 文本，暂不显示分析过程。</li></ul></li><li><strong>数据结构调整</strong><ul><li>任务类型需扩展：原仅<code>agent task</code>，现需支持<code>客户分析任务</code>。</li><li>方案选项：<ul><li>扩展原表字段，或新增<code>job</code>表关联子任务（如<code>agent task</code>或客户分析）。</li></ul></li><li>抽象任务结构：任务列表统一展示，详情页按类型动态渲染。</li></ul></li></ol><hr><h4 id="待明确与后续事项"><a href="#待明确与后续事项" class="headerlink" title="待明确与后续事项"></a><strong>待明确与后续事项</strong></h4><ol><li><strong>技术实现细节</strong><ul><li>停止分析功能优先级：若实现复杂可延后处理。</li><li>流式对象输出：小关优先评估可行性，遇到问题及时反馈。</li><li>批量删除需求：小关需跟进群消息处理（使用Server Action实现）。</li></ul></li><li><strong>其他任务安排</strong><ul><li>朱晨：评估“Android自动扩充产品库”开发周期，优先处理或调整顺序。</li></ul></li></ol><hr><h4 id="关键注意事项"><a href="#关键注意事项" class="headerlink" title="关键注意事项"></a><strong>关键注意事项</strong></h4><ul><li><strong>对比分析逻辑</strong>：确保先独立分析再聚合，提示词可暂简化，后续优化。</li><li><strong>数据兼容性</strong>：调整任务表结构时需兼容历史<code>agent task</code>数据。</li><li><strong>进度反馈</strong>：分析中需实时更新进度（每完成一个步骤更新20%）。</li></ul><p><strong>下一步行动</strong>：</p><ul><li>开发团队按分工推进（任务拆分、接口调整、UI适配），阻塞问题及时同步。</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;任务与客户分析结构调整&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="会议总结" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="葵普" scheme="https://blog.gwjzc.top/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/"/>
-    
-    
-    <category term="会议总结" scheme="https://blog.gwjzc.top/tags/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="葵普" scheme="https://blog.gwjzc.top/tags/%E8%91%B5%E6%99%AE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>客户分析功能变更</title>
     <link href="https://blog.gwjzc.top/archives/1bf62f79.html"/>
     <id>https://blog.gwjzc.top/archives/1bf62f79.html</id>
@@ -532,6 +505,29 @@
     
     
     <category term="公司" scheme="https://blog.gwjzc.top/tags/%E5%85%AC%E5%8F%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker简单概述</title>
+    <link href="https://blog.gwjzc.top/archives/3647edf5.html"/>
+    <id>https://blog.gwjzc.top/archives/3647edf5.html</id>
+    <published>2021-09-20T08:30:32.000Z</published>
+    <updated>2021-09-20T08:30:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Docker 是一个应用程序开发、部署、运行的平台，使用 go 语言开发。相较于传统的主机虚拟化，Docker 提供了轻量级的应用隔离方案，并且为我们提供了应用程序快速扩容、缩容的能力。</p></blockquote><span id="more"></span><h3 id="Docker-Engine"><a href="#Docker-Engine" class="headerlink" title="Docker Engine"></a>Docker Engine</h3><p>先来看一下 Docker Engine 的结构，它是一个Client-Server应用程序，包含了三个主要部分：dockerd守护进程、REST API接口层、cli接口层(管理容器、镜像、网络、存储等等)。</p><p>![image-20220831163205749](/Users/dieselchen/Library/Application Support/typora-user-images/image-20220831163205749.png)</p><h4 id="Docker-架构"><a href="#Docker-架构" class="headerlink" title="Docker 架构"></a>Docker 架构</h4><p>Docker采用的是CS架构，docker client 通过Unix套接字或者网络接口访问 docker daemon，从而完成容器、镜像等内容的管理。</p><p><img src="https://image.dieselchen.work/uPic/2022/08/31/image-20220831163353576.png" alt="image-20220831163353576"></p><h3 id="Docker-Daemon"><a href="#Docker-Daemon" class="headerlink" title="Docker Daemon"></a>Docker Daemon</h3><p>Docker的守护进程监听对于API的请求，并且管理Docker对象，包括容器、镜像、网络、存储等。不同守护进程之间可以互相通信，从而构成集群服务。</p><h3 id="Docker-Client"><a href="#Docker-Client" class="headerlink" title="Docker Client"></a>Docker Client</h3><p>Dokcer 客户端 docker 命令是与Dokcer交互的主要方式</p><h3 id="Docker-仓库"><a href="#Docker-仓库" class="headerlink" title="Docker 仓库"></a>Docker 仓库</h3><p>Docker仓库保存Docker镜像，可以通过<code>docker pull</code>以及<code>docker push</code>来下载、上传镜像文件。</p><h3 id="Docker-对象"><a href="#Docker-对象" class="headerlink" title="Docker 对象"></a>Docker 对象</h3><p><em>1. 镜像</em></p><p>镜像是一个用来构建容器的只读模版，通常一个镜像会依赖其他的镜像。例如我们编写的一个Node程序需要依赖Node环境，那在构建这个应用镜像时就需要依赖基础的Node镜像。</p><p>我们可以创建自己的镜像，也可以使用仓库中已经创建好的镜像。创建镜像需要创建一个 <code>Dockerfile</code> 文件。每个Dockerfile定义镜像文件中的一层，当定义发生变化的时候，只需要更新着一层的文件即可。</p><p><em>2. 容器</em></p><p>容器是一个运行时状态下的镜像，通过docker命令我们可以创建、启动、停止、删除容器。例如以下命令：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -i -t ubuntu /bin/bash</span><br></pre></td></tr></table></figure><p>实际上经过了6个步骤：1、如果本地没有 <em>ubuntu</em> 镜像，那么首先执行 <code>docker pull ubuntu</code>镜像文件到本地；2、自动创建一个容器，相当于命令 <code>dock container create</code>；3、Docker分配一块文件系统给容器；4、Docker创建网络接口、分配网络地址；5、启动容器，并且执行<code>/bin/bash</code>命令；6、我们可以在bash中执行命令，执行exit后，退出ubuntu的命令行，同时容器关闭。</p><p><em>3. 网络</em></p><p>Docker的网络子系统是可插拔的，支持bridge、host、overlay、macvlan、none等网络模式。熟悉虚拟机的同学可能对这些有概念，想要了解更多参考<a href="https://docs.docker.com/network/network-tutorial-standalone/">这里</a>。</p><p><em>4. 存储</em></p><p>默认情况下，容器中的应用生成的所有文件都存放在一个可写的容器层，意味着这些数据的生命周期和容器保持一致，一旦容器重启数据就丢了。另外，这些文件与容器高度关联，想要将这些文件分享给其他的容器或者设备非常困难。</p><p>为此，Docker提供了两种方案解决数据问题：<em>Volumes</em>、<em>bind mount</em>。不管使用哪种方式，容器内看起来都是一样的，或者作为一个文件夹存在、或者作为一个文件存在。</p><p>上图说明了不同方式的区别，<em>Volumes</em> 是存在本地文件系统中的一部分，其他应用程序不能对这个文件系统进行修改，Linux下在<code>/var/lib/docker/volumes</code>。这是数据持久化的最好方案。<em>Bind Mount</em> 允许将主机中任何位置的数据挂载，这些数据的读写没有收到保护。<em>tmps</em>是存储在主机内存中的数据。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Docker 是一个应用程序开发、部署、运行的平台，使用 go 语言开发。相较于传统的主机虚拟化，Docker 提供了轻量级的应用隔离方案，并且为我们提供了应用程序快速扩容、缩容的能力。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="https://blog.gwjzc.top/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.gwjzc.top/tags/Docker/"/>
     
   </entry>
   
