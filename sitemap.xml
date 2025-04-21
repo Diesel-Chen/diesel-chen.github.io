@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://blog.gwjzc.top/archives/1bf62f79.html</loc>
+    
+    <lastmod>2025-04-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.gwjzc.top/about/index.html</loc>
     
     <lastmod>2025-04-16</lastmod>
@@ -591,6 +598,20 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://blog.gwjzc.top/tags/%E7%90%90%E4%BA%8B/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gwjzc.top/tags/%E5%AE%B6%E5%BA%AD/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -805,6 +826,13 @@
   
   <url>
     <loc>https://blog.gwjzc.top/categories/%E8%A3%85%E4%BF%AE/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gwjzc.top/categories/%E5%AE%B6%E5%BA%AD/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
