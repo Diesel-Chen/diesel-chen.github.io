@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.gwjzc.top/archives/3dbb178.html</loc>
+    
+    <lastmod>2025-04-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.gwjzc.top/archives/ef64740d.html</loc>
     
     <lastmod>2025-04-20</lastmod>
@@ -600,6 +607,20 @@
   
   <url>
     <loc>https://blog.gwjzc.top/tags/%E5%AE%B6%E5%BA%AD/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gwjzc.top/tags/%E8%A3%85%E4%BF%AE%E5%85%AC%E5%8F%B8/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gwjzc.top/tags/%E5%8D%8A%E5%8C%85/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
