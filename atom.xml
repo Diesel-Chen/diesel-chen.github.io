@@ -6,7 +6,7 @@
   <link href="https://blog.gwjzc.top/atom.xml" rel="self"/>
   
   <link href="https://blog.gwjzc.top/"/>
-  <updated>2025-04-20T23:26:34.000Z</updated>
+  <updated>2025-04-21T09:35:44.000Z</updated>
   <id>https://blog.gwjzc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>业主推荐的前硕宅设计师</title>
+    <link href="https://blog.gwjzc.top/archives/66466f4e.html"/>
+    <id>https://blog.gwjzc.top/archives/66466f4e.html</id>
+    <published>2025-04-21T09:35:44.000Z</published>
+    <updated>2025-04-21T09:35:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这个设计师听着很有水平 业主推荐的 应该也能拿返点</p></blockquote><span id="more"></span><h1 id="匠选优品整装设计讨论"><a href="#匠选优品整装设计讨论" class="headerlink" title="匠选优品整装设计讨论"></a>匠选优品整装设计讨论</h1><ul><li><strong>主题</strong>：132㎡户型装修方案讨论</li><li><strong>参与方</strong>：业主(B)、设计师(C)、材料商(A)</li></ul><pre class="mermaid">graph TD    A[核心需求] --> B[地暖改造]    A --> C[空间优化]    B --> D{地面处理方案}    C --> E[飘窗改造]    C --> F[厨房布局]</pre><h2 id="二、核心讨论内容"><a href="#二、核心讨论内容" class="headerlink" title="二、核心讨论内容"></a>二、核心讨论内容</h2><h3 id="1-地暖系统改造"><a href="#1-地暖系统改造" class="headerlink" title="1. 地暖系统改造"></a>1. 地暖系统改造</h3><table><thead><tr><th align="left">问题</th><th align="left">解决方案</th><th align="left">注意事项</th></tr></thead><tbody><tr><td align="left">地面高度不足</td><td align="left">①下挖3cm ②更换防盗门</td><td align="left">需确认原始结构承重</td></tr><tr><td align="left">卫生间高低差</td><td align="left">采用门槛石过渡</td><td align="left">预留2cm落差</td></tr><tr><td align="left">管线保护</td><td align="left">局改电路+点位预留</td><td align="left">开发商线路质量需检测</td></tr></tbody></table><h3 id="2-空间优化方案"><a href="#2-空间优化方案" class="headerlink" title="2. 空间优化方案"></a>2. 空间优化方案</h3><h4 id="重点区域改造"><a href="#重点区域改造" class="headerlink" title="重点区域改造"></a>重点区域改造</h4><ul><li><p><strong>厨房</strong>：</p><ul><li>拆除交付简易橱柜</li><li>重新布局蒸烤箱+洗碗机（需4平方专线）</li><li>两种冰箱位方案（高柜旁或原位）</li></ul></li><li><p><strong>阳台</strong>：</p><pre class="mermaid">  pie    title 阳台改造方案选择    "砸墙扩展(156cm)" : 55    "保留原墙(140cm)" : 45</pre><ul><li>洗烘套装+洗手池组合</li><li>玻璃砖隔断方案（透光不透视）</li></ul></li><li><p><strong>卧室</strong>：</p><ul><li>老人房床尾柜特殊设计（活动层板）</li><li>飘窗电动窗帘方案（需预埋插座）</li></ul></li></ul><h3 id="3-水电改造策略"><a href="#3-水电改造策略" class="headerlink" title="3. 水电改造策略"></a>3. 水电改造策略</h3><table><thead><tr><th align="left">改造类型</th><th align="left">费用预估</th><th align="left">优势</th><th align="left">风险</th></tr></thead><tbody><tr><td align="left">全改</td><td align="left">较高</td><td align="left">线路规范</td><td align="left">原有线材浪费</td></tr><tr><td align="left">局改+增补</td><td align="left">适中</td><td align="left">性价比高</td><td align="left">需检测原有线路</td></tr></tbody></table><h2 id="三、待确认事项"><a href="#三、待确认事项" class="headerlink" title="三、待确认事项"></a>三、待确认事项</h2><ol><li><strong>结构方面</strong>：<ul><li>飘窗拆除可行性（需交付3个月后确认）</li><li>厨房烟道改造审批流程</li></ul></li><li><strong>设计细节</strong>：<ul><li>主卫壁龛深度验证（马桶移位影响）</li><li>阳台玻璃砖施工工艺</li></ul></li><li><strong>成本控制</strong>：<ul><li>地暖回填责任划分（装修公司/地暖商）</li><li>点位增补封顶协议（建议限定25个）</li></ul></li></ol><h2 id="四、项目计划"><a href="#四、项目计划" class="headerlink" title="四、项目计划"></a>四、项目计划</h2><pre class="mermaid">gantt    title 装修里程碑计划    dateFormat  YYYY-MM-DD    section 准备阶段    结构确认       :2025-05-01, 7d    最终方案确认    :2025-05-08, 5d    section 施工阶段    拆改工程      :2025-05-15, 10d    水电改造      :2025-05-25, 14d    地暖安装      :2025-06-10, 7d</pre><h2 id="五、特别说明"><a href="#五、特别说明" class="headerlink" title="五、特别说明"></a>五、特别说明</h2><ol><li><strong>风险提示</strong>：<ul><li>简装房原有线路存在非标走线可能</li><li>地暖铺设后需72小时压力测试</li></ul></li><li><strong>设计建议</strong>：<ul><li>优先保留厨房承重墙体</li><li>卧室采用上下分体柜门设计（床体遮挡部分）</li></ul></li><li><strong>材料选择</strong>：<ul><li>瓷砖：罗马/欧神诺等一线品牌</li><li>开关：公牛/西门子系列</li></ul></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这个设计师听着很有水平 业主推荐的 应该也能拿返点&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="装修" scheme="https://blog.gwjzc.top/categories/%E8%A3%85%E4%BF%AE/"/>
+    
+    
+    <category term="装修" scheme="https://blog.gwjzc.top/tags/%E8%A3%85%E4%BF%AE/"/>
+    
+    <category term="装修公司" scheme="https://blog.gwjzc.top/tags/%E8%A3%85%E4%BF%AE%E5%85%AC%E5%8F%B8/"/>
+    
+    <category term="半包" scheme="https://blog.gwjzc.top/tags/%E5%8D%8A%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>关于家庭赡养与居住模式的思考总结</title>
@@ -509,33 +536,6 @@
     
     
     <category term="总结" scheme="https://blog.gwjzc.top/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker构建一个简单的java开发环境</title>
-    <link href="https://blog.gwjzc.top/archives/2700d4b7.html"/>
-    <id>https://blog.gwjzc.top/archives/2700d4b7.html</id>
-    <published>2021-12-11T08:44:00.000Z</published>
-    <updated>2021-12-11T08:44:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>首先确保已经安装了 Docker ，并且把 <code>openjdk:8</code> 的镜像拉取下来</p></blockquote><span id="more"></span><p>目前 Java 语言的版本很多，除了常用的 Java 8，有一些遗留项目可能使用了 Java 7，也可能有一些比较新的的项目使用了 Java 10 以上的版本。如果想切换自己本地的 Java 开发环境，折腾起来还是需要花费一些时间的，并且日后在不同版本间切换每次都要折腾一次。</p><p>Docker 的出现让我们维护不同版本的开发编译环境变得简单，如果你还不知道什么是 Docker 可以看看 <a href="http://edulinks.cn/2018/06/20/20180620-docker-overview/">Docker 入门介绍</a>。我们可以采用两种方式来构建 java 的开发环境，一种是在容器内编译运行，一种是在容器外编译运行，下面分别来看看具体如何操作。</p><h2 id="容器内编译与运行"><a href="#容器内编译与运行" class="headerlink" title="容器内编译与运行"></a>容器内编译与运行</h2><p>本文以一个简单的 Helloworld 程序为例，工程的文件目录结构及代码如下。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -lh</span></span><br><span class="line">total 24</span><br><span class="line">-rw-r--r--  1 shiqiang  staff    60B 11 11 19:02 Dockerfile</span><br><span class="line">-rw-r--r--  1 shiqiang  staff   123B 11 11 19:02 Helloworld.java</span><br></pre></td></tr></table></figure><p>代码的内容。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello world.\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>做好以上准备后，就可以编辑 Dockerfile 的内容。</p><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>  <span class="comment">#基于 openjdk:8 构建镜像</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . /usr/src/myapp    <span class="comment">#将目录内的代码拷贝到镜像中 /usr/src/myapp 的位置</span></span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/myapp  <span class="comment">#将 /usr/src/myapp 设为工作目录</span></span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> javac Helloworld.java    <span class="comment">#运行编译命令，编译 Helloworld.java 程序</span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;java&quot;</span>, <span class="string">&quot;Helloworld&quot;</span>]    <span class="comment">#执行编译出来的 Helloworld</span></span></span><br></pre></td></tr></table></figure><p>构建镜像文件。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker build -t java_in_docker_env_8 .</span> </span><br><span class="line"><span class="meta">$</span><span class="bash"> docker images <span class="comment"># 使用 docker images 命令可以看到构建出来的 java_in_docker_env_8 镜像</span></span></span><br></pre></td></tr></table></figure><p>运行容器。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -it --rm java_in_docker_env_8</span></span><br><span class="line">Hello world.</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -lh</span>                                  </span><br><span class="line">total 24</span><br><span class="line">-rw-r--r--  1 shiqiang  staff   112B 11 12 10:53 Dockerfile</span><br><span class="line">-rw-r--r--  1 shiqiang  staff   123B 11 12 10:49 Helloworld.java</span><br></pre></td></tr></table></figure><p>可以看到程序的输出，并且看到当前目录下并有没编译出来的结果。但是这种方式每次启动容器的时候都要进行编译，并且没有办法把编译结果进行分享，下一节的内容介绍如何在容器外保存编译结果。</p><h2 id="容器外编译与运行"><a href="#容器外编译与运行" class="headerlink" title="容器外编译与运行"></a>容器外编译与运行</h2><p>工作目录和代码准备与上一节相同，Dockerfile 文件与上一节略有不同。</p><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . /usr/src/myapp</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/myapp</span></span><br></pre></td></tr></table></figure><p>构建镜像文件。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker build -t java_env_8</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker images <span class="comment"># 使用 docker images 命令可以看到构建出来的 java_env_8 镜像</span></span></span><br></pre></td></tr></table></figure><p>编译文件。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run --rm -v <span class="string">&quot;<span class="variable">$PWD</span>&quot;</span>:/usr/src/myapp -w /usr/src/myapp java_env_8 javac Helloworld.java</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -lh<span class="comment"># 可以看到编译出来的结果</span></span></span><br><span class="line">total 32</span><br><span class="line">-rw-r--r--  1 shiqiang  staff   112B 11 12 10:53 Dockerfile</span><br><span class="line">-rw-r--r--  1 shiqiang  staff   427B 11 12 11:09 Helloworld.class</span><br><span class="line">-rw-r--r--  1 shiqiang  staff   123B 11 12 10:49 Helloworld.java</span><br></pre></td></tr></table></figure><p>运行程序。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run --rm -v <span class="string">&quot;<span class="variable">$PWD</span>&quot;</span>:/usr/src/myapp -w /usr/src/myapp java_env_8 java Helloworld</span>      </span><br><span class="line">Hello world.</span><br></pre></td></tr></table></figure><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>本文仅仅构建了一个简单的 java 开发环境，使用这种方式编译运行 java 程序的好处是无需在本地安装 jdk ，在需要为多个 jdk 版本编译程序的时候更加方便。但是对于复杂的工程常常使用 maven 或者 graddle 进行构建。</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;首先确保已经安装了 Docker ，并且把 &lt;code&gt;openjdk:8&lt;/code&gt; 的镜像拉取下来&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="https://blog.gwjzc.top/categories/Docker/"/>
-    
-    <category term="Java" scheme="https://blog.gwjzc.top/categories/Docker/Java/"/>
-    
-    
-    <category term="Docker" scheme="https://blog.gwjzc.top/tags/Docker/"/>
-    
-    <category term="Java" scheme="https://blog.gwjzc.top/tags/Java/"/>
     
   </entry>
   
