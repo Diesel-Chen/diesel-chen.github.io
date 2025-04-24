@@ -309,14 +309,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -420,6 +420,104 @@
 <li><strong>灵活性保留</strong>：部分设计（如报告存储）暂按宽松方案实现，后续根据反馈调整。</li>
 </ol>
 <p><strong>下一步</strong>：各成员按分工推进开发，优先解决技术难点（如流式输出），后续会议跟进进度。</p>
+<h1 id="客户分析任务的创建和执行流程"><a href="#客户分析任务的创建和执行流程" class="headerlink" title="客户分析任务的创建和执行流程"></a>客户分析任务的创建和执行流程</h1><h2 id="1-创建客户分析任务"><a href="#1-创建客户分析任务" class="headerlink" title="1. 创建客户分析任务"></a>1. 创建客户分析任务</h2><h3 id="创建基本任务"><a href="#创建基本任务" class="headerlink" title="创建基本任务"></a>创建基本任务</h3><ul>
+<li>调用 <code>createCustomerAnalysisTask</code> 函数（位于 <code>companyResearch/actions.ts</code>）</li>
+<li>生成默认任务名称（格式：<code>yyyy-MM-dd-HH:mm:ss客户分析</code>）</li>
+<li>在 <code>agentTaskTable</code> 表中插入新记录：<ul>
+<li>任务类型：<code>customer_analysis</code></li>
+<li>状态：<code>pending</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="绑定公司研究到任务"><a href="#绑定公司研究到任务" class="headerlink" title="绑定公司研究到任务"></a>绑定公司研究到任务</h3><ul>
+<li><strong>单个公司</strong>：使用 <code>bindCompanyResearchToTask</code> 函数</li>
+<li><strong>多个公司</strong>：使用 <code>bindMultipleCompanyResearchToTask</code> 函数</li>
+<li>每个公司创建一条 <code>companyResearch</code> 记录：<ul>
+<li>状态：<code>pending</code></li>
+<li>分析模式：<code>independent</code>（独立分析）</li>
+</ul>
+</li>
+<li>注意：这些函数仅创建记录，不启动实际分析</li>
+</ul>
+<h3 id="启动分析"><a href="#启动分析" class="headerlink" title="启动分析"></a>启动分析</h3><ul>
+<li><strong>单个分析</strong>：调用 <code>startCompanyResearchAnalysis</code></li>
+<li><strong>多个分析</strong>：调用 <code>startMultipleCompanyResearchAnalysis</code></li>
+<li>将公司研究任务添加到 Bull MQ 队列处理</li>
+</ul>
+<h2 id="2-分析执行流程"><a href="#2-分析执行流程" class="headerlink" title="2. 分析执行流程"></a>2. 分析执行流程</h2><h3 id="独立分析过程"><a href="#独立分析过程" class="headerlink" title="独立分析过程"></a>独立分析过程</h3><ol>
+<li>创建 <code>CompanyResearch</code> 类实例</li>
+<li>执行多个研究步骤（通过 <code>run</code> 方法）：<ul>
+<li>研究公司概况 (<code>researchCompanyProfile</code>)</li>
+<li>研究公司进口信息 (<code>researchCompanyImports</code>)</li>
+<li>分析网站流量 (<code>researchWebsiteTraffic</code>)</li>
+<li>研究公司产品 (<code>researchCompanyProducts</code>)</li>
+<li>研究公司新闻 (<code>researchCompanyNews</code>)</li>
+<li>研究团队成员 (<code>researchTeamMembers</code>)</li>
+<li>生成最终报告 (<code>generateFinalReport</code>)</li>
+<li>生成思维导图 (<code>generateMindMap</code>)</li>
+</ul>
+</li>
+<li>更新数据库中的状态和结果</li>
+</ol>
+<h3 id="对比分析过程"><a href="#对比分析过程" class="headerlink" title="对比分析过程"></a>对比分析过程</h3><ul>
+<li>使用 <code>createComparisonAnalysis</code> 创建对比分析</li>
+<li>将多个独立分析关联到同一个 <code>comparisonId</code></li>
+<li>通过 <code>startComparisonAnalysis</code> 开始对比分析</li>
+<li>系统先确保所有独立分析完成，再执行对比分析</li>
+</ul>
+<h3 id="研究深度流程"><a href="#研究深度流程" class="headerlink" title="研究深度流程"></a>研究深度流程</h3><ul>
+<li>每个研究步骤使用 <code>deepResearchFlow</code> 功能（ReAct循环）：<ul>
+<li>思考</li>
+<li>搜索</li>
+<li>访问网页</li>
+</ul>
+</li>
+<li>使用的代理（agents）：<ul>
+<li><code>researchThinkingAgent</code>：决定下一步行动</li>
+<li><code>searchAndAnalyzerAgent</code>：执行搜索并分析结果</li>
+<li><code>webContentReaderAgent</code>：读取和分析网页内容</li>
+<li><code>generateResearchReportAgent</code>：生成最终研究报告</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-数据结构"><a href="#3-数据结构" class="headerlink" title="3. 数据结构"></a>3. 数据结构</h2><h3 id="AgentTask"><a href="#AgentTask" class="headerlink" title="AgentTask"></a>AgentTask</h3><ul>
+<li>表示客户分析任务</li>
+<li>关键字段：<ul>
+<li><code>id</code>, <code>name</code>, <code>employeeId</code>, <code>status</code>, <code>taskType</code></li>
+</ul>
+</li>
+<li>任务类型：<code>customer_analysis</code></li>
+<li>状态包括：<code>pending</code>, <code>processing</code>, <code>completed</code>, <code>failed</code></li>
+</ul>
+<h3 id="CompanyResearch"><a href="#CompanyResearch" class="headerlink" title="CompanyResearch"></a>CompanyResearch</h3><ul>
+<li>表示公司研究</li>
+<li>关键字段：<ul>
+<li><code>uid</code>, <code>name</code>, <code>status</code>, <code>result</code>, <code>agentTaskId</code>, <code>analysisMode</code></li>
+</ul>
+</li>
+<li>分析模式：<ul>
+<li><code>independent</code>（独立分析）</li>
+<li><code>comparative</code>（对比分析）</li>
+</ul>
+</li>
+<li>状态包括：<code>pending</code>, <code>processing</code>, <code>completed</code>, <code>failed</code>, <code>canceled</code></li>
+</ul>
+<h2 id="4-结果和通知"><a href="#4-结果和通知" class="headerlink" title="4. 结果和通知"></a>4. 结果和通知</h2><ul>
+<li>分析完成后：<ul>
+<li>结果保存在 <code>companyResearch</code> 表的 <code>result</code> 字段（JSON格式）</li>
+<li>结果包括：<code>finalReport</code>, <code>mindMap</code>, <code>traffic</code> 等</li>
+<li>系统向员工发送电子邮件通知</li>
+</ul>
+</li>
+<li>对比分析：<ul>
+<li>检查所有独立分析是否完成</li>
+<li>如果完成，自动启动对比分析</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>整个系统使用队列处理耗时分析任务，并使用AI执行研究分析工作。</p>
+</blockquote>
 
     </div>
 
@@ -551,7 +649,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AE%AE%E5%86%85%E5%AE%B9%E8%AF%A6%E7%BB%86%E9%98%90%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">会议内容详细阐述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%9A%E8%AE%AE%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="nav-number">1.1.</span> <span class="nav-text">1. 会议基本信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A0%B8%E5%BF%83%E8%AE%AE%E9%A2%98%E4%B8%8E%E8%AE%A8%E8%AE%BA%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">2. 核心议题与讨论内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E5%8A%9F%E8%83%BD%E5%8F%98%E6%9B%B4%E6%A6%82%E8%BF%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 客户分析功能变更概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-%E7%8B%AC%E7%AB%8B%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 独立分析流程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 对比分析流程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-%E6%8A%A5%E5%91%8A%E7%94%9F%E6%88%90%E4%B8%8E%E5%AF%BC%E5%87%BA"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 报告生成与导出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%B0%83%E6%95%B4"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 数据结构调整</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6-%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6 其他技术细节</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-%E5%BE%85%E7%A1%AE%E8%AE%A4%E9%97%AE%E9%A2%98"><span class="nav-number">1.2.7.</span> <span class="nav-text">2.7 待确认问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D%E4%B8%8E%E5%90%8E%E7%BB%AD%E8%AE%A1%E5%88%92"><span class="nav-number">1.3.</span> <span class="nav-text">3. 任务分配与后续计划</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93"><span class="nav-number">2.</span> <span class="nav-text">会议总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AE%AE%E5%86%85%E5%AE%B9%E8%AF%A6%E7%BB%86%E9%98%90%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">会议内容详细阐述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%9A%E8%AE%AE%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="nav-number">1.1.</span> <span class="nav-text">1. 会议基本信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A0%B8%E5%BF%83%E8%AE%AE%E9%A2%98%E4%B8%8E%E8%AE%A8%E8%AE%BA%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">2. 核心议题与讨论内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E5%8A%9F%E8%83%BD%E5%8F%98%E6%9B%B4%E6%A6%82%E8%BF%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 客户分析功能变更概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-%E7%8B%AC%E7%AB%8B%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 独立分析流程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 对比分析流程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-%E6%8A%A5%E5%91%8A%E7%94%9F%E6%88%90%E4%B8%8E%E5%AF%BC%E5%87%BA"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 报告生成与导出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%B0%83%E6%95%B4"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 数据结构调整</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6-%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6 其他技术细节</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-%E5%BE%85%E7%A1%AE%E8%AE%A4%E9%97%AE%E9%A2%98"><span class="nav-number">1.2.7.</span> <span class="nav-text">2.7 待确认问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D%E4%B8%8E%E5%90%8E%E7%BB%AD%E8%AE%A1%E5%88%92"><span class="nav-number">1.3.</span> <span class="nav-text">3. 任务分配与后续计划</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93"><span class="nav-number">2.</span> <span class="nav-text">会议总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">客户分析任务的创建和执行流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E4%BB%BB%E5%8A%A1"><span class="nav-number"></span> <span class="nav-text">1. 创建客户分析任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%9F%BA%E6%9C%AC%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.</span> <span class="nav-text">创建基本任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B6%E5%88%B0%E4%BB%BB%E5%8A%A1"><span class="nav-number">2.</span> <span class="nav-text">绑定公司研究到任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">启动分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%86%E6%9E%90%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">2. 分析执行流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8B%AC%E7%AB%8B%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">独立分析过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">对比分析过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%B7%B1%E5%BA%A6%E6%B5%81%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">研究深度流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number"></span> <span class="nav-text">3. 数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AgentTask"><span class="nav-number">1.</span> <span class="nav-text">AgentTask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CompanyResearch"><span class="nav-number">2.</span> <span class="nav-text">CompanyResearch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BB%93%E6%9E%9C%E5%92%8C%E9%80%9A%E7%9F%A5"><span class="nav-number"></span> <span class="nav-text">4. 结果和通知</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -927,12 +1025,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">72k</span>
+    <span title="站点总字数">73k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:05</span>
+    <span title="站点阅读时长">1:07</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
