@@ -239,6 +239,186 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/4a8f9b2c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Diesel-Chen">
+      <meta itemprop="description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DieselChen">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/archives/4a8f9b2c.html" class="post-title-link" itemprop="url">2025年12月16日 工作日志总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-12-16 22:00:00" itemprop="dateCreated datePublished" datetime="2025-12-16T22:00:00+08:00">2025-12-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" itemprop="url" rel="index"><span itemprop="name">工作日志</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/archives/4a8f9b2c.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/4a8f9b2c.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <span id="more"></span>
+
+<h1 id="2025年12月16日-工作日志总结"><a href="#2025年12月16日-工作日志总结" class="headerlink" title="2025年12月16日 工作日志总结"></a>2025年12月16日 工作日志总结</h1><h2 id="📊-工作统计"><a href="#📊-工作统计" class="headerlink" title="📊 工作统计"></a>📊 工作统计</h2><ul>
+<li><strong>总文件修改数</strong>: 49个文件</li>
+<li><strong>主要工作项目</strong>: 7个不同项目</li>
+<li><strong>工作时长</strong>: 约12小时（从早上到晚上）</li>
+</ul>
+<h2 id="🏗️-核心工作内容"><a href="#🏗️-核心工作内容" class="headerlink" title="🏗️ 核心工作内容"></a>🏗️ 核心工作内容</h2><h3 id="1-Tars项目AI-SDK升级适配-主要工作"><a href="#1-Tars项目AI-SDK升级适配-主要工作" class="headerlink" title="1. Tars项目AI SDK升级适配 (主要工作)"></a>1. Tars项目AI SDK升级适配 (主要工作)</h3><p><strong>项目路径</strong>: <code>/KuipWork/Project/tars</code></p>
+<p><strong>工作内容</strong>: 适配AI SDK新版本的API变更</p>
+<p><strong>遇到的问题</strong>:</p>
+<ul>
+<li><code>generateObject</code>方法中<code>mode: &quot;json&quot;</code>参数不再支持</li>
+<li>Milvus SDK搜索API参数格式变更</li>
+<li>TypeScript类型错误需要修复</li>
+</ul>
+<p><strong>解决方案</strong>:</p>
+<ul>
+<li>查阅AI SDK官方文档了解新的API规范</li>
+<li>修复LLM服务调用中的参数格式</li>
+<li>调整向量搜索服务的API调用方式</li>
+</ul>
+<h3 id="2-客户分析功能增强设计"><a href="#2-客户分析功能增强设计" class="headerlink" title="2. 客户分析功能增强设计"></a>2. 客户分析功能增强设计</h3><p><strong>项目路径</strong>: <code>/KuipWork/Project/new-chat</code></p>
+<p><strong>主要成果</strong>: 完成客户分析报告分享和PDF导出功能的完整技术方案</p>
+<p><strong>核心特性</strong>:</p>
+<ul>
+<li><strong>分享功能</strong>: 支持报告/思维导图/完整报告三种分享模式</li>
+<li><strong>PDF导出</strong>: 异步队列处理，支持状态轮询</li>
+<li><strong>架构设计</strong>: 最大化复用现有系统，零后端修改</li>
+</ul>
+<p><strong>技术亮点</strong>:</p>
+<ul>
+<li>利用现有Share实体和searchObj JSON字段</li>
+<li>复用现有token机制和过期控制</li>
+<li>保持与产品分享流程的一致性</li>
+</ul>
+<h3 id="3-MCP-Router项目维护"><a href="#3-MCP-Router项目维护" class="headerlink" title="3. MCP Router项目维护"></a>3. MCP Router项目维护</h3><p><strong>项目路径</strong>: <code>/GitHub-Repo/mcp-router</code></p>
+<p><strong>工作内容</strong>:</p>
+<ul>
+<li>编译本地Mac Intel应用</li>
+<li>遇到问题: 应用启动时出现”Error Loading apps”错误</li>
+<li>解决方案: 重新编译程序，修复启动问题</li>
+</ul>
+<h2 id="🔧-技术难点与解决"><a href="#🔧-技术难点与解决" class="headerlink" title="🔧 技术难点与解决"></a>🔧 技术难点与解决</h2><h3 id="AI-SDK版本升级适配"><a href="#AI-SDK版本升级适配" class="headerlink" title="AI SDK版本升级适配"></a>AI SDK版本升级适配</h3><p><strong>挑战</strong>: 新版本API breaking changes导致多个TypeScript错误</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧版本（不再支持）</span></span><br><span class="line">mode: <span class="string">&quot;json&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 需要适配新的API格式</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>解决策略</strong>:</p>
+<ul>
+<li>使用Context7查阅官方文档</li>
+<li>逐步替换废弃的API调用</li>
+<li>修复Milvus向量搜索的参数格式</li>
+</ul>
+<h3 id="S3FS文件系统挂载问题"><a href="#S3FS文件系统挂载问题" class="headerlink" title="S3FS文件系统挂载问题"></a>S3FS文件系统挂载问题</h3><p><strong>问题</strong>: 文件系统挂载失败影响项目文件访问<br><strong>原因</strong>: FUSE文件系统初始化问题<br><strong>影响</strong>: 多个项目出现文件访问延迟</p>
+<h2 id="📈-项目进展"><a href="#📈-项目进展" class="headerlink" title="📈 项目进展"></a>📈 项目进展</h2><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ol>
+<li>✅ 客户分析PDF导出功能实现（后端部分）</li>
+<li>✅ AI SDK升级技术方案调研</li>
+<li>✅ MCP Router本地编译</li>
+<li>✅ 分享功能架构设计</li>
+</ol>
+<h3 id="进行中"><a href="#进行中" class="headerlink" title="进行中"></a>进行中</h3><ol>
+<li>🔄 AI SDK API适配修复</li>
+<li>🔄 客户分析分享功能前端实现</li>
+</ol>
+<h3 id="待处理"><a href="#待处理" class="headerlink" title="待处理"></a>待处理</h3><ol>
+<li>⏳ Milvus SDK API适配完成</li>
+<li>⏳ TypeScript编译错误全部修复</li>
+<li>⏳ 客户分析功能测试验证</li>
+</ol>
+<h2 id="💡-技术洞察"><a href="#💡-技术洞察" class="headerlink" title="💡 技术洞察"></a>💡 技术洞察</h2><h3 id="架构设计思路"><a href="#架构设计思路" class="headerlink" title="架构设计思路"></a>架构设计思路</h3><p>今天完成的客户分析分享功能设计体现了优秀的架构思维：</p>
+<ul>
+<li><strong>复用现有基础设施</strong>: 避免重复开发</li>
+<li><strong>最小化修改原则</strong>: 降低引入bug的风险</li>
+<li><strong>统一用户体验</strong>: 保持产品一致性</li>
+</ul>
+<h3 id="版本兼容性处理"><a href="#版本兼容性处理" class="headerlink" title="版本兼容性处理"></a>版本兼容性处理</h3><p>AI SDK升级过程中遇到的问题提醒：</p>
+<ul>
+<li>及时关注依赖库的版本更新通知</li>
+<li>建立完善的测试覆盖以捕获breaking changes</li>
+<li>逐步升级而非跳跃式更新</li>
+</ul>
+<h2 id="📝-备注"><a href="#📝-备注" class="headerlink" title="📝 备注"></a>📝 备注</h2><ul>
+<li>今天主要聚焦在新旧API的适配工作上，涉及多个项目的修改</li>
+<li>客户分析功能的技术方案设计为后续开发奠定了良好基础</li>
+<li>需要更加关注依赖库版本管理，建立更完善的升级流程</li>
+</ul>
+<hr>
+<p><strong>关键词</strong>: AI SDK升级、TypeScript修复、客户分析、功能设计、API适配</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/48ca300d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1203,113 +1383,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.gwjzc.top/archives/e6f30e11.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Diesel-Chen">
-      <meta itemprop="description" content="无论你觉得自己多么的了不起，也永远有人比你更强；无论你觉得自己多么的不幸，永远有人比你更加不幸。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DieselChen">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/e6f30e11.html" class="post-title-link" itemprop="url">系统功能测试问题研讨20250904</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-09-04 13:57:04" itemprop="dateCreated datePublished" datetime="2025-09-04T13:57:04+08:00">2025-09-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">会议总结</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BC%9A%E8%AE%AE%E6%80%BB%E7%BB%93/%E8%91%B5%E6%99%AE/" itemprop="url" rel="index"><span itemprop="name">葵普</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/e6f30e11.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/e6f30e11.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/e6f30e11.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1381,20 +1454,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-count">57</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1420,6 +1493,10 @@
         
         
           <li>
+            <a href="/archives/4a8f9b2c.html" title="2025年12月16日 工作日志总结" target="_blank">2025年12月16日 工作日志总结</a>
+          </li>
+        
+          <li>
             <a href="/archives/48ca300d.html" title="Puppeteer Docker 部署踩坑笔记" target="_blank">Puppeteer Docker 部署踩坑笔记</a>
           </li>
         
@@ -1433,10 +1510,6 @@
         
           <li>
             <a href="/archives/77d31e6c.html" title="代码与功能优化讨论会纪要20251118" target="_blank">代码与功能优化讨论会纪要20251118</a>
-          </li>
-        
-          <li>
-            <a href="/archives/8ed803c8.html" title="New CHAT项目进展会纪要20251111" target="_blank">New CHAT项目进展会纪要20251111</a>
           </li>
         
       </ul>
@@ -1741,12 +1814,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">163k</span>
+    <span title="站点总字数">165k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:29</span>
+    <span title="站点阅读时长">2:30</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
