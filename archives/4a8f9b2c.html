@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"blog.gwjzc.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="2025年12月16日 工作日志总结📊 工作统计 总文件修改数: 49个文件 主要工作项目: 7个不同项目 工作时长: 约12小时（从早上到晚上）  🏗️ 核心工作内容1. Tars项目AI SDK升级适配 (主要工作)项目路径: &#x2F;KuipWork&#x2F;Project&#x2F;tars 工作内容: 适配AI SDK新版本的API变更 遇到的问题:  generateObject方法中mode: &amp;q">
+  <meta name="description" content="今天在处理AI SDK升级时遇到了不少breaking changes，同时也完成了一个优雅的架构设计。技术升级总是充满挑战，但也让我们重新审视代码架构的合理性。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2025年12月16日 工作日志总结">
 <meta property="og:url" content="https://blog.gwjzc.top/archives/4a8f9b2c.html">
 <meta property="og:site_name" content="DieselChen">
-<meta property="og:description" content="2025年12月16日 工作日志总结📊 工作统计 总文件修改数: 49个文件 主要工作项目: 7个不同项目 工作时长: 约12小时（从早上到晚上）  🏗️ 核心工作内容1. Tars项目AI SDK升级适配 (主要工作)项目路径: &#x2F;KuipWork&#x2F;Project&#x2F;tars 工作内容: 适配AI SDK新版本的API变更 遇到的问题:  generateObject方法中mode: &amp;q">
+<meta property="og:description" content="今天在处理AI SDK升级时遇到了不少breaking changes，同时也完成了一个优雅的架构设计。技术升级总是充满挑战，但也让我们重新审视代码架构的合理性。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-12-16T14:00:00.000Z">
 <meta property="article:modified_time" content="2025-12-16T14:00:00.000Z">
@@ -307,7 +307,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -326,90 +326,66 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <span id="more"></span>
+        <p>今天在处理AI SDK升级时遇到了不少breaking changes，同时也完成了一个优雅的架构设计。技术升级总是充满挑战，但也让我们重新审视代码架构的合理性。</p>
+<span id="more"></span>
 
-<h1 id="2025年12月16日-工作日志总结"><a href="#2025年12月16日-工作日志总结" class="headerlink" title="2025年12月16日 工作日志总结"></a>2025年12月16日 工作日志总结</h1><h2 id="📊-工作统计"><a href="#📊-工作统计" class="headerlink" title="📊 工作统计"></a>📊 工作统计</h2><ul>
-<li><strong>总文件修改数</strong>: 49个文件</li>
-<li><strong>主要工作项目</strong>: 7个不同项目</li>
-<li><strong>工作时长</strong>: 约12小时（从早上到晚上）</li>
-</ul>
-<h2 id="🏗️-核心工作内容"><a href="#🏗️-核心工作内容" class="headerlink" title="🏗️ 核心工作内容"></a>🏗️ 核心工作内容</h2><h3 id="1-Tars项目AI-SDK升级适配-主要工作"><a href="#1-Tars项目AI-SDK升级适配-主要工作" class="headerlink" title="1. Tars项目AI SDK升级适配 (主要工作)"></a>1. Tars项目AI SDK升级适配 (主要工作)</h3><p><strong>项目路径</strong>: <code>/KuipWork/Project/tars</code></p>
-<p><strong>工作内容</strong>: 适配AI SDK新版本的API变更</p>
-<p><strong>遇到的问题</strong>:</p>
+<h1 id="AI-SDK升级踩坑与架构设计思考"><a href="#AI-SDK升级踩坑与架构设计思考" class="headerlink" title="AI SDK升级踩坑与架构设计思考"></a>AI SDK升级踩坑与架构设计思考</h1><h2 id="一、升级之痛：Breaking-Changes的处理"><a href="#一、升级之痛：Breaking-Changes的处理" class="headerlink" title="一、升级之痛：Breaking Changes的处理"></a>一、升级之痛：Breaking Changes的处理</h2><h3 id="1-API废弃的连锁反应"><a href="#1-API废弃的连锁反应" class="headerlink" title="1. API废弃的连锁反应"></a>1. API废弃的连锁反应</h3><p>今天最头疼的问题莫过于AI SDK的大版本升级。一个简单的参数变更引发了蝴蝶效应：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧版本，简洁明了</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="keyword">await</span> generateObject(&#123;</span><br><span class="line">  mode: <span class="string">&quot;json&quot;</span>,  <span class="comment">// 这个参数被废弃了</span></span><br><span class="line">  prompt: <span class="string">&quot;...&quot;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新版本，需要更复杂的配置</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="keyword">await</span> generateObject(&#123;</span><br><span class="line">  schema: mySchema,</span><br><span class="line">  prompt: <span class="string">&quot;...&quot;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这个看似简单的变更，实际上是API设计理念的转变——从约定式配置转向显式配置。虽然增加了代码量，但提供了更好的类型安全性和可预测性。</p>
+<h3 id="2-TypeScript的守护与束缚"><a href="#2-TypeScript的守护与束缚" class="headerlink" title="2. TypeScript的守护与束缚"></a>2. TypeScript的守护与束缚</h3><p>升级过程中，TypeScript既是守护者也是束缚者。它及时发现了所有不兼容的用法，但也让我们不得不处理大量类型错误：</p>
 <ul>
-<li><code>generateObject</code>方法中<code>mode: &quot;json&quot;</code>参数不再支持</li>
-<li>Milvus SDK搜索API参数格式变更</li>
-<li>TypeScript类型错误需要修复</li>
+<li>向量搜索的参数结构完全改变</li>
+<li>响应数据的字段名称调整</li>
+<li>中间件的注入方式更新</li>
 </ul>
-<p><strong>解决方案</strong>:</p>
+<p><strong>教训</strong>：对于核心依赖，必须建立完善的测试覆盖，并且要关注版本发布的changelog，而不是等到出了问题才去查文档。</p>
+<h2 id="二、架构设计：复用的艺术"><a href="#二、架构设计：复用的艺术" class="headerlink" title="二、架构设计：复用的艺术"></a>二、架构设计：复用的艺术</h2><h3 id="1-客户分析功能的分享设计"><a href="#1-客户分析功能的分享设计" class="headerlink" title="1. 客户分析功能的分享设计"></a>1. 客户分析功能的分享设计</h3><p>在为客户分析功能设计分享和导出能力时，我们没有选择重新开发，而是深度复用现有体系：</p>
+<p><strong>分享功能的复用策略</strong>：</p>
 <ul>
-<li>查阅AI SDK官方文档了解新的API规范</li>
-<li>修复LLM服务调用中的参数格式</li>
-<li>调整向量搜索服务的API调用方式</li>
-</ul>
-<h3 id="2-客户分析功能增强设计"><a href="#2-客户分析功能增强设计" class="headerlink" title="2. 客户分析功能增强设计"></a>2. 客户分析功能增强设计</h3><p><strong>项目路径</strong>: <code>/KuipWork/Project/new-chat</code></p>
-<p><strong>主要成果</strong>: 完成客户分析报告分享和PDF导出功能的完整技术方案</p>
-<p><strong>核心特性</strong>:</p>
-<ul>
-<li><strong>分享功能</strong>: 支持报告/思维导图/完整报告三种分享模式</li>
-<li><strong>PDF导出</strong>: 异步队列处理，支持状态轮询</li>
-<li><strong>架构设计</strong>: 最大化复用现有系统，零后端修改</li>
-</ul>
-<p><strong>技术亮点</strong>:</p>
-<ul>
-<li>利用现有Share实体和searchObj JSON字段</li>
-<li>复用现有token机制和过期控制</li>
+<li>利用现有的Share实体，扩展其用途</li>
+<li>复用token机制和过期控制逻辑</li>
 <li>保持与产品分享流程的一致性</li>
 </ul>
-<h3 id="3-MCP-Router项目维护"><a href="#3-MCP-Router项目维护" class="headerlink" title="3. MCP Router项目维护"></a>3. MCP Router项目维护</h3><p><strong>项目路径</strong>: <code>/GitHub-Repo/mcp-router</code></p>
-<p><strong>工作内容</strong>:</p>
-<ul>
-<li>编译本地Mac Intel应用</li>
-<li>遇到问题: 应用启动时出现”Error Loading apps”错误</li>
-<li>解决方案: 重新编译程序，修复启动问题</li>
-</ul>
-<h2 id="🔧-技术难点与解决"><a href="#🔧-技术难点与解决" class="headerlink" title="🔧 技术难点与解决"></a>🔧 技术难点与解决</h2><h3 id="AI-SDK版本升级适配"><a href="#AI-SDK版本升级适配" class="headerlink" title="AI SDK版本升级适配"></a>AI SDK版本升级适配</h3><p><strong>挑战</strong>: 新版本API breaking changes导致多个TypeScript错误</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧版本（不再支持）</span></span><br><span class="line">mode: <span class="string">&quot;json&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 需要适配新的API格式</span></span><br></pre></td></tr></table></figure>
+<p><strong>PDF导出的异步设计</strong>：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步处理，避免长时间阻塞</span></span><br><span class="line"><span class="keyword">const</span> jobId = <span class="keyword">await</span> enqueuePdfGeneration(reportId)</span><br><span class="line"><span class="comment">// 前端轮询状态</span></span><br><span class="line"><span class="keyword">const</span> status = <span class="keyword">await</span> pollJobStatus(jobId)</span><br></pre></td></tr></table></figure>
 
-<p><strong>解决策略</strong>:</p>
+<p>这种设计让系统能够处理大文件生成，同时保持良好的用户体验。</p>
+<h3 id="2-零后端修改的实现"><a href="#2-零后端修改的实现" class="headerlink" title="2. 零后端修改的实现"></a>2. 零后端修改的实现</h3><p>通过巧妙利用现有的searchObj JSON字段，我们实现了功能的扩展而无需修改数据库结构。这种方式的优势在于：</p>
 <ul>
-<li>使用Context7查阅官方文档</li>
-<li>逐步替换废弃的API调用</li>
-<li>修复Milvus向量搜索的参数格式</li>
+<li><strong>降低风险</strong>：不改动核心数据结构</li>
+<li><strong>快速上线</strong>：减少测试和部署周期</li>
+<li><strong>向后兼容</strong>：不影响现有功能</li>
 </ul>
-<h3 id="S3FS文件系统挂载问题"><a href="#S3FS文件系统挂载问题" class="headerlink" title="S3FS文件系统挂载问题"></a>S3FS文件系统挂载问题</h3><p><strong>问题</strong>: 文件系统挂载失败影响项目文件访问<br><strong>原因</strong>: FUSE文件系统初始化问题<br><strong>影响</strong>: 多个项目出现文件访问延迟</p>
-<h2 id="📈-项目进展"><a href="#📈-项目进展" class="headerlink" title="📈 项目进展"></a>📈 项目进展</h2><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ol>
-<li>✅ 客户分析PDF导出功能实现（后端部分）</li>
-<li>✅ AI SDK升级技术方案调研</li>
-<li>✅ MCP Router本地编译</li>
-<li>✅ 分享功能架构设计</li>
-</ol>
-<h3 id="进行中"><a href="#进行中" class="headerlink" title="进行中"></a>进行中</h3><ol>
-<li>🔄 AI SDK API适配修复</li>
-<li>🔄 客户分析分享功能前端实现</li>
-</ol>
-<h3 id="待处理"><a href="#待处理" class="headerlink" title="待处理"></a>待处理</h3><ol>
-<li>⏳ Milvus SDK API适配完成</li>
-<li>⏳ TypeScript编译错误全部修复</li>
-<li>⏳ 客户分析功能测试验证</li>
-</ol>
-<h2 id="💡-技术洞察"><a href="#💡-技术洞察" class="headerlink" title="💡 技术洞察"></a>💡 技术洞察</h2><h3 id="架构设计思路"><a href="#架构设计思路" class="headerlink" title="架构设计思路"></a>架构设计思路</h3><p>今天完成的客户分析分享功能设计体现了优秀的架构思维：</p>
+<h2 id="三、技术栈选择的思考"><a href="#三、技术栈选择的思考" class="headerlink" title="三、技术栈选择的思考"></a>三、技术栈选择的思考</h2><h3 id="1-版本管理的策略"><a href="#1-版本管理的策略" class="headerlink" title="1. 版本管理的策略"></a>1. 版本管理的策略</h3><p>今天的经历让我重新思考版本管理策略：</p>
+<p><strong>渐进式升级</strong>优于跳跃式升级：</p>
 <ul>
-<li><strong>复用现有基础设施</strong>: 避免重复开发</li>
-<li><strong>最小化修改原则</strong>: 降低引入bug的风险</li>
-<li><strong>统一用户体验</strong>: 保持产品一致性</li>
+<li>先升级到兼容版本</li>
+<li>逐步迁移新API</li>
+<li>最后升级到目标版本</li>
 </ul>
-<h3 id="版本兼容性处理"><a href="#版本兼容性处理" class="headerlink" title="版本兼容性处理"></a>版本兼容性处理</h3><p>AI SDK升级过程中遇到的问题提醒：</p>
+<p><strong>依赖隔离</strong>的重要性：</p>
 <ul>
-<li>及时关注依赖库的版本更新通知</li>
-<li>建立完善的测试覆盖以捕获breaking changes</li>
-<li>逐步升级而非跳跃式更新</li>
+<li>核心业务与工具库解耦</li>
+<li>使用适配器模式隔离变化</li>
+<li>建立统一的API层</li>
 </ul>
-<h2 id="📝-备注"><a href="#📝-备注" class="headerlink" title="📝 备注"></a>📝 备注</h2><ul>
-<li>今天主要聚焦在新旧API的适配工作上，涉及多个项目的修改</li>
-<li>客户分析功能的技术方案设计为后续开发奠定了良好基础</li>
-<li>需要更加关注依赖库版本管理，建立更完善的升级流程</li>
-</ul>
+<h3 id="2-架构的韧性"><a href="#2-架构的韧性" class="headerlink" title="2. 架构的韧性"></a>2. 架构的韧性</h3><p>好的架构应该能够平滑地处理依赖升级：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">业务逻辑</span><br><span class="line">    ↓</span><br><span class="line">抽象层（接口定义）</span><br><span class="line">    ↓</span><br><span class="line">适配器层（实现具体依赖）</span><br></pre></td></tr></table></figure>
+
+<p>这样的设计，当我们需要替换底层实现时，只需要修改适配器层，业务逻辑保持不变。</p>
+<h2 id="四、今日反思"><a href="#四、今日反思" class="headerlink" title="四、今日反思"></a>四、今日反思</h2><h3 id="1-技术债务的代价"><a href="#1-技术债务的代价" class="headerlink" title="1. 技术债务的代价"></a>1. 技术债务的代价</h3><p>拖延升级的代价是巨大的。如果每次小版本更新都及时跟进，就不会在今天面临如此大的改动量。</p>
+<h3 id="2-文档的价值"><a href="#2-文档的价值" class="headerlink" title="2. 文档的价值"></a>2. 文档的价值</h3><p>在查阅新API文档时，深刻体会到文档的重要性。好的文档不仅是API说明，更是设计理念的传达。</p>
+<h3 id="3-测试的保障"><a href="#3-测试的保障" class="headerlink" title="3. 测试的保障"></a>3. 测试的保障</h3><p>如果当初有完善的集成测试，很多问题在开发阶段就能发现，而不是在生产环境暴露。</p>
+<h2 id="五、最佳实践总结"><a href="#五、最佳实践总结" class="headerlink" title="五、最佳实践总结"></a>五、最佳实践总结</h2><ol>
+<li><strong>及时跟进依赖更新</strong>：关注changelog，及时处理deprecation warnings</li>
+<li><strong>建立抽象层</strong>：隔离外部依赖，降低耦合度</li>
+<li><strong>优先复用</strong>：在现有架构基础上扩展，避免重复造轮子</li>
+<li><strong>异步优先</strong>：对于耗时操作，使用异步队列提升用户体验</li>
+<li><strong>渐进式改进</strong>：重构和升级要小步快跑，避免大爆炸式改动</li>
+</ol>
+<hr>
+<p>技术栈的演进永不停歇，我们只能不断学习、适应和进化。每一次踩坑都是成长的机会。</p>
 <hr>
 <p><strong>关键词</strong>: AI SDK升级、TypeScript修复、客户分析、功能设计、API适配</p>
 
@@ -542,7 +518,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2025%E5%B9%B412%E6%9C%8816%E6%97%A5-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">2025年12月16日 工作日志总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8A-%E5%B7%A5%E4%BD%9C%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.1.</span> <span class="nav-text">📊 工作统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%97%EF%B8%8F-%E6%A0%B8%E5%BF%83%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">🏗️ 核心工作内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Tars%E9%A1%B9%E7%9B%AEAI-SDK%E5%8D%87%E7%BA%A7%E9%80%82%E9%85%8D-%E4%B8%BB%E8%A6%81%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. Tars项目AI SDK升级适配 (主要工作)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 客户分析功能增强设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-MCP-Router%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. MCP Router项目维护</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E6%8A%80%E6%9C%AF%E9%9A%BE%E7%82%B9%E4%B8%8E%E8%A7%A3%E5%86%B3"><span class="nav-number">1.3.</span> <span class="nav-text">🔧 技术难点与解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AI-SDK%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7%E9%80%82%E9%85%8D"><span class="nav-number">1.3.1.</span> <span class="nav-text">AI SDK版本升级适配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3FS%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%8C%82%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="nav-number">1.3.2.</span> <span class="nav-text">S3FS文件系统挂载问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%88-%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%B1%95"><span class="nav-number">1.4.</span> <span class="nav-text">📈 项目进展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B2%E5%AE%8C%E6%88%90"><span class="nav-number">1.4.1.</span> <span class="nav-text">已完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E4%B8%AD"><span class="nav-number">1.4.2.</span> <span class="nav-text">进行中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%85%E5%A4%84%E7%90%86"><span class="nav-number">1.4.3.</span> <span class="nav-text">待处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E6%8A%80%E6%9C%AF%E6%B4%9E%E5%AF%9F"><span class="nav-number">1.5.</span> <span class="nav-text">💡 技术洞察</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="nav-number">1.5.1.</span> <span class="nav-text">架构设计思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86"><span class="nav-number">1.5.2.</span> <span class="nav-text">版本兼容性处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E5%A4%87%E6%B3%A8"><span class="nav-number">1.6.</span> <span class="nav-text">📝 备注</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AI-SDK%E5%8D%87%E7%BA%A7%E8%B8%A9%E5%9D%91%E4%B8%8E%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83"><span class="nav-number">1.</span> <span class="nav-text">AI SDK升级踩坑与架构设计思考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%8D%87%E7%BA%A7%E4%B9%8B%E7%97%9B%EF%BC%9ABreaking-Changes%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">一、升级之痛：Breaking Changes的处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-API%E5%BA%9F%E5%BC%83%E7%9A%84%E8%BF%9E%E9%94%81%E5%8F%8D%E5%BA%94"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. API废弃的连锁反应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-TypeScript%E7%9A%84%E5%AE%88%E6%8A%A4%E4%B8%8E%E6%9D%9F%E7%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. TypeScript的守护与束缚</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E5%A4%8D%E7%94%A8%E7%9A%84%E8%89%BA%E6%9C%AF"><span class="nav-number">1.2.</span> <span class="nav-text">二、架构设计：复用的艺术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%A2%E6%88%B7%E5%88%86%E6%9E%90%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%86%E4%BA%AB%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 客户分析功能的分享设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%9B%B6%E5%90%8E%E7%AB%AF%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 零后端修改的实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8A%80%E6%9C%AF%E6%A0%88%E9%80%89%E6%8B%A9%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">1.3.</span> <span class="nav-text">三、技术栈选择的思考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%9A%84%E7%AD%96%E7%95%A5"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 版本管理的策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9E%B6%E6%9E%84%E7%9A%84%E9%9F%A7%E6%80%A7"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 架构的韧性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BB%8A%E6%97%A5%E5%8F%8D%E6%80%9D"><span class="nav-number">1.4.</span> <span class="nav-text">四、今日反思</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8A%80%E6%9C%AF%E5%80%BA%E5%8A%A1%E7%9A%84%E4%BB%A3%E4%BB%B7"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 技术债务的代价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%96%87%E6%A1%A3%E7%9A%84%E4%BB%B7%E5%80%BC"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 文档的价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BF%9D%E9%9A%9C"><span class="nav-number">1.4.3.</span> <span class="nav-text">3. 测试的保障</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">五、最佳实践总结</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
